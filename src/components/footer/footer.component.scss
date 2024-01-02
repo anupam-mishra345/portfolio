@@ -1,0 +1,30 @@
+.left-div {
+  height: 300px;
+}
+.my-name {
+  font-size: 48px;
+}
+i {
+  font-size: 32px;
+}
+span {
+  margin-left: 15px;
+}
+.social-platforms {
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+}
+
+/* Hide the email by default */
+.insta span:last-child {
+  display: none;
+}
+
+/* Show the email on hover */
+.insta:hover span {
+  display: none;
+}
+
+.insta:hover span:last-child {
+  display: block;
+}
