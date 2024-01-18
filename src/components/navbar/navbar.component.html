@@ -1,19 +1,36 @@
 <div class="navbar flex" [ngClass]="{ loaded: isLoaded }">
-  <div class="my-name flex my-auto ml-5 cursor-pointer">
+  <div
+    class="my-name flex my-auto ml-5 cursor-pointer"
+    (click)="navigateTo('/home')"
+  >
     <div class="h-full">
       <img
-        src="./../../assets/Logo AM.png"
+        src="./../../assets/Logo_A4.png"
         alt="logo"
         height="80px"
         width="auto"
       />
     </div>
-    <div class="flex h-full ml-5 my-auto">Anupam Mishra</div>
+    <div class="para flex h-full ml-5 my-auto font-bold">My Portfolio</div>
   </div>
-  <div class="flex ml-auto my-auto">
-    <div class="mx-4 cursor-pointer">Download Resume</div>
-    <div class="mx-4 cursor-pointer">About Me</div>
-    <div class="mx-4 cursor-pointer">Projects</div>
-    <div class="mx-4 mr-10 cursor-pointer">Contact Me</div>
+  <div class="para flex ml-auto my-auto">
+    <div class="items mx-4 cursor-pointer">Download Resume</div>
+    <div
+      class="items mx-4 cursor-pointer"
+      (click)="navigateTo('/experience')"
+      [ngClass]="currentPath.includes('experience') ? 'selected-item' : ''"
+    >
+      Experience
+    </div>
+    <div
+      class="items mx-4 cursor-pointer"
+      (click)="navigateTo('/all-projects')"
+      [ngClass]="currentPath.includes('project') ? 'selected-item' : ''"
+    >
+      Projects
+    </div>
+    <div class="items mx-4 mr-10 cursor-pointer" (click)="contactMe()">
+      Contact Me
+    </div>
   </div>
 </div>

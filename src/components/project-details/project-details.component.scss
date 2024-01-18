@@ -1,0 +1,61 @@
+.main-div {
+  height: 100%;
+  width: 800px;
+  border: 1px solid black;
+}
+.heading {
+  font-size: 44px;
+}
+.heading:hover {
+  /* Define a linear gradient for the text color */
+  background: linear-gradient(180deg, black, #e52e71);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  color: transparent; /* Set text color to transparent */
+}
+.tools-heading {
+  font-size: 24px;
+  font-family: var(--main-heading);
+}
+.tool-div {
+  background-color: rgb(var(--heading-red), 0.2);
+  border-radius: 20px;
+  border: 1px solid rgb(var(--heading-red), 0.8);
+  transition: 0.5s ease-in-out;
+}
+.tool-div:hover {
+  background-color: rgb(var(--heading-red), 0.4);
+  color: white;
+}
+.project-data {
+  // font-family: var(--paragraph);
+  font-size: 18px;
+  text-align: justify;
+  //   word-spacing: 5px;
+  line-height: 1.7;
+  color: rgb(53, 52, 52);
+}
+
+hr {
+  background-color: rgba(var(--heading-red));
+  color: rgba(var(--heading-red));
+  height: 2px;
+}
+
+.live-btn {
+  background-color: rgb(144, 26, 208);
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+}
+.back-btn {
+  border: 1px solid rgb(144, 26, 208);
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+}
+.back-btn:hover,
+.live-btn:hover {
+  position: relative;
+  transform: translateY(-5px);
+}

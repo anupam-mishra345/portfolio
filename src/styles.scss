@@ -2,3 +2,14 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+:root {
+  --heading-red: 131, 21, 21;
+
+  --main-heading: Copperplate;
+  --paragraph: Source Sans Pro;
+}
+
+.para {
+  font-family: var(--paragraph);
+}

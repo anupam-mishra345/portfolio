@@ -1,0 +1,50 @@
+.main-home {
+  height: 100vh;
+}
+.intro {
+  font-size: 108px;
+  line-height: 1;
+  /* Define a linear gradient for the text color */
+  background: linear-gradient(180deg, #b30444, #b30444, rgb(0, 0, 0));
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  color: transparent; /* Set text color to transparent */
+  background-color: transparent;
+  font-family: serif;
+}
+.parent2 {
+  background-image: linear-gradient(
+    90deg,
+    rgb(150, 243, 20),
+    rgb(92, 223, 230),
+    rgb(112, 178, 248)
+  );
+  border-radius: 5px;
+}
+.parent1 {
+  background-image: linear-gradient(
+    90deg,
+    rgb(243, 165, 20),
+    rgb(249, 70, 100)
+  );
+  border-radius: 5px;
+}
+.btns {
+  font-size: 20px;
+  color: white;
+  width: max-content;
+  border-radius: 5px;
+  // font-family: var(--main-heading);
+  // font-family: serif;
+  transition: all 0.3s ease-in-out;
+}
+.btns:hover {
+  transform: translateY(-5px);
+  transform: scale(0.98, 0.9);
+}
+.experiences {
+  background-color: #8e16b2;
+}
+.projects {
+  background-color: #12674b;
+}

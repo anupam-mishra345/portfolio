@@ -1,68 +1,133 @@
-<div class="footer-main-div flex flex-col absolute inset-x-0 bottom-0">
-  <div class="left-div flex w-full justify-between">
-    <div class="flex flex-col justify-items-center ml-5 w-1/2">
-      <div class="my-name">Anupam Mishra</div>
-      <div>Haar ke jeetne wale ko baazigar kehte hai,</div>
-      <div>Code jiska ek bar me compile ho jaye usey techie kehte hai...</div>
+<!-- <div class="footer-main-div">
+
+  <div class="flex flex-col abstract inset-x-0">
+    <div class="left-div mt-5 flex w-full justify-between">
+      <div class="flex flex-col justify-items-center ml-5 w-1/2">
+        <div class="my-name">Anupam Mishra</div>
+        <div>Haar ke jeetne wale ko baazigar kehte hai,</div>
+        <div>Code jiska ek bar me compile ho jaye usey techie kehte hai...</div>
+      </div>
+      <div class="w-1/2 grid grid-cols-2 gap-4">
+        <div class="social-platforms">
+          <a
+            class="flex span-container"
+            href="mailto:anupam.mishra345@gmail.com"
+            target="_blank"
+          >
+            <i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+            <span class="slide-left self-center">Email</span>
+            <span class="slide-right self-center"
+              >anupam.mishra345@gmail.com</span
+            >
+          </a>
+        </div>
+        <div class="social-platforms">
+          <a
+            class="flex span-container"
+            href="https://www.linkedin.com/in/anupam-pramod-mishra/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin" style="color: #2159ba"></i>
+            <span class="slide-left self-center">LinkedIn</span>
+            <span class="slide-right self-center">anupam-pramod-mishra</span>
+          </a>
+        </div>
+        <div class="social-platforms">
+          <a
+            class="flex span-container"
+            href="https://github.com/anupam-mishra345"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span class="slide-left self-center">Github</span>
+            <span class="slide-right self-center">anupam-mishra345</span>
+          </a>
+        </div>
+        <div class="social-platforms">
+          <a
+            class="flex span-container"
+            href="https://wa.me/917747852594"
+            target="_blank"
+          >
+            <i class="fa-brands fa-whatsapp" style="color: #317d70"></i>
+            <span class="slide-left self-center">WhatsApp</span>
+            <span class="slide-right self-center"
+              >WhatsApp@(+91)-7747852594</span
+            >
+          </a>
+        </div>
+        <div class="social-platforms">
+          <a
+            class="flex span-container"
+            href="https://www.instagram.com/anupam.mishra315/"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-instagram self-center"
+              style="color: #ae3d79"
+            ></i>
+            <span class="slide-left self-center">Instagram</span>
+            <span class="slide-right self-center">anupam.mishra315</span>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="w-1/2 grid grid-cols-2 gap-4">
-      <div class="social-platforms">
+    <hr class="mt-2" />
+    <div class="mx-auto mt-2">&copy; copyright 2024. Made by Anupam Mishra</div>
+  </div>
+
+</div> -->
+
+<div class="footer-main-div py-10">
+  <div *ngIf="hoveringElement === ''" class="my-name text-center">
+    <span>Let's Collaborate with</span>
+    <span class="heading">Anupam Mishra !</span>
+  </div>
+  <div
+    *ngIf="hoveringElement !== ''"
+    class="my-name text-center stroking"
+    [ngStyle]="{ color: getStackColor() }"
+  >
+    {{ hoveringId }}
+  </div>
+
+  <div class="about-div para text-center mx-[200px] mt-5">
+    <div>
+      I am always eager to take on new challenges and collaborate on exciting
+      projects. If you are looking for a dedicated web developer who can bring
+      your ideas to life, let's connect!
+    </div>
+    <div>
+      Feel free to explore my portfolio and get in touch for potential
+      collaborations or inquiries.
+    </div>
+  </div>
+  <div class="flex mt-10 gap-4 justify-center">
+    <div class="cursor-pointer" *ngFor="let social of socialPlatformData">
+      <div
+        class="social flex"
+        (mouseenter)="enableHovering(social.name, social.id)"
+        (mouseleave)="disableHovering()"
+        [ngClass]="
+          hoveringElement === social.name ? 'w-[200px] !bg-[#000]' : ''
+        "
+      >
         <a
-          class="flex"
-          href="mailto:anupam.mishra345@gmail.com"
+          class="flex span-container self-center mx-auto"
+          [ngStyle]="{ color: hoveringElement !== '' ? getStackColor() : '' }"
+          [href]="social.link"
           target="_blank"
         >
           <i
-            class="fa-solid fa-envelope self-center"
-            style="color: #ffffff"
+            [ngClass]="[
+              social.icons,
+              hoveringElement === social.name
+                ? 'text-[' + social.color + ']'
+                : 'text-[#000]'
+            ]"
           ></i>
-          <span class="self-center">Email</span>
-        </a>
-      </div>
-      <div class="social-platforms">
-        <a
-          class="flex"
-          href="https://www.linkedin.com/in/anupam-pramod-mishra/"
-          target="_blank"
-        >
-          <i
-            class="fa-brands fa-linkedin self-center"
-            style="color: #2159ba"
-          ></i>
-          <span class="self-center">LinkedIn</span>
-        </a>
-      </div>
-      <div class="social-platforms">
-        <a class="flex" href="" target="_blank">
-          <i class="fa-brands fa-github"></i>
-          <span class="self-center">Github</span>
-        </a>
-      </div>
-      <div class="social-platforms">
-        <a class="flex" href="https://wa.me/917747852594" target="_blank">
-          <i
-            class="fa-brands fa-whatsapp self-center"
-            style="color: #317d70"
-          ></i
-          ><span class="self-center">WhatsApp</span>
-        </a>
-      </div>
-      <div class="social-platforms insta">
-        <a
-          class="flex"
-          href="https://www.instagram.com/anupam.mishra315/"
-          target="_blank"
-        >
-          <i
-            class="fa-brands fa-instagram self-center"
-            style="color: #ae3d79"
-          ></i>
-          <span class="self-center">Instagram</span>
-          <span class="self-center">anupam.mishra315</span>
         </a>
       </div>
     </div>
   </div>
-  <hr class="mt-2" />
-  <div class="mx-auto mt-2">&copy; copyright 2024. Made by Anupam Mishra</div>
 </div>

@@ -1,0 +1,47 @@
+<div class="main-div pt-[140px] px-10 mx-auto">
+  <div>
+    <hr />
+    <div class="heading text-center">{{ projectData?.projectName }}</div>
+    <hr />
+  </div>
+  <div class="mt-10">
+    <div class="tools-heading">Project Overview</div>
+    <div class="mt-3 project-data para">{{ projectData?.overview }}</div>
+  </div>
+  <div class="mt-10">
+    <div class="tools-heading">Key features</div>
+    <div class="mt-3">
+      <li
+        *ngFor="let data of projectData?.keyFeatures"
+        class="project-data para"
+      >
+        {{ data }}
+      </li>
+    </div>
+  </div>
+  <div class="mt-10 mb-12">
+    <div class="tools-heading mt-3">Tools Used</div>
+    <div class="flex mt-3">
+      <div
+        *ngFor="let tool of projectData?.technologies"
+        class="tool-div para project-data mr-5 px-3 py-1"
+      >
+        {{ tool }}
+      </div>
+    </div>
+  </div>
+  <div class="mt-10 mb-12">
+    <div class="tools-heading mt-3">See Live</div>
+    <div class="mt-3">
+      <button
+        class="live-btn para text-white py-3 px-10"
+        (click)="visitProject()"
+      >
+        Project Link
+      </button>
+      <button class="back-btn para py-3 px-10 ml-5" (click)="goBack()">
+        Go Back
+      </button>
+    </div>
+  </div>
+</div>

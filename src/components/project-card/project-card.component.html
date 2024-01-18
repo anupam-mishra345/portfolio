@@ -1,0 +1,11 @@
+<div class="main-card flex flex-col">
+  <div>
+    <img src="../../assets/Logo_A.png" alt="" height="40px" width="40px" />
+  </div>
+  <div class="heading">{{ projectData?.projectName }}</div>
+  <div class="description mt-3">{{ projectData?.cardInfo }}</div>
+  <div class="flex justify-between mt-5">
+    <div class="read-more cursor-pointer" (click)="navigateTo()">Read more</div>
+    <div class="year">{{ projectData?.year }}</div>
+  </div>
+</div>

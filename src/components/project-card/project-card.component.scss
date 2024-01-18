@@ -1,0 +1,26 @@
+.main-card {
+  width: 300px;
+  border: 1px solid rgba(256, 256, 256, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.heading {
+  font-size: 24px;
+  color: rgb(var(--heading-red));
+  text-decoration: underline;
+}
+.description {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.read-more,
+.year {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.read-more:hover {
+  font-size: 15px;
+  text-decoration: underline rgb(var(--heading-red));
+  color: rgba(0, 0, 0, 1);
+}

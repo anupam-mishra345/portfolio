@@ -1,0 +1,76 @@
+<div class="main-div py-[140px] mx-auto">
+  <hr />
+  <div class="about-heading text-center">Experience</div>
+  <hr />
+  <div>
+    <div class="intro para basic-para mt-5">
+      {{ experienceData.intro.data }}
+    </div>
+
+    <div class="mt-10">
+      <div class="heading">
+        {{ experienceData.professionalApproach.name }}
+      </div>
+      <div class="para basic-para mt-4">
+        <div *ngFor="let data of experienceData.professionalApproach.data">
+          {{ data }}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <div class="heading">
+        {{ experienceData.fullstackDev.name }}
+      </div>
+      <div class="para basic-para mt-4">
+        <div *ngFor="let data of experienceData.fullstackDev.data">
+          {{ data }}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <div class="heading">
+        {{ experienceData.frontendDev.name }}
+      </div>
+      <div class="para basic-para mt-4">
+        <div *ngFor="let data of experienceData.frontendDev.data">
+          {{ data }}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <div class="heading">
+        {{ experienceData.backendDev.name }}
+      </div>
+      <div class="para basic-para mt-4">
+        <div *ngFor="let data of experienceData.backendDev.data">
+          {{ data }}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <div class="heading">
+        {{ experienceData.responsiveDesign.name }}
+      </div>
+      <div class="para basic-para mt-4">
+        <div *ngFor="let data of experienceData.responsiveDesign.data">
+          {{ data }}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <div class="heading">
+        {{ experienceData.versionControl.name }}
+      </div>
+      <div class="para basic-para mt-4">
+        <div *ngFor="let data of experienceData.versionControl.data">
+          {{ data }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
