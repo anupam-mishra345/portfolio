@@ -13,6 +13,10 @@
 .description {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4; /* Change this value to the number of lines you want to display */
 }
 .read-more,
 .year {

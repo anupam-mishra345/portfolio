@@ -1,4 +1,4 @@
-export class Experience {
+export class Expertise {
   public static intro = {
     name: '',
     data: [

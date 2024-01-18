@@ -11,13 +11,13 @@ import { AllProjectsComponent } from 'src/components/all-projects/all-projects.c
 import { CommonModule } from '@angular/common';
 import { ProjectCardComponent } from 'src/components/project-card/project-card.component';
 import { ProjectDetailsComponent } from 'src/components/project-details/project-details.component';
-import { AboutComponent } from 'src/components/about/about.component';
+import { ExpertiseComponent } from 'src/components/expertise/expertise.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
+    ExpertiseComponent,
     FooterComponent,
     NavbarComponent,
     ContactMeComponent,
