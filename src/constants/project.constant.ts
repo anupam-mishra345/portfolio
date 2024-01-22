@@ -2,7 +2,7 @@ export class Projects {
   public static projectsData = [
     {
       id: '498ead31-ba3f-4149-80b3-331586739d3a',
-      logo: './assets/Task-Planner.png',
+      logo: './assets/task-planner2.png',
       projectName: 'Task-Planner',
       projectLink: 'https://anupam-mishra345.github.io/task-planner/',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Tailwind'],
@@ -49,7 +49,7 @@ export class Projects {
     },
     {
       id: '54c3aaac-ebed-4d53-b0b8-8e201a0a6b86',
-      logo: './assets/Restaurant-logo-PNG.png',
+      logo: './assets/restaurant-logo3-PNG.png',
       projectName: 'Restaurant Website',
       projectLink:
         'https://anupam-mishra345.github.io/Restaurant/Restaurant.html',
@@ -74,7 +74,8 @@ export class Projects {
       id: '852ed509-e270-4043-9dfa-67e812ddedfa',
       logo: './assets/chatting-box.png',
       projectName: 'Chatting Box',
-      projectLink: 'https://anupam-mishra345.github.io/Chatting-Box/',
+      projectLink:
+        'https://anupam-mishra345.github.io/Chatting-Box/Chatting.html',
       technologies: ['JavaScript', 'HTML', 'CSS'],
       cardInfo:
         'The Chatting Box project is a self-learning prototype that adds every message as a new node in the HTML tree.',
@@ -90,7 +91,7 @@ export class Projects {
     },
     {
       id: 'c40b0ed9-0e6e-4af7-9e1a-0f94b9704dae',
-      logo: './assets/bank-application.png',
+      logo: './assets/bank-application2.png',
       projectName: 'Bank Application',
       projectLink:
         'https://anupam-mishra345.github.io/BankApplication/Oceanbank.html',
