@@ -8,10 +8,20 @@ import { Router } from '@angular/router';
 })
 export class ProjectCardComponent {
   @Input() projectData: any = {};
+  isDivHovered: boolean = false;
 
   constructor(private router: Router) {}
+
   navigateTo() {
     const url = '/project-details/' + this.projectData.id;
     this.router.navigateByUrl(url);
   }
+
+  onHover(val: boolean) {
+    this.isDivHovered = val;
+  }
+
+  // getBgImage() {
+  //   return `url(../../assets/${this.projectData.imagePath})`;
+  // }
 }

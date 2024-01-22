@@ -4,6 +4,9 @@
   border-radius: 10px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.2);
+  // background-image: url(../../assets/restaurant-image.jpeg);
+  // background-size: cover;
+  // opacity: 0.6;
 }
 .heading {
   font-size: 24px;
@@ -23,8 +26,18 @@
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
-.read-more:hover {
+.read-more-hover {
   font-size: 15px;
   text-decoration: underline rgb(var(--heading-red));
   color: rgba(0, 0, 0, 1);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  filter: grayscale(1);
+}
+.colored {
+  filter: grayscale(0);
+  // filter: hue-rotate(180deg);
 }

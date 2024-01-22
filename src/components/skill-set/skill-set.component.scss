@@ -1,0 +1,18 @@
+.main-skill-div {
+  height: 1000px;
+}
+.heading {
+  font-size: 44px;
+}
+.heading:hover {
+  /* Define a linear gradient for the text color */
+  background: linear-gradient(180deg, black, #e52e71);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  color: transparent; /* Set text color to transparent */
+}
+hr {
+  background-color: rgba(var(--heading-red));
+  color: rgba(var(--heading-red));
+  height: 2px;
+}

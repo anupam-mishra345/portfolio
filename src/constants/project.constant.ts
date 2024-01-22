@@ -2,7 +2,7 @@ export class Projects {
   public static projectsData = [
     {
       id: '498ead31-ba3f-4149-80b3-331586739d3a',
-      logo: '',
+      logo: './assets/Task-Planner.png',
       projectName: 'Task-Planner',
       projectLink: 'https://anupam-mishra345.github.io/task-planner/',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Tailwind'],
@@ -27,26 +27,8 @@ export class Projects {
       ],
     },
     {
-      id: '852ed509-e270-4043-9dfa-67e812ddedfa',
-      logo: '',
-      projectName: 'Chatting Box',
-      projectLink: 'https://anupam-mishra345.github.io/Chatting-Box/',
-      technologies: ['JavaScript', 'HTML', 'CSS'],
-      cardInfo:
-        'The Chatting Box project is a self-learning prototype that adds every message as a new node in the HTML tree.',
-      year: 2020,
-      overview: [
-        'The Chatting Box prototype is a project designed to facilitate communication between two individuals. The user interface of this prototype closely mirrors the inbox layout of the WhatsApp application.',
-      ],
-      keyFeatures: [
-        'Distinguished Message Designs: Sent and received messages feature distinct designs, facilitating easy differentiation and enhancing user experience.',
-        'Dynamic Message Display: Prioritizing the latest message, our design ensures that it remains in focus and is positioned at the forefront of the message queue for user convenience.',
-        'Real-Time Message Capture: Each message, whether sent or received, is captured in real-time, providing users with an up-to-the-moment and responsive communication experience.',
-      ],
-    },
-    {
       id: 'c3a45c09-09bd-47eb-832f-6073f197caea',
-      logo: '',
+      logo: './assets/Footwear-PNG.png',
       projectName: 'Footwear Shopping',
       projectLink:
         'https://anupam-mishra345.github.io/Shopping-site.github.io/',
@@ -67,50 +49,88 @@ export class Projects {
     },
     {
       id: '54c3aaac-ebed-4d53-b0b8-8e201a0a6b86',
-      logo: '',
-      projectName: 'Task-Planner',
-      projectLink: 'https://anupam-mishra345.github.io/task-planner/',
-      technologies: ['Angular', 'Typescript', 'HTML', 'CSS'],
+      logo: './assets/Restaurant-logo-PNG.png',
+      projectName: 'Restaurant Website',
+      projectLink:
+        'https://anupam-mishra345.github.io/Restaurant/Restaurant.html',
+      technologies: ['HTML', 'CSS', 'Bootstrap'],
       cardInfo:
-        'Task-Planner is a single page application which anyone can use to track their task list and follow ups.',
-      year: 2024,
-      overview: [''],
-      keyFeatures: [''],
+        'This website stands as a sophisticated prototype, meticulously developed with a foundation of HTML, CSS, and Bootstrap technologies. The fusion of these cutting-edge web technologies ensures a visually appealing, responsive, and user-friendly interface that not only showcases our culinary prowess but also offers a seamless online experience for our valued patrons.',
+      year: 2020,
+      overview: [
+        'Experience the epitome of a culinary destination with our meticulously crafted restaurant website, designed to captivate and entice food enthusiasts to explore the exquisite offerings of our establishment. The menu, seamlessly integrated into the site, provides a tantalizing preview of the culinary delights that await. Indulge your senses and embark on a virtual gastronomic adventure through our restaurant website – where culinary excellence meets cutting-edge web design. Explore, discover, and anticipate an unparalleled dining experience.',
+      ],
+      keyFeatures: [
+        'Visually Stunning Design: Immerse yourself in an aesthetically pleasing design that reflects the ambiance and culinary excellence of our restaurant.',
+        'Interactive Menu Presentation: Explore our diverse menu directly on the website, featuring mouthwatering visuals and detailed descriptions to heighten anticipation.',
+        'Technologically Advanced Prototype: Leveraging HTML, CSS, and Bootstrap, our prototype ensures optimal performance, responsiveness, and compatibility across various devices, providing a consistent and engaging user experience.',
+        'Intuitive Navigation: Navigate effortlessly through the website with a user-friendly interface, enabling swift access to vital information such as menu details, location, and contact information.',
+        'Engaging Multimedia Elements: Immerse yourself in the culinary journey through captivating images and multimedia elements that showcase the ambiance, signature dishes, and the unique charm of our restaurant.',
+        'Responsive Across Devices: Enjoy a seamless browsing experience on any device, be it desktop, tablet, or mobile, ensuring accessibility for food enthusiasts on the go.',
+      ],
+      imagePath: '../../assets/restaurant-image.jpeg',
+    },
+    {
+      id: '852ed509-e270-4043-9dfa-67e812ddedfa',
+      logo: './assets/chatting-box.png',
+      projectName: 'Chatting Box',
+      projectLink: 'https://anupam-mishra345.github.io/Chatting-Box/',
+      technologies: ['JavaScript', 'HTML', 'CSS'],
+      cardInfo:
+        'The Chatting Box project is a self-learning prototype that adds every message as a new node in the HTML tree.',
+      year: 2020,
+      overview: [
+        'The Chatting Box prototype is a project designed to facilitate communication between two individuals. The user interface of this prototype closely mirrors the inbox layout of the WhatsApp application.',
+      ],
+      keyFeatures: [
+        'Distinguished Message Designs: Sent and received messages feature distinct designs, facilitating easy differentiation and enhancing user experience.',
+        'Dynamic Message Display: Prioritizing the latest message, our design ensures that it remains in focus and is positioned at the forefront of the message queue for user convenience.',
+        'Real-Time Message Capture: Each message, whether sent or received, is captured in real-time, providing users with an up-to-the-moment and responsive communication experience.',
+      ],
     },
     {
       id: 'c40b0ed9-0e6e-4af7-9e1a-0f94b9704dae',
-      logo: '',
-      projectName: 'Task-Planner',
-      technologies: ['Angular', 'Typescript', 'HTML', 'CSS'],
+      logo: './assets/bank-application.png',
+      projectName: 'Bank Application',
+      projectLink:
+        'https://anupam-mishra345.github.io/BankApplication/Oceanbank.html',
+      technologies: ['JavaScript', 'HTML', 'CSS'],
       cardInfo:
-        'Task-Planner is a single page application which anyone can use to track their task list and follow ups.',
-      year: 2024,
-      overview: [''],
-      keyFeatures: [''],
+        'Embark on a journey of financial empowerment with our feature-rich banking website. Whether you seek real-time transaction insights, virtual banking experiences, or a variety of financial services, our platform is designed to cater to your every need. Your financial well-being is our priority. Explore the possibilities today.',
+      year: 2019,
+      overview: [
+        'Welcome to our comprehensive banking website, featuring multiple pages dedicated to showcasing a wide array of financial services. With a user-centric approach, our platform allows seamless access to various functionalities, ensuring an enriching and secure banking experience.',
+      ],
+      keyFeatures: [
+        'Secure Account Access: Enjoy the convenience of logging into your account securely, providing instant access to view your account balance and transaction details.',
+        'Virtual Transaction Experience: Immerse yourself in the intricacies of the banking system by virtually initiating credit and debit transactions, offering a hands-on understanding of financial operations.',
+        'Real-time Transaction Monitoring: Stay informed in real-time with the ability to view your bank statement, including detailed records of debit and credit transactions, ensuring transparency and accountability.',
+        'Intuitive Navigation: Explore our user-friendly interface, designed to facilitate effortless navigation across multiple pages offering a variety of financial services.',
+        'Enhanced Security Measures: Rest assured that your sensitive financial information is protected through robust security measures, ensuring the confidentiality and integrity of your banking transactions.',
+        'Comprehensive Financial Services: Beyond account management, our website extends a variety of services, providing a holistic banking experience that caters to diverse financial needs.',
+      ],
     },
     {
       id: '5e16553b-9b4d-4695-812f-e94d42eabc7b',
-      logo: '',
-      projectName: 'Task-Planner',
-      projectLink: 'https://anupam-mishra345.github.io/task-planner/',
-      technologies: ['Angular', 'Typescript', 'HTML', 'CSS'],
+      logo: './assets/real-estate.png',
+      projectName: 'Real-Estate Website',
+      projectLink:
+        'https://anupam-mishra345.github.io/Real-estate/MaMaison.html',
+      technologies: ['HTML', 'CSS'],
       cardInfo:
-        'Task-Planner is a single page application which anyone can use to track their task list and follow ups.',
-      year: 2024,
-      overview: [''],
-      keyFeatures: [''],
-    },
-    {
-      id: 'e9ef01d7-706c-422a-95e4-b15a9602192c',
-      logo: '',
-      projectName: 'Task-Planner',
-      projectLink: 'https://anupam-mishra345.github.io/task-planner/',
-      technologies: ['Angular', 'Typescript', 'HTML', 'CSS'],
-      cardInfo:
-        'Task-Planner is a single page application which anyone can use to track their task list and follow ups.',
-      year: 2024,
-      overview: [''],
-      keyFeatures: [''],
+        'Welcome to our pioneering real estate website, representing the initial prototype project conceived during the learning phase. Crafted exclusively with pure HTML and CSS, this platform stands as a testament to the foundational skills acquired, offering a glimpse into the dynamic realm of real estate.',
+      year: 2019,
+      overview: [
+        'Embark on a virtual tour of the real estate market through our prototype website, where foundational coding expertise meets the dynamic world of property exploration. Witness the convergence of knowledge and innovation in real estate web development.',
+      ],
+      keyFeatures: [
+        'Intuitive Property Exploration: Immerse yourself in a user-friendly interface designed to facilitate seamless exploration of diverse real estate offerings, showcasing a breadth of property options.',
+        'Educational Prototype: This website serves as an educational prototype, providing insights into the fundamentals of web development and design within the context of the real estate market.',
+        'HTML and CSS Prowess: Developed with precision using HTML and CSS, the website showcases the foundational coding skills acquired during the learning process, emphasizing simplicity, elegance, and functionality.',
+        'Responsive Design: Experience a responsive design that ensures optimal viewing across various devices, creating an inclusive browsing experience for all users.',
+        'Visual Appeal: The website combines aesthetics and functionality, presenting a visually appealing platform that aligns with the sophistication of the real estate market.',
+        'Continuous Learning: As the initial step in a continuous learning journey, this prototype lays the groundwork for future enhancements, incorporating evolving technologies and design principles.',
+      ],
     },
   ];
 }
