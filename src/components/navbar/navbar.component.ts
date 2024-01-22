@@ -1,15 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-// import {
-//   trigger,
-//   state,
-//   style,
-//   animate,
-//   transition,
-// } from '@angular/animations';
-// import { BrowserModule } from '@angular/platform-browser';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +9,8 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   isLoaded: boolean = false;
   currentPath: string = '';
+  resumeFilePath: string = '../../assets/pdfs/';
+  resumeFileName: string = 'Anupam-Mishra-Resume.pdf';
 
   constructor(private router: Router) {}
 
