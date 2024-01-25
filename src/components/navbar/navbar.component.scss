@@ -5,7 +5,7 @@
   backdrop-filter: blur(6px);
   color: white;
   width: 100%;
-  height: 100px;
+  height: auto;
   font-size: 20px;
   transition: top 0.3s;
 }
@@ -34,7 +34,6 @@ img {
   height: 50px;
   width: auto;
   border-radius: 20px;
-  // mix-blend-mode: soft-light;
 }
 
 .items-light {
@@ -124,4 +123,49 @@ img {
 .lightMode {
   transform: translateX(2px);
   // background-color: #fff;
+}
+.display-none {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .my-name {
+    font-size: 30px;
+  }
+  .items {
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  img {
+    height: 35px;
+    width: auto;
+    border-radius: 20px;
+  }
+}
+.mobile-main {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .desktop-main {
+    display: none;
+  }
+  .mobile-main {
+    display: flex;
+  }
+  .menu-dark {
+    font-size: 28px;
+    color: rgb(201, 196, 196);
+  }
+  .menu-light {
+    font-size: 28px;
+    color: rgb(77, 76, 76);
+  }
+  .close-menu {
+    font-size: 28px;
+    color: rgb(191, 8, 8);
+  }
+  .items {
+    font-size: 20px;
+    margin: 20px 50px 0;
+  }
 }

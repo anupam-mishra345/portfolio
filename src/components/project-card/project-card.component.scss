@@ -59,3 +59,14 @@
 .colored {
   filter: grayscale(0);
 }
+
+@media screen and (max-width: 950px) and (min-width: 850px) {
+  .main-card {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    filter: grayscale(0);
+  }
+}

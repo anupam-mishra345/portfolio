@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { ThemeService } from 'src/services/theme.service';
 
@@ -14,8 +14,21 @@ export class NavbarComponent {
   resumeFileName: string = 'Anupam-Mishra-Resume.pdf';
 
   isDarkMode: boolean = false;
+  isMenuOpen: boolean = false;
 
-  constructor(private router: Router, private themeService: ThemeService) {}
+  constructor(
+    private router: Router,
+    private themeService: ThemeService,
+    private elementRef: ElementRef
+  ) {}
+
+  @HostListener('document:click', ['$event'])
+  handleDocumentClick(event: MouseEvent): void {
+    const clickedInside = this.elementRef.nativeElement.contains(event.target);
+    if (!clickedInside) {
+      this.closeMenu();
+    }
+  }
 
   ngOnInit() {
     setTimeout(() => {
@@ -34,9 +47,18 @@ export class NavbarComponent {
 
   navigateTo(path: string) {
     this.router.navigateByUrl(path);
+    this.closeMenu();
   }
 
   contactMe() {
+    this.closeMenu();
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+
+  openMenu() {
+    this.isMenuOpen = true;
+  }
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }

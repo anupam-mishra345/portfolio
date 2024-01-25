@@ -1,75 +1,166 @@
-<div class="navbar flex" [ngClass]="{ loaded: isLoaded }" style="z-index: 100">
-  <div class="flex my-auto ml-5 cursor-pointer" (click)="navigateTo('/home')">
-    <div class="h-full self-center">
-      <img src="./assets/Logo_A6.png" alt="logo" height="80px" width="auto" />
-    </div>
-    <div class="my-name para flex h-full ml-5 my-auto font-bold">
-      My Portfolio
-    </div>
-  </div>
-  <div class="para flex ml-auto my-auto">
-    <div
-      class="big-circle flex mx-4 cursor-pointer"
-      [ngClass]="isDarkMode ? 'bg-[#000]' : 'bg-[#fff]'"
-      (click)="changeTheme()"
-    >
-      <div
-        class="small-circle self-center flex"
-        [ngClass]="isDarkMode ? 'darkMode' : 'lightMode'"
-      >
-        <i *ngIf="isDarkMode" class="moon fa-solid fa-moon mx-auto my-auto"></i>
-        <i
-          *ngIf="!isDarkMode"
-          class="sun fa-solid fa-sun mx-auto my-auto"
-          style="color: orange"
-        ></i>
+<div
+  class="navbar flex flex-col"
+  [ngClass]="{ loaded: isLoaded }"
+  style="z-index: 100"
+>
+  <div class="flex h-[100px]">
+    <div class="flex my-auto ml-5 cursor-pointer" (click)="navigateTo('/home')">
+      <div class="h-full self-center">
+        <img src="./assets/Logo_A6.png" alt="logo" height="80px" width="auto" />
+      </div>
+      <div class="my-name para flex h-full ml-5 my-auto font-bold">
+        Portfolio
       </div>
     </div>
-    <a
-      href="./assets/pdfs/Anupam-Mishra-Resume.pdf"
-      target="_blank"
-      class="items mx-4 cursor-pointer"
-      [ngClass]="{
+    <div class="desktop-main para flex ml-auto my-auto">
+      <div
+        class="big-circle flex mx-4 cursor-pointer"
+        [ngClass]="isDarkMode ? 'bg-[#000]' : 'bg-[#fff]'"
+        (click)="changeTheme()"
+      >
+        <div
+          class="small-circle self-center flex"
+          [ngClass]="isDarkMode ? 'darkMode' : 'lightMode'"
+        >
+          <i
+            *ngIf="isDarkMode"
+            class="moon fa-solid fa-moon mx-auto my-auto"
+          ></i>
+          <i
+            *ngIf="!isDarkMode"
+            class="sun fa-solid fa-sun mx-auto my-auto"
+            style="color: orange"
+          ></i>
+        </div>
+      </div>
+      <a
+        href="./assets/pdfs/Anupam-Mishra-Resume.pdf"
+        target="_blank"
+        class="items mx-4 cursor-pointer"
+        [ngClass]="{
         'items-light': !isDarkMode,
         'items-dark': isDarkMode,
         'selected-item-light': !isDarkMode && currentPath.includes('resume'),
         'selected-item-dark': isDarkMode && currentPath.includes('resume'),
       }"
-    >
-      Download Resume
-    </a>
-    <div
-      class="mx-4 cursor-pointer"
-      (click)="navigateTo('/expertise')"
-      [ngClass]="{
+      >
+        Download Resume
+      </a>
+      <div
+        class="items mx-4 cursor-pointer"
+        (click)="navigateTo('/expertise')"
+        [ngClass]="{
         'items-light': !isDarkMode,
         'items-dark': isDarkMode,
         'selected-item-light': !isDarkMode && currentPath.includes('expertise'),
         'selected-item-dark': isDarkMode && currentPath.includes('expertise'),
       }"
-    >
-      Expertise
-    </div>
-    <div
-      class="items mx-4 cursor-pointer"
-      (click)="navigateTo('/all-projects')"
-      [ngClass]="{
+      >
+        Expertise
+      </div>
+      <div
+        class="items mx-4 cursor-pointer"
+        (click)="navigateTo('/all-projects')"
+        [ngClass]="{
         'items-light': !isDarkMode,
         'items-dark': isDarkMode,
         'selected-item-light': !isDarkMode && currentPath.includes('project'),
         'selected-item-dark': isDarkMode && currentPath.includes('project'),
       }"
-    >
-      Projects
-    </div>
-    <div
-      class="items mx-4 mr-10 cursor-pointer"
-      [ngClass]="{
+      >
+        Projects
+      </div>
+      <div
+        class="items mx-4 mr-10 cursor-pointer"
+        [ngClass]="{
       'items-light': !isDarkMode,
       'items-dark': isDarkMode,
       'selected-item-light': !isDarkMode && currentPath.includes('contact'),
       'selected-item-dark': isDarkMode && currentPath.includes('contact'),
     }"
+        (click)="contactMe()"
+      >
+        Contact Me
+      </div>
+    </div>
+    <div class="mobile-main my-auto ml-auto mr-10 cursor-pointer">
+      <i
+        class="fa-solid fa-bars"
+        [ngClass]="{
+          'display-none': isMenuOpen,
+          'menu-dark': isDarkMode,
+          'menu-light': !isDarkMode
+        }"
+        (click)="openMenu()"
+      ></i>
+      <i
+        class="close-menu fa-regular fa-circle-xmark"
+        [ngClass]="isMenuOpen ? '' : 'display-none'"
+        (click)="closeMenu()"
+      ></i>
+    </div>
+  </div>
+  <div class="flex flex-col pb-10" [ngClass]="isMenuOpen ? '' : 'display-none'">
+    <div class="items flex">
+      Theme
+      <div
+        class="big-circle flex mx-4 cursor-pointer"
+        [ngClass]="isDarkMode ? 'bg-[#000]' : 'bg-[#fff]'"
+        (click)="changeTheme()"
+      >
+        <div
+          class="small-circle self-center flex"
+          [ngClass]="isDarkMode ? 'darkMode' : 'lightMode'"
+        >
+          <i
+            *ngIf="isDarkMode"
+            class="moon fa-solid fa-moon mx-auto my-auto"
+          ></i>
+          <i
+            *ngIf="!isDarkMode"
+            class="sun fa-solid fa-sun mx-auto my-auto"
+            style="color: orange"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <div
+      class="items mx-4"
+      [ngClass]="{
+      'selected-item-light': !isDarkMode && currentPath.includes('resume'),
+      'selected-item-dark': isDarkMode && currentPath.includes('resume'),
+    }"
+    >
+      <a href="./assets/pdfs/Anupam-Mishra-Resume.pdf" target="_blank">
+        Download Resume
+      </a>
+    </div>
+    <div
+      class="items mx-4"
+      (click)="navigateTo('/expertise')"
+      [ngClass]="{
+    'selected-item-light': !isDarkMode && currentPath.includes('expertise'),
+    'selected-item-dark': isDarkMode && currentPath.includes('expertise'),
+  }"
+    >
+      Expertise
+    </div>
+    <div
+      class="items mx-4"
+      (click)="navigateTo('/all-projects')"
+      [ngClass]="{
+    'selected-item-light': !isDarkMode && currentPath.includes('project'),
+    'selected-item-dark': isDarkMode && currentPath.includes('project'),
+  }"
+    >
+      Projects
+    </div>
+    <div
+      class="items mx-4 mr-10"
+      [ngClass]="{
+  'selected-item-light': !isDarkMode && currentPath.includes('contact'),
+  'selected-item-dark': isDarkMode && currentPath.includes('contact'),
+}"
       (click)="contactMe()"
     >
       Contact Me

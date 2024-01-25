@@ -7,11 +7,6 @@
   transition: 0.3s ease-in-out;
 }
 .expertise-heading:hover {
-  // background: linear-gradient(180deg, black, #e52e71);
-  // -webkit-background-clip: text;
-  // background-clip: text;
-  // color: transparent;
-  // text-shadow: none;
   color: rgb(var(--heading-pink));
 }
 hr {
@@ -28,4 +23,12 @@ hr {
 }
 .main-heading-effect {
   color: rgb(var(--heading-pink));
+}
+
+@media screen and (max-width: 768px) {
+  .main-div {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

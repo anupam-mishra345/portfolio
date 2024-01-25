@@ -1,28 +1,20 @@
 .main-div {
   height: 100%;
   width: 800px;
-  // border: 1px solid black;
 }
 .heading {
   font-size: 44px;
   transition: 0.3s ease-in-out;
 }
 .main-heading-effect {
-  // text-shadow: 0 0 20px white;
   color: rgb(var(--heading-pink));
 }
 
 .heading:hover {
-  // background: linear-gradient(180deg, black, #e52e71);
-  // -webkit-background-clip: text;
-  // background-clip: text;
-  // color: transparent;
-  // text-shadow: none;
   color: rgb(var(--heading-pink));
 }
 .tools-heading {
   font-size: 24px;
-  // font-family: var(--main-heading);
 }
 .tool-div {
   background-color: rgb(var(--heading-red), 0.2);
@@ -35,12 +27,9 @@
   color: white;
 }
 .project-data {
-  // font-family: var(--paragraph);
   font-size: 18px;
   text-align: justify;
-  //   word-spacing: 5px;
   line-height: 1.7;
-  // color: rgb(53, 52, 52);
 }
 
 hr {
@@ -84,8 +73,33 @@ hr {
   height: 8px;
   border-radius: 10px;
   background: rgb(134, 4, 10);
-  // border: solid 1px #aaa;
   position: absolute;
   top: 12px;
   left: -15px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-div {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .buttons-div {
+    flex-direction: column;
+  }
+  .live-btn,
+  .back-btn {
+    margin: 0;
+    width: 100%;
+  }
+  .back-btn {
+    margin-top: 20px;
+  }
+  .back-btn:hover,
+  .live-btn:hover {
+    // position: relative;
+    transform: translateY(0);
+  }
 }

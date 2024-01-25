@@ -54,3 +54,32 @@
   background-position: right;
   background-attachment: fixed;
 }
+
+@media screen and (max-width: 1000px) {
+  .bg-image {
+    background-position: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro {
+    font-size: 58px;
+    padding-top: 300px;
+  }
+  .btns-main {
+    flex-direction: column;
+    width: fit-content;
+  }
+  .parent2 {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .parent1,
+  .parent2 {
+    background-image: none;
+    border-radius: 5px;
+  }
+  .btns:hover {
+    transform: translateY(0);
+    transform: scale(1, 1);
+  }
+}

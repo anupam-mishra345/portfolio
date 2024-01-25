@@ -1,5 +1,5 @@
 .main-skill-div {
-  height: 1000px;
+  height: 100%;
 }
 .heading {
   font-size: 44px;
@@ -15,4 +15,9 @@ hr {
 }
 .main-heading-effect {
   color: rgba(var(--heading-pink));
+}
+.skillset-div {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent content from wrapping to the next line */
+  max-width: 100%; /* Adjust as needed based on your layout */
 }

@@ -19,7 +19,6 @@ export class SkillSetComponent {
     this.initiateSkillChartDarkTheme();
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
-      console.log('theme: ', theme);
     });
   }
 
@@ -27,9 +26,10 @@ export class SkillSetComponent {
     this.chartOptionsLightMode = {
       animationEnabled: true,
       exportEnabled: true,
-      dataPointWidth: 115,
+      // dataPointWidth: 50,
       backgroundColor: 'transparent',
-      height: 600,
+      height: 400,
+      width: 1200,
       zoomEnabled: true,
       title: {
         text: '',
@@ -45,7 +45,7 @@ export class SkillSetComponent {
         tickColor: 'transparent',
       },
       axisY: {
-        interval: 10,
+        interval: 20,
         title: '',
         suffix: '%',
         includeZero: true,
@@ -57,7 +57,8 @@ export class SkillSetComponent {
         gridDashType: 'dot',
       },
       toolbar: {
-        itemBackgroundColor: 'transparent',
+        // itemBackgroundColor: 'transparent',
+        // exportEnabled: false,
       },
       toolTip: {
         // enabled: false,
@@ -94,9 +95,10 @@ export class SkillSetComponent {
     this.chartOptionsDarkMode = {
       animationEnabled: true,
       exportEnabled: true,
-      dataPointWidth: 115,
+      // dataPointWidth: 115,
       backgroundColor: 'transparent',
-      height: 600,
+      height: 400,
+      width: 1200,
       zoomEnabled: true,
       title: {
         text: '',
@@ -112,7 +114,7 @@ export class SkillSetComponent {
         tickColor: 'transparent',
       },
       axisY: {
-        interval: 10,
+        interval: 20,
         title: '',
         suffix: '%',
         includeZero: true,
@@ -124,7 +126,7 @@ export class SkillSetComponent {
         gridDashType: 'dot',
       },
       toolbar: {
-        itemBackgroundColor: 'transparent',
+        // itemBackgroundColor: 'transparent',
       },
       toolTip: {
         // enabled: false,

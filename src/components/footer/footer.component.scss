@@ -73,3 +73,14 @@ span {
 .span-container:hover .slide-right {
   transform: translateX(0); /* Slide to the left on hover */
 }
+
+@media screen and (max-width: 768px) {
+  .about-div {
+    width: 100%;
+    padding: 50px 50px 30px 50px;
+    margin: 0;
+  }
+  .my-name {
+    font-size: 30px;
+  }
+}

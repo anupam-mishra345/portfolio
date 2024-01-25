@@ -20,3 +20,25 @@ hr {
   color: rgba(var(--heading-pink));
   // text-shadow: 0 0 20px white;
 }
+
+@media screen and (max-width: 1200px) {
+  .card-div {
+    // grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .card-div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .card-div {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
