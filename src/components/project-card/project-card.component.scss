@@ -3,23 +3,36 @@
   border: 1px solid rgba(256, 256, 256, 0.2);
   border-radius: 10px;
   padding: 20px;
+}
+.light-card {
   background-color: rgba(0, 0, 0, 0.2);
-  // background-image: url(../../assets/restaurant-image.jpeg);
-  // background-size: cover;
-  // opacity: 0.6;
+}
+.light-card:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.dark-card {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.dark-card:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .heading {
   font-size: 24px;
-  color: rgb(var(--heading-red));
   text-decoration: underline;
+}
+.heading-dark {
+  color: rgb(var(--aqua-blue));
+  text-shadow: 0 0 2px black;
+}
+.heading-light {
+  color: rgb(var(--heading-red));
 }
 .description {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 4; /* Change this value to the number of lines you want to display */
+  -webkit-line-clamp: 4;
 }
 .read-more,
 .year {
@@ -27,9 +40,15 @@
   color: rgba(0, 0, 0, 0.5);
 }
 .read-more-hover {
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: underline rgb(var(--heading-red));
-  color: rgba(0, 0, 0, 1);
+  color: rgb(var(--heading-red));
+}
+.read-more-dark-mode {
+  color: rgba(255, 255, 255, 0.4);
+}
+.read-more-dark-mode-hover {
+  color: rgba(var(--heading-red));
 }
 
 .logo {
@@ -39,5 +58,4 @@
 }
 .colored {
   filter: grayscale(0);
-  // filter: hue-rotate(180deg);
 }

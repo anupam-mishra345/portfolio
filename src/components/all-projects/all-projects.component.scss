@@ -1,16 +1,22 @@
 .projects-heading {
   font-size: 44px;
+  transition: 0.3s ease-in-out;
 }
 .projects-heading:hover {
-  /* Define a linear gradient for the text color */
-  background: linear-gradient(180deg, black, #e52e71);
-  -webkit-background-clip: text; /* Clip the background to the text */
-  background-clip: text;
-  color: transparent; /* Set text color to transparent */
+  // background: linear-gradient(180deg, black, #e52e71);
+  // -webkit-background-clip: text;
+  // background-clip: text;
+  // color: transparent;
+  // text-shadow: none;
+  color: rgba(var(--heading-pink));
 }
 
 hr {
-  background-color: rgba(var(--heading-red));
-  color: rgba(var(--heading-red));
+  background-color: rgba(var(--heading-pink));
+  color: rgba(var(--heading-pink));
   height: 2px;
+}
+.main-heading-effect {
+  color: rgba(var(--heading-pink));
+  // text-shadow: 0 0 20px white;
 }

@@ -1,17 +1,31 @@
-<div class="main-div py-[140px] mx-auto">
+<div class="main-div pt-[140px] mx-auto">
   <hr />
-  <div class="about-heading text-center">My Expertise</div>
+  <div
+    class="expertise-heading text-center"
+    [ngClass]="isDarkMode ? 'main-heading-effect' : ''"
+  >
+    My Expertise
+  </div>
   <hr />
-  <div>
-    <div class="intro para basic-para mt-5">
+  <div class="my-20">
+    <div
+      class="intro basic-para"
+      [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+    >
       {{ expertiseData.intro.data }}
     </div>
 
     <div class="mt-10">
-      <div class="heading">
+      <div
+        class="heading"
+        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+      >
         {{ expertiseData.professionalApproach.name }}
       </div>
-      <div class="para basic-para mt-4">
+      <div
+        class="basic-para mt-4"
+        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+      >
         <div *ngFor="let data of expertiseData.professionalApproach.data">
           {{ data }}
         </div>
@@ -19,10 +33,16 @@
     </div>
 
     <div class="mt-10">
-      <div class="heading">
+      <div
+        class="heading"
+        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+      >
         {{ expertiseData.fullstackDev.name }}
       </div>
-      <div class="para basic-para mt-4">
+      <div
+        class="basic-para mt-4"
+        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+      >
         <div *ngFor="let data of expertiseData.fullstackDev.data">
           {{ data }}
         </div>
@@ -30,10 +50,16 @@
     </div>
 
     <div class="mt-10">
-      <div class="heading">
+      <div
+        class="heading"
+        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+      >
         {{ expertiseData.frontendDev.name }}
       </div>
-      <div class="para basic-para mt-4">
+      <div
+        class="basic-para mt-4"
+        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+      >
         <div *ngFor="let data of expertiseData.frontendDev.data">
           {{ data }}
         </div>
@@ -41,10 +67,16 @@
     </div>
 
     <div class="mt-10">
-      <div class="heading">
+      <div
+        class="heading"
+        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+      >
         {{ expertiseData.backendDev.name }}
       </div>
-      <div class="para basic-para mt-4">
+      <div
+        class="basic-para mt-4"
+        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+      >
         <div *ngFor="let data of expertiseData.backendDev.data">
           {{ data }}
         </div>
@@ -52,10 +84,16 @@
     </div>
 
     <div class="mt-10">
-      <div class="heading">
+      <div
+        class="heading"
+        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+      >
         {{ expertiseData.responsiveDesign.name }}
       </div>
-      <div class="para basic-para mt-4">
+      <div
+        class="basic-para mt-4"
+        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+      >
         <div *ngFor="let data of expertiseData.responsiveDesign.data">
           {{ data }}
         </div>
@@ -63,10 +101,16 @@
     </div>
 
     <div class="mt-10">
-      <div class="heading">
+      <div
+        class="heading"
+        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+      >
         {{ expertiseData.versionControl.name }}
       </div>
-      <div class="para basic-para mt-4">
+      <div
+        class="basic-para mt-4"
+        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+      >
         <div *ngFor="let data of expertiseData.versionControl.data">
           {{ data }}
         </div>

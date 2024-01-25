@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Projects } from 'src/constants/project.constant';
+import { ThemeService } from 'src/services/theme.service';
 
 @Component({
   selector: 'app-project-details',
@@ -10,8 +11,9 @@ import { Projects } from 'src/constants/project.constant';
 export class ProjectDetailsComponent {
   allProjectData: any = Projects.projectsData;
   projectData: any = {};
+  isDarkMode: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private themeService: ThemeService) {
     const routeArray = this.router.url.split('/');
     const id = routeArray[routeArray.length - 1];
 
@@ -22,6 +24,9 @@ export class ProjectDetailsComponent {
 
   ngOnInit() {
     scrollTo(0, 0);
+    this.themeService.getTheme().subscribe((theme) => {
+      this.isDarkMode = theme;
+    });
   }
 
   visitProject() {

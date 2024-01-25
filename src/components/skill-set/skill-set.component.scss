@@ -3,16 +3,20 @@
 }
 .heading {
   font-size: 44px;
+  transition: 1s ease-in-out;
 }
 .heading:hover {
-  /* Define a linear gradient for the text color */
   background: linear-gradient(180deg, black, #e52e71);
-  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Set text color to transparent */
+  color: transparent;
+  text-shadow: none;
 }
 hr {
   background-color: rgba(var(--heading-red));
   color: rgba(var(--heading-red));
   height: 2px;
+}
+.main-heading-effect {
+  text-shadow: 0 0 20px white;
 }

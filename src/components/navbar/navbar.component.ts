@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThemeService } from 'src/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,9 @@ export class NavbarComponent {
   resumeFilePath: string = '../../assets/pdfs/';
   resumeFileName: string = 'Anupam-Mishra-Resume.pdf';
 
-  constructor(private router: Router) {}
+  isDarkMode: boolean = false;
+
+  constructor(private router: Router, private themeService: ThemeService) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -22,6 +25,11 @@ export class NavbarComponent {
 
   ngAfterContentChecked() {
     this.currentPath = this.router.url;
+  }
+
+  changeTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    this.themeService.setTheme(this.isDarkMode);
   }
 
   navigateTo(path: string) {

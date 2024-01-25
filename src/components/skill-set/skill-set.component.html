@@ -1,10 +1,22 @@
 <div class="main-skill-div">
   <div class="pt-[140px]">
     <hr />
-    <div class="heading text-center">My Skills</div>
+    <div
+      class="heading text-center"
+      [ngClass]="isDarkMode ? 'main-heading-effect' : ''"
+    >
+      My Skills
+    </div>
     <hr />
   </div>
   <div class="pt-[70px]">
-    <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+    <canvasjs-chart
+      *ngIf="!isDarkMode"
+      [options]="chartOptionsLightMode"
+    ></canvasjs-chart>
+    <canvasjs-chart
+      *ngIf="isDarkMode"
+      [options]="chartOptionsDarkMode"
+    ></canvasjs-chart>
   </div>
 </div>

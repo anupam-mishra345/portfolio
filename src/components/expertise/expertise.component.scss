@@ -2,20 +2,21 @@
   height: 100%;
   width: 800px;
 }
-.about-heading {
+.expertise-heading {
   font-size: 44px;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.about-heading:hover {
-  /* Define a linear gradient for the text color */
-  background: linear-gradient(180deg, black, #e52e71);
-  -webkit-background-clip: text; /* Clip the background to the text */
-  background-clip: text;
-  color: transparent; /* Set text color to transparent */
+.expertise-heading:hover {
+  // background: linear-gradient(180deg, black, #e52e71);
+  // -webkit-background-clip: text;
+  // background-clip: text;
+  // color: transparent;
+  // text-shadow: none;
+  color: rgb(var(--heading-pink));
 }
 hr {
-  background-color: rgba(var(--heading-red));
-  color: rgba(var(--heading-red));
+  background-color: rgba(var(--heading-pink));
+  color: rgb(var(--heading-pink));
   height: 2px;
 }
 .basic-para {
@@ -24,5 +25,7 @@ hr {
 }
 .heading {
   font-size: 24px;
-  font-family: var(--main-heading);
+}
+.main-heading-effect {
+  color: rgb(var(--heading-pink));
 }

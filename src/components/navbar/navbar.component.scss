@@ -1,7 +1,8 @@
 .navbar {
   position: fixed;
   top: 0px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(105, 102, 102, 0.5);
+  backdrop-filter: blur(6px);
   color: white;
   width: 100%;
   height: 100px;
@@ -27,15 +28,16 @@
 .my-name {
   font-size: 48px;
   color: rgb(var(--heading-red));
+  text-shadow: 0 0 2px white;
 }
-.my-name img {
-  height: 80px;
+img {
+  height: 50px;
   width: auto;
   border-radius: 20px;
   // mix-blend-mode: soft-light;
 }
 
-.items {
+.items-light {
   position: relative;
   text-decoration: none; /* Remove default underline */
   color: rgb(233, 231, 231); /* Set the text color */
@@ -63,7 +65,63 @@
     transform-origin: bottom left;
   }
 }
-.selected-item,
-.items:hover {
-  color: rgb(158, 63, 98);
+.items-dark {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+  color: rgb(233, 231, 231); /* Set the text color */
+  font-weight: 600;
+  /* Create the underline using ::before pseudo-element */
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px; /* Adjust the height of the underline */
+    bottom: 0;
+    border-radius: 50px;
+    left: 0;
+    background-color: rgb(
+      var(--aqua-blue)
+    ); /* Set the color of the underline */
+    transform: scaleX(0); /* Initial transformation to hide the underline */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; /* Add transition effect */
+  }
+
+  /* Apply the underline animation on hover */
+  &:hover::before {
+    transform: scaleX(1); /* Expand the underline on hover */
+    transform-origin: bottom left;
+  }
+}
+
+.selected-item-light,
+.items-light:hover {
+  color: rgb(var(--heading-red));
+}
+.selected-item-dark,
+.items-dark:hover {
+  color: rgb(var(--aqua-blue));
+  text-shadow: 0 0 2px black;
+}
+
+.big-circle {
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid rgb(83, 82, 82);
+  transition: all 0.7s ease-in-out;
+}
+.small-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: all 0.7s ease-in-out;
+}
+.darkMode {
+  transform: translateX(42px);
+  // background-color: #000;
+}
+.lightMode {
+  transform: translateX(2px);
+  // background-color: #fff;
 }
