@@ -38,7 +38,7 @@ export class SkillSetComponent {
   initiateSkillChartLightTheme() {
     this.chartOptionsLightMode = {
       animationEnabled: true,
-      exportEnabled: true,
+      exportEnabled: false,
       // dataPointWidth: 50,
       backgroundColor: 'transparent',
       height: 400,
@@ -106,7 +106,7 @@ export class SkillSetComponent {
   initiateSkillChartDarkTheme() {
     this.chartOptionsDarkMode = {
       animationEnabled: true,
-      exportEnabled: true,
+      exportEnabled: false,
       // dataPointWidth: 115,
       backgroundColor: 'transparent',
       height: 400,
