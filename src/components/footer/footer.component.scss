@@ -74,6 +74,9 @@ span {
   transform: translateX(0); /* Slide to the left on hover */
 }
 
+.mobile-div {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .about-div {
     width: 100%;
@@ -82,5 +85,11 @@ span {
   }
   .my-name {
     font-size: 30px;
+  }
+  .desktop-div {
+    display: none;
+  }
+  .mobile-div {
+    display: flex;
   }
 }

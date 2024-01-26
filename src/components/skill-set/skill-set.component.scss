@@ -21,3 +21,10 @@ hr {
   white-space: nowrap; /* Prevent content from wrapping to the next line */
   max-width: 100%; /* Adjust as needed based on your layout */
 }
+@media screen and (max-width: 768px) {
+  .skillset-div {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+  }
+}

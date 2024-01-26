@@ -11,6 +11,8 @@ export class SkillSetComponent {
   chartOptionsLightMode: any = {};
   chartOptionsDarkMode: any = {};
   isDarkMode: boolean = false;
+  screenWidth: number = 0;
+  chart: any = {};
 
   constructor(private themeService: ThemeService) {}
 
@@ -20,6 +22,17 @@ export class SkillSetComponent {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
     });
+    this.screenWidth = window.innerWidth;
+    setTimeout(() => {
+      this.updateWidthOfChart();
+    }, 1000);
+    // You can also add an event listener to track changes in screen width
+    window.addEventListener('resize', this.onResize.bind(this));
+  }
+
+  onResize(event: Event) {
+    this.screenWidth = (event.target as Window).innerWidth;
+    this.updateWidthOfChart();
   }
 
   initiateSkillChartLightTheme() {
@@ -29,7 +42,6 @@ export class SkillSetComponent {
       // dataPointWidth: 50,
       backgroundColor: 'transparent',
       height: 400,
-      width: 1200,
       zoomEnabled: true,
       title: {
         text: '',
@@ -49,7 +61,7 @@ export class SkillSetComponent {
         title: '',
         suffix: '%',
         includeZero: true,
-        margin: 50,
+        // margin: 50,
         labelFontSize: 15,
         labelFontColor: 'rgba(0, 0, 0, 0.8)',
         maximum: 100,
@@ -98,7 +110,6 @@ export class SkillSetComponent {
       // dataPointWidth: 115,
       backgroundColor: 'transparent',
       height: 400,
-      width: 1200,
       zoomEnabled: true,
       title: {
         text: '',
@@ -118,7 +129,7 @@ export class SkillSetComponent {
         title: '',
         suffix: '%',
         includeZero: true,
-        margin: 50,
+        // margin: 50,
         labelFontSize: 15,
         labelFontColor: 'rgba(255, 255, 255, 0.7)',
         maximum: 100,
@@ -126,7 +137,7 @@ export class SkillSetComponent {
         gridDashType: 'dot',
       },
       toolbar: {
-        // itemBackgroundColor: 'transparent',
+        itemBackgroundColor: 'grey',
       },
       toolTip: {
         // enabled: false,
@@ -157,5 +168,21 @@ export class SkillSetComponent {
         },
       ],
     };
+  }
+
+  getChartInstance(event: any) {
+    this.chart = event;
+  }
+
+  updateWidthOfChart() {
+    if (this.screenWidth < 1200) {
+      this.chartOptionsLightMode.width = 1200;
+      this.chartOptionsDarkMode.width = 1200;
+      this.chart.render();
+    } else {
+      delete this.chartOptionsLightMode.width;
+      delete this.chartOptionsDarkMode.width;
+      this.chart.render();
+    }
   }
 }

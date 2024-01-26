@@ -9,14 +9,16 @@
     </div>
     <hr />
   </div>
-  <div class="skillset-div py-[70px]">
+  <div class="skillset-div py-[70px] px-[50px]">
     <canvasjs-chart
       *ngIf="!isDarkMode"
       [options]="chartOptionsLightMode"
+      (chartInstance)="getChartInstance($event)"
     ></canvasjs-chart>
     <canvasjs-chart
       *ngIf="isDarkMode"
       [options]="chartOptionsDarkMode"
+      (chartInstance)="getChartInstance($event)"
     ></canvasjs-chart>
   </div>
 </div>

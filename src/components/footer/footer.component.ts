@@ -61,9 +61,15 @@ export class FooterComponent {
     this.hoveringElement = '';
     this.hoveringId = '';
   }
-  getStackColor() {
-    return this.socialPlatformData.filter(
-      (elem: any) => elem.name === this.hoveringElement
-    )[0].color;
+  getStackColor(social: string) {
+    if (social === '') {
+      return this.socialPlatformData.filter(
+        (elem: any) => elem.name === this.hoveringElement
+      )[0].color;
+    } else {
+      return this.socialPlatformData.filter(
+        (elem: any) => elem.name === social
+      )[0].color;
+    }
   }
 }
