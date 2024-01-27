@@ -1,11 +1,16 @@
 <div class="main-div pt-[140px] px-10 mx-auto">
   <div>
     <hr />
-    <div
-      class="heading text-center"
-      [ngClass]="isDarkMode ? 'main-heading-effect' : ''"
-    >
-      {{ projectData?.projectName }}
+    <div class="flex justify-center my-2">
+      <div class="mr-10 self-center">
+        <img [src]="projectData.logo" alt="" />
+      </div>
+      <div
+        class="heading self-center"
+        [ngClass]="isDarkMode ? 'main-heading-effect' : ''"
+      >
+        {{ projectData?.projectName }}
+      </div>
     </div>
     <hr />
   </div>
