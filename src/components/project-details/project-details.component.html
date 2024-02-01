@@ -2,7 +2,7 @@
   <div>
     <hr />
     <div class="flex justify-center my-2">
-      <div class="mr-10 self-center">
+      <div class="logo mr-10 self-center">
         <img [src]="projectData.logo" alt="" />
       </div>
       <div
@@ -14,81 +14,139 @@
     </div>
     <hr />
   </div>
-  <div class="my-20">
-    <div>
-      <div
-        class="mt-3 project-data"
-        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
-      >
-        {{ projectData?.cardInfo }}
+  <div class="below-div flex">
+    <!-- <div class="main-left w-1/2 my-10">
+      <div class="project-ss mx-10">
+        <img
+          [src]="projectData.projectScreenShot"
+          alt=""
+          height="200px"
+          width="300px"
+        />
       </div>
-    </div>
-    <div class="mt-10">
-      <div
-        class="tools-heading"
-        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
-      >
-        Project Overview
+      <div class="sticky-btn mt-10 mb-12">
+        <div
+          class="tools-heading mt-3"
+          [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+        >
+          See Live
+        </div>
+        <div class="buttons-div flex mt-3">
+          <button
+            class="live-btn text-white py-3 px-10"
+            (click)="visitProject()"
+          >
+            Project Link
+          </button>
+          <button
+            class="back-btn py-3 px-10 ml-5"
+            [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+            (click)="goBack()"
+          >
+            Go Back
+          </button>
+        </div>
       </div>
-      <div
-        class="mt-3 project-data"
-        [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
-      >
-        {{ projectData?.overview }}
+      <div class="mt-10 mb-12">
+        <div
+          class="tools-heading mt-3"
+          [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+        >
+          Tools Used
+        </div>
+        <div class="flex flex-wrap mt-3">
+          <div
+            *ngFor="let tool of projectData?.technologies"
+            class="tool-div project-data mr-5 mt-2 px-3 py-1 cursor-pointer"
+            [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+          >
+            {{ tool }}
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="mt-10">
-      <div
-        class="tools-heading"
-        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
-      >
-        Key features
+    </div> -->
+    <div class="main-right my-10">
+      <div class="resp project-ss mb-5">
+        <img [src]="projectData.projectScreenShot" alt="" />
       </div>
-      <div class="mt-3 list">
-        <li
-          *ngFor="let data of projectData?.keyFeatures"
+      <div>
+        <div
           class="project-data"
           [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
         >
-          {{ data }}
-        </li>
-      </div>
-    </div>
-    <div class="mt-10 mb-12">
-      <div
-        class="tools-heading mt-3"
-        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
-      >
-        Tools Used
-      </div>
-      <div class="flex flex-wrap mt-3">
-        <div
-          *ngFor="let tool of projectData?.technologies"
-          class="tool-div project-data mr-5 mt-2 px-3 py-1 cursor-pointer"
-          [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
-        >
-          {{ tool }}
+          {{ projectData?.cardInfo }}
         </div>
       </div>
-    </div>
-    <div class="mt-10 mb-12">
-      <div
-        class="tools-heading mt-3"
-        [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
-      >
-        See Live
-      </div>
-      <div class="buttons-div flex mt-3">
-        <button class="live-btn text-white py-3 px-10" (click)="visitProject()">
-          Project Link
-        </button>
-        <button
-          class="back-btn py-3 px-10 ml-5"
-          [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
-          (click)="goBack()"
+      <div class="mt-10">
+        <div
+          class="tools-heading"
+          [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
         >
-          Go Back
-        </button>
+          Project Overview
+        </div>
+        <div
+          class="mt-3 project-data"
+          [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+        >
+          {{ projectData?.overview }}
+        </div>
+      </div>
+      <div class="mt-10">
+        <div
+          class="tools-heading"
+          [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+        >
+          Key features
+        </div>
+        <div class="mt-3 list">
+          <li
+            *ngFor="let data of projectData?.keyFeatures"
+            class="project-data"
+            [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+          >
+            {{ data }}
+          </li>
+        </div>
+      </div>
+      <div class="resp mt-10 mb-12">
+        <div
+          class="tools-heading mt-3"
+          [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+        >
+          Tools Used
+        </div>
+        <div class="flex flex-wrap mt-3">
+          <div
+            *ngFor="let tool of projectData?.technologies"
+            class="tool-div project-data mr-5 mt-2 px-3 py-1 cursor-pointer"
+            [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+          >
+            {{ tool }}
+          </div>
+        </div>
+      </div>
+      <div class="resp mt-10 mb-12">
+        <div
+          class="tools-heading mt-3"
+          [ngClass]="isDarkMode ? 'dark-heading' : 'light-heading'"
+        >
+          See Live
+        </div>
+        <div class="buttons-div flex mt-3">
+          <button
+            class="live-btn text-white py-3 px-10"
+            (click)="visitProject()"
+          >
+            Project Link
+          </button>
+          <button
+            class="back-btn py-3 px-10 ml-5"
+            [ngClass]="isDarkMode ? 'dark-para' : 'light-para'"
+            (click)="goBack()"
+          >
+            Go Back
+          </button>
+        </div>
       </div>
     </div>
   </div>
