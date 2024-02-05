@@ -5,7 +5,7 @@
   (mouseleave)="onHover(false)"
   (click)="navigateTo()"
 >
-  <div>
+  <div class="mx-auto my-5">
     <img
       class="logo"
       src="{{ projectData.logo }}"
@@ -14,7 +14,7 @@
     />
   </div>
   <div
-    class="heading"
+    class="heading mx-auto"
     [ngClass]="isDarkMode ? 'heading-dark' : 'heading-light'"
   >
     {{ projectData?.projectName }}

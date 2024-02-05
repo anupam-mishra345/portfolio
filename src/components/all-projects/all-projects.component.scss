@@ -3,11 +3,6 @@
   transition: 0.3s ease-in-out;
 }
 .projects-heading:hover {
-  // background: linear-gradient(180deg, black, #e52e71);
-  // -webkit-background-clip: text;
-  // background-clip: text;
-  // color: transparent;
-  // text-shadow: none;
   color: rgba(var(--heading-pink));
 }
 
@@ -18,14 +13,26 @@ hr {
 }
 .main-heading-effect {
   color: rgba(var(--heading-pink));
-  // text-shadow: 0 0 20px white;
+}
+.project-div {
+  width: 100%;
+  height: auto;
+  overflow-x: auto;
+}
+.project-card {
+  transition: all 0.3s ease-in-out;
+}
+.project-card:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1200px) {
   .card-div {
-    // grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     padding: 0 10px;
+  }
+  .project-div {
+    padding: 20px;
   }
 }
 @media screen and (max-width: 850px) {
@@ -35,10 +42,52 @@ hr {
     padding: 0 10px;
   }
 }
+@media screen and (max-width: 768px) {
+  .project-div {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .project-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (max-width: 650px) {
   .card-div {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 20px;
     padding: 0 10px;
   }
+  .projects-parent-div {
+    margin: 0 20px;
+  }
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Change color as needed */
+  border-radius: 20px;
+}
+
+/* For Firefox */
+/* Note: Firefox supports a separate pseudo-element, scrollbar-thumb, for the scrollbar thumb style */
+/* This example sets both scrollbar and thumb to a width of 10px */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+/* For Internet Explorer */
+*::-ms-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-ms-scrollbar-thumb {
+  background-color: #888; /* Change color as needed */
 }

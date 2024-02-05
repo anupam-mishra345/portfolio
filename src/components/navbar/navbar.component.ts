@@ -31,6 +31,9 @@ export class NavbarComponent {
   }
 
   ngOnInit() {
+    this.themeService.getTheme().subscribe((theme) => {
+      this.isDarkMode = theme;
+    });
     setTimeout(() => {
       this.isLoaded = true;
     }, 100);

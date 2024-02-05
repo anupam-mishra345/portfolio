@@ -1,6 +1,7 @@
 .main-div {
   height: 100%;
-  width: 800px;
+  // width: 800px;
+  width: 100%;
 }
 .heading {
   font-size: 44px;
@@ -88,37 +89,47 @@ hr {
   border: 2px solid gray;
   border-radius: 5px;
 }
-// .resp {
-//   display: none;
-// }
-// .main-left {
-//   display: block;
-// }
-// .sticky-btn {
-//   overflow-y: auto;
-//   position: sticky;
-//   top: 200px;
-// }
-// .below-div {
-//   max-height: calc(100vh - 250px);
-//   overflow: auto;
-// }
+.resp {
+  display: none;
+}
+.main-left {
+  display: block;
+  // overflow-y: hidden;
+}
+.sticky-btn {
+  overflow-y: auto;
+  position: sticky;
+  top: 30px;
+}
+.sticky-btn2 {
+  overflow-y: auto;
+  position: sticky;
+  top: 30px;
+}
+.below-div {
+  max-height: calc(100vh - 250px);
+  overflow: auto;
+}
 
 @media screen and (max-width: 768px) {
+  .below-div {
+    max-height: 100%;
+    // overflow: visible;
+  }
   .main-div {
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+    // padding-left: 50px;
+    // padding-right: 50px;
   }
-  // .resp {
-  //   display: block;
-  // }
-  // .main-left {
-  //   display: none;
-  // }
-  // .main-right {
-  //   width: 100%;
-  // }
+  .resp {
+    display: block;
+  }
+  .main-left {
+    display: none;
+  }
+  .main-right {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 500px) {
   .buttons-div {
@@ -134,7 +145,12 @@ hr {
   }
   .back-btn:hover,
   .live-btn:hover {
-    // position: relative;
     transform: translateY(0);
+  }
+  .heading {
+    font-size: 36px;
+  }
+  .logo img {
+    height: 50px;
   }
 }
