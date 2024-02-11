@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThemeService } from 'src/services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private router: Router) {}
+  isDarkMode: boolean = false;
+  constructor(private router: Router, private themeService: ThemeService) {}
 
   ngOnInit() {
+    this.themeService.getTheme().subscribe((theme) => {
+      this.isDarkMode = theme;
+    });
     scrollTo(0, 0);
   }
 

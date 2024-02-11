@@ -8,31 +8,30 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 .light-card:hover {
-  // background-color: rgba(0, 0, 0, 0.3);
-  background-image: linear-gradient(
-    180deg,
-    rgb(152, 196, 244),
-    rgb(196, 223, 251)
-  );
-  border: 2px solid rgb(var(--heading-red));
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgb(var(--color-heading-red));
 }
 .dark-card {
   background-color: rgba(255, 255, 255, 0.2);
 }
 .dark-card:hover {
   background-color: rgba(255, 255, 255, 0.3);
-  border: 2px solid rgb(var(--heading-red));
+  border: 2px solid rgb(var(--color-heading-red));
 }
 .heading {
   font-size: 24px;
   text-decoration: underline;
 }
 .heading-dark {
-  color: rgb(var(--aqua-blue));
-  text-shadow: 0 0 2px black;
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 .heading-light {
-  color: rgb(var(--heading-red));
+  color: rgb(var(--color-heading-red));
+}
+.heading-hover {
+  color: rgb(var(--color-heading-red));
+  text-shadow: 1px 1px 0px black;
 }
 .description {
   font-size: 16px;
@@ -48,14 +47,14 @@
 }
 .read-more-hover {
   font-size: 14px;
-  text-decoration: underline rgb(var(--heading-red));
-  color: rgb(var(--heading-red));
+  text-decoration: underline rgb(var(--color-heading-red));
+  color: rgb(var(--color-heading-red));
 }
 .read-more-dark-mode {
   color: rgba(255, 255, 255, 0.4);
 }
 .read-more-dark-mode-hover {
-  color: rgba(var(--heading-red));
+  color: rgba(var(--color-heading-red));
 }
 
 .logo {

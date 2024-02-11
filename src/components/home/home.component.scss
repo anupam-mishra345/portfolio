@@ -1,33 +1,30 @@
 .main-home {
   height: 100%;
 }
+span {
+  color: rgb(var(--color-heading-red));
+}
 .intro {
-  font-size: 108px;
+  font-size: 95px;
   line-height: 1;
   /* Define a linear gradient for the text color */
-  background: linear-gradient(180deg, #b30444, #b30444, rgb(0, 0, 0));
-  -webkit-background-clip: text; /* Clip the background to the text */
-  background-clip: text;
-  color: transparent; /* Set text color to transparent */
-  background-color: transparent;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgb(var(--color-heading-red)),
+  //   rgb(var(--color-heading-red)),
+  //   rgb(0, 0, 0)
+  // );
+  // -webkit-background-clip: text; /* Clip the background to the text */
+  // background-clip: text;
+  // color: transparent; /* Set text color to transparent */
+  // background-color: transparent;
   font-family: serif;
 }
-.parent2 {
-  background-image: linear-gradient(
-    90deg,
-    rgb(150, 243, 20),
-    rgb(92, 223, 230),
-    rgb(112, 178, 248)
-  );
-  border-radius: 5px;
+.dark-intro-font {
+  color: rgba(255, 255, 255, 0.8);
 }
-.parent1 {
-  background-image: linear-gradient(
-    90deg,
-    rgb(243, 165, 20),
-    rgb(249, 70, 100)
-  );
-  border-radius: 5px;
+.light-intro-font {
+  color: rgba(0, 0, 0, 0.7);
 }
 .btns {
   font-size: 20px;
@@ -40,52 +37,135 @@
   transform: translateY(-5px);
   transform: scale(0.98, 0.9);
 }
-.experiences {
-  background-color: #8e16b2;
+.expertise {
+  background-color: rgb(var(--color-heading-red));
 }
 .projects {
-  background-color: #12674b;
+  background-color: rgba(var(--color-heading-red), 0.5);
+  // background-color: #12674b;
+  border: 2px solid rgb(var(--color-heading-red));
 }
-.bg-image {
-  background-image: url(../../assets/anupam1.png);
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
+// .bg-image {
+// background-image: url(../../assets/anupam1.png);
+// width: 90%;
+// height: 75vh;
+// border: 1px solid red;
 
-@media screen and (max-width: 1000px) {
-  .bg-image {
-    background-position: center;
+// background-color: #252525;
+// background-size: cover;
+// background-position: top;
+// background-attachment: fixed;
+// background-repeat: no-repeat;
+// }
+
+.img-div img {
+  // width: 100%;
+  // min-width: 300px;
+  // max-width: 450px;
+  height: 75vh;
+  width: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgb(var(--color-heading-red));
+}
+@media screen and (max-width: 1266px) {
+  .intro {
+    font-size: 70px;
   }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 966px) {
+  // .bg-image {
+  //   background-position: center;
+  // }
   .intro {
-    font-size: 58px;
-    padding-top: 300px;
+    font-size: 60px;
   }
   .btns-main {
     flex-direction: column;
     width: fit-content;
+    div {
+      margin-left: 0;
+      margin-top: 20px;
+    }
   }
-  .parent2 {
-    margin-left: 0;
-    margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .light-intro-font {
+    color: rgba(255, 255, 255, 0.8);
   }
-  .parent1,
-  .parent2 {
-    background-image: none;
-    border-radius: 5px;
+  .intro {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 58px;
+    // background: none;
+    // -webkit-background-clip: unset; /* Clip the background to the text */
+    // background-clip: unset;
+    // color: rgb(var(--color-heading-red)); /* Set text color to transparent */
   }
+  .img-div {
+    display: none;
+  }
+  .left-frame {
+    width: 100%;
+    padding: 0;
+  }
+  .bg-image {
+    background-image: url(../../assets/anupam3.jpg);
+    height: 100vh;
+    background-color: #252525;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  .highlight {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: auto;
+    padding-left: 40px;
+  }
+  .btns-main {
+    padding-left: 40px;
+    flex-direction: row;
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 20px;
+    div:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
+  // .parent2 {
+  //   margin-left: 0;
+  //   margin-top: 20px;
+  // }
+  // .parent1,
+  // .parent2 {
+  //   background-image: none;
+  //   border-radius: 5px;
+  // }
   .btns:hover {
     transform: translateY(0);
     transform: scale(1, 1);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+  .intro {
+    margin-top: auto;
+    // margin-bottom: 20px;
+  }
+
   .btns-main {
-    padding-top: 30px;
+    // flex-direction: column;
+    width: 100%;
+    padding: 0 50px;
+    div:nth-child(2) {
+      margin-left: 0;
+    }
+  }
+  .projects {
+    width: 100%;
+    background-color: rgba(var(--color-heading-red), 0.7);
+  }
+  .expertise {
+    display: none;
   }
 }

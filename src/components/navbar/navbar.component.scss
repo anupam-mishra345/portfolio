@@ -27,7 +27,7 @@
 
 .my-name {
   font-size: 48px;
-  color: rgb(var(--heading-red));
+  color: rgb(var(--color-heading-red));
   text-shadow: 0 0 2px white;
 }
 img {
@@ -51,7 +51,7 @@ img {
     border-radius: 50px;
     left: 0;
     background-color: rgb(
-      var(--heading-red)
+      var(--color-heading-red)
     ); /* Set the color of the underline */
     transform: scaleX(0); /* Initial transformation to hide the underline */
     transform-origin: bottom right;
@@ -79,7 +79,7 @@ img {
     border-radius: 50px;
     left: 0;
     background-color: rgb(
-      var(--aqua-blue)
+      var(--color-heading-red)
     ); /* Set the color of the underline */
     transform: scaleX(0); /* Initial transformation to hide the underline */
     transform-origin: bottom right;
@@ -94,14 +94,15 @@ img {
 }
 
 .selected-item-light,
-.items-light:hover {
-  color: rgb(var(--heading-red));
-}
+.items-light:hover,
 .selected-item-dark,
 .items-dark:hover {
-  color: rgb(var(--aqua-blue));
-  text-shadow: 0 0 2px black;
+  color: rgb(var(--color-heading-red));
 }
+// .selected-item-dark,
+// .items-dark:hover {
+//   color: rgb(var(--color-heading-red));
+// }
 
 .big-circle {
   width: 70px;

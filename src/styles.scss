@@ -4,30 +4,28 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --heading-red: 131, 21, 21;
-  --heading-pink: 229, 46, 113;
-  --aqua-blue: 47, 202, 202;
-  --main-heading: Copperplate;
-  --paragraph: Source Sans Pro;
+  --color-heading-red: 165, 25, 25;
+  --font-heading: Palatino;
+  // --font-paragraph: Source Sans Pro;
+  --font-paragraph: Optima;
 }
 
 .para {
-  font-family: var(--paragraph);
+  font-family: var(--font-paragraph);
 }
 .light-para {
   color: rgba(0, 0, 0, 0.8);
-  font-family: var(--paragraph);
+  font-family: var(--font-paragraph);
 }
 .dark-para {
   color: rgba(255, 255, 255, 0.8);
-  font-family: var(--paragraph);
+  font-family: var(--font-paragraph);
 }
 .light-heading {
-  font-family: var(--main-heading);
+  font-family: var(--font-heading);
+  color: rgb(0, 0, 0);
 }
 .dark-heading {
-  // color: rgb(var(--heading-red));
-  font-family: var(--main-heading);
-  // font-family: var(--paragraph);
-  color: rgb(var(--aqua-blue));
+  font-family: var(--font-heading);
+  color: rgb(var(--color-heading-red));
 }

@@ -6,15 +6,15 @@
   transition: all 0.3s ease-in-out;
 }
 .heading:hover {
-  color: rgba(var(--heading-pink));
+  color: rgb(var(--color-heading-red));
 }
 hr {
-  background-color: rgba(var(--heading-pink));
-  color: rgba(var(--heading-pink));
+  background-color: rgb(var(--color-heading-red));
+  color: rgb(var(--color-heading-red));
   height: 2px;
 }
 .main-heading-effect {
-  color: rgba(var(--heading-pink));
+  color: rgb(var(--color-heading-red));
 }
 .skillset-div {
   overflow-x: auto; /* Enable horizontal scrolling */

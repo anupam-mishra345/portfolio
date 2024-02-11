@@ -5,13 +5,14 @@
 .expertise-heading {
   font-size: 44px;
   transition: 0.3s ease-in-out;
+  font-family: var(--font-heading);
 }
 .expertise-heading:hover {
-  color: rgb(var(--heading-pink));
+  color: rgb(var(--color-heading-red));
 }
 hr {
-  background-color: rgba(var(--heading-pink));
-  color: rgb(var(--heading-pink));
+  background-color: rgb(var(--color-heading-red));
+  color: rgb(var(--color-heading-red));
   height: 2px;
 }
 .basic-para {
@@ -22,7 +23,7 @@ hr {
   font-size: 24px;
 }
 .main-heading-effect {
-  color: rgb(var(--heading-pink));
+  color: rgb(var(--color-heading-red));
 }
 
 @media screen and (max-width: 768px) {

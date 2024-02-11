@@ -8,24 +8,23 @@
   transition: 0.3s ease-in-out;
 }
 .main-heading-effect {
-  color: rgb(var(--heading-pink));
+  color: rgb(var(--color-heading-red));
 }
 
 .heading:hover {
-  color: rgb(var(--heading-pink));
+  color: rgb(var(--color-heading-redng-red));
 }
 .tools-heading {
   font-size: 24px;
-  // text-align: center;
 }
 .tool-div {
-  background-color: rgb(var(--heading-red), 0.2);
+  background-color: rgb(var(--color-heading-redng-red), 0.2);
   border-radius: 20px;
-  border: 1px solid rgb(var(--heading-red), 0.8);
+  border: 1px solid rgb(var(--color-heading-red), 0.8);
   transition: 0.5s ease-in-out;
 }
 .tool-div:hover {
-  background-color: rgb(var(--heading-red), 0.4);
+  background-color: rgb(var(--color-heading-red), 0.4);
   color: white;
 }
 .project-data {
@@ -35,19 +34,19 @@
 }
 
 hr {
-  background-color: rgba(var(--heading-pink));
-  color: rgba(var(--heading-pink));
+  background-color: rgba(var(--color-heading-red));
+  color: rgba(var(--color-heading-red));
   height: 2px;
 }
 
 .live-btn {
-  background-color: rgb(144, 26, 208);
+  background-color: rgb(var(--color-heading-red));
   border-radius: 10px;
   font-weight: 600;
   transition: 0.5s ease-in-out;
 }
 .back-btn {
-  border: 1px solid rgb(144, 26, 208);
+  border: 1px solid rgb(var(--color-heading-red));
   border-radius: 10px;
   font-weight: 600;
   transition: 0.5s ease-in-out;

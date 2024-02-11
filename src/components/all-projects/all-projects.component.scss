@@ -3,16 +3,16 @@
   transition: 0.3s ease-in-out;
 }
 .projects-heading:hover {
-  color: rgba(var(--heading-pink));
+  color: rgb(var(--color-heading-red));
 }
 
 hr {
-  background-color: rgba(var(--heading-pink));
-  color: rgba(var(--heading-pink));
+  background-color: rgb(var(--color-heading-red));
+  color: rgb(var(--color-heading-red));
   height: 2px;
 }
 .main-heading-effect {
-  color: rgba(var(--heading-pink));
+  color: rgb(var(--color-heading-red));
 }
 .project-div {
   width: 100%;

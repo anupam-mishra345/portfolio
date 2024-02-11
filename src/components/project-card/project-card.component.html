@@ -15,7 +15,11 @@
   </div>
   <div
     class="heading mx-auto"
-    [ngClass]="isDarkMode ? 'heading-dark' : 'heading-light'"
+    [ngClass]="{
+      'heading-dark': isDarkMode,
+      'heading-light': !isDarkMode,
+      'heading-hover': isDivHovered
+    }"
   >
     {{ projectData?.projectName }}
   </div>
