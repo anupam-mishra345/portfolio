@@ -2,13 +2,20 @@ export class Projects {
   public static projectsData = [
     {
       id: '498ead31-ba3f-4149-80b3-331586739d3a',
-      logo: './assets/task-planner.png',
+      logo: './assets/MyProjectsLogo/task-planner.png',
       projectScreenShot: './assets/task-planner-ss.png',
+      projectMockup: './assets/screenshots/Task-planner.png',
       projectName: 'Task-Planner',
       projectLink: 'https://anupam-mishra345.github.io/task-planner/',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Tailwind'],
+      technologies2: [
+        { name: 'Angular', logo: './assets/StackLogo/Angular.png' },
+        { name: 'TypeScript', logo: './assets/StackLogo/Typescript.png' },
+        { name: 'Tailwind', logo: './assets/StackLogo/Tailwind.png' },
+      ],
       cardInfo:
         'Task-Planner stands as a streamlined single-page application, designed to cater to individuals seeking an efficient and user-friendly platform for task management and follow-ups. Whether you are a professional, student, or anyone with tasks to manage, Task-Planner offers a seamless and intuitive experience to organize your task list comprehensively.',
+      duration: '3 weeks',
       year: 2024,
       overview: [
         "The Task-Planner project is born out of the essential need for a comprehensive bird's-eye view of tasks. Individuals frequently manage their tasks and deadlines, yet the inherent risk of overlooking crucial deadlines persists. Task-Planner serves as a self-directed solution, providing a range of attractive features and essential options to meticulously monitor and stay abreast of all tasks. With an intuitive interface and customizable features, Task-Planner empowers users to proactively manage their workload, ensuring deadlines are met efficiently and productivity is optimized. Elevate your task management experience with Task-Planner - your ally in staying organized and achieving your goals.",
@@ -29,14 +36,22 @@ export class Projects {
     },
     {
       id: 'c3a45c09-09bd-47eb-832f-6073f197caea',
-      logo: './assets/Footwear-PNG.png',
+      logo: './assets/MyProjectsLogo/Footwear-PNG.png',
       projectScreenShot: './assets/Footwear-ss.png',
-      projectName: 'Footwear Shopping',
+      projectMockup: './assets/screenshots/Shopping.png',
+      projectName: 'Footwear Shop',
       projectLink:
         'https://anupam-mishra345.github.io/Shopping-site.github.io/',
-      technologies: ['JavaScript', 'HTML', 'SCSS', 'Bootstrap'],
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+      technologies2: [
+        { name: 'HTML', logo: './assets/StackLogo/Html.png' },
+        { name: 'CSS', logo: './assets/StackLogo/Css.png' },
+        { name: 'Bootstrap', logo: './assets/StackLogo/Bootstrap.png' },
+        { name: 'JavaScript', logo: './assets/StackLogo/Javascript.png' },
+      ],
       cardInfo:
         'Footwear Shopping is an E-commerce project that reflects the same functionalities as other E-commerce websites.',
+      duration: '3 weeks',
       year: 2021,
       overview: [
         'The Footwear Shopping Project represents a foundational e-commerce prototype website, having essential product data such as name, brand, size, color, and images, facilitating a user-friendly shopping experience. Incorporated filters contribute to streamlining the browsing process, while multiple images for each product ensure comprehensive views. The implementation of JavaScript further elevates the overall user experience on the platform.',
@@ -51,14 +66,21 @@ export class Projects {
     },
     {
       id: '54c3aaac-ebed-4d53-b0b8-8e201a0a6b86',
-      logo: './assets/restaurant.png',
+      logo: './assets/MyProjectsLogo/Restaurent.png',
       projectScreenShot: './assets/restaurent-ss.png',
-      projectName: 'Restaurant Website',
+      projectMockup: './assets/screenshots/Restaurent.png',
+      projectName: 'Restaurant',
       projectLink:
         'https://anupam-mishra345.github.io/Restaurant/Restaurant.html',
       technologies: ['HTML', 'CSS', 'Bootstrap'],
+      technologies2: [
+        { name: 'HTML', logo: './assets/StackLogo/Html.png' },
+        { name: 'CSS', logo: './assets/StackLogo/Css.png' },
+        { name: 'Bootstrap', logo: './assets/StackLogo/Bootstrap.png' },
+      ],
       cardInfo:
         'This website stands as a sophisticated prototype, meticulously developed with a foundation of HTML, CSS, and Bootstrap technologies. The fusion of these cutting-edge web technologies ensures a visually appealing, responsive, and user-friendly interface that not only showcases our culinary prowess but also offers a seamless online experience for our valued patrons.',
+      duration: '3 weeks',
       year: 2020,
       overview: [
         'Experience the epitome of a culinary destination with our meticulously crafted restaurant website, designed to captivate and entice food enthusiasts to explore the exquisite offerings of our establishment. The menu, seamlessly integrated into the site, provides a tantalizing preview of the culinary delights that await. Indulge your senses and embark on a virtual gastronomic adventure through our restaurant website – where culinary excellence meets cutting-edge web design. Explore, discover, and anticipate an unparalleled dining experience.',
@@ -75,14 +97,21 @@ export class Projects {
     },
     {
       id: '852ed509-e270-4043-9dfa-67e812ddedfa',
-      logo: './assets/chatting-box.png',
+      logo: './assets/MyProjectsLogo/ChattingBox.png',
       projectScreenShot: './assets/chatting-box-ss.png',
+      projectMockup: './assets/screenshots/Chatting-box.png',
       projectName: 'Chatting Box',
       projectLink:
         'https://anupam-mishra345.github.io/Chatting-Box/Chatting.html',
       technologies: ['JavaScript', 'HTML', 'CSS'],
+      technologies2: [
+        { name: 'HTML', logo: './assets/StackLogo/Html.png' },
+        { name: 'CSS', logo: './assets/StackLogo/Css.png' },
+        { name: 'JavaScript', logo: './assets/StackLogo/Javascript.png' },
+      ],
       cardInfo:
         'The Chatting Box project is a self-learning prototype that adds every message as a new node in the HTML tree.',
+      duration: '3 weeks',
       year: 2020,
       overview: [
         'The Chatting Box prototype is a project designed to facilitate communication between two individuals. The user interface of this prototype closely mirrors the inbox layout of the WhatsApp application.',
@@ -95,14 +124,21 @@ export class Projects {
     },
     {
       id: 'c40b0ed9-0e6e-4af7-9e1a-0f94b9704dae',
-      logo: './assets/bank-application.png',
+      logo: './assets/MyProjectsLogo/BankApplication.png',
       projectScreenShot: './assets/bank-application-ss.png',
+      projectMockup: './assets/screenshots/Bank-application.png',
       projectName: 'Bank Application',
       projectLink:
         'https://anupam-mishra345.github.io/BankApplication/Oceanbank.html',
       technologies: ['JavaScript', 'HTML', 'CSS'],
+      technologies2: [
+        { name: 'HTML', logo: './assets/StackLogo/Html.png' },
+        { name: 'CSS', logo: './assets/StackLogo/Css.png' },
+        { name: 'JavaScript', logo: './assets/StackLogo/Javascript.png' },
+      ],
       cardInfo:
         'Embark on a journey of financial empowerment with our feature-rich banking website. Whether you seek real-time transaction insights, virtual banking experiences, or a variety of financial services, our platform is designed to cater to your every need. Your financial well-being is our priority. Explore the possibilities today.',
+      duration: '3 weeks',
       year: 2019,
       overview: [
         'Welcome to our comprehensive banking website, featuring multiple pages dedicated to showcasing a wide array of financial services. With a user-centric approach, our platform allows seamless access to various functionalities, ensuring an enriching and secure banking experience.',
@@ -118,14 +154,20 @@ export class Projects {
     },
     {
       id: '5e16553b-9b4d-4695-812f-e94d42eabc7b',
-      logo: './assets/real-estate.png',
+      logo: './assets/MyProjectsLogo/real-estate.png',
       projectScreenShot: './assets/real-estate-ss.png',
-      projectName: 'Real-Estate Website',
+      projectMockup: './assets/screenshots/Real-estate.png',
+      projectName: 'Real-Estate',
       projectLink:
         'https://anupam-mishra345.github.io/Real-estate/MaMaison.html',
       technologies: ['HTML', 'CSS'],
+      technologies2: [
+        { name: 'HTML', logo: './assets/StackLogo/Html.png' },
+        { name: 'CSS', logo: './assets/StackLogo/Css.png' },
+      ],
       cardInfo:
         'Welcome to our pioneering real estate website, representing the initial prototype project conceived during the learning phase. Crafted exclusively with pure HTML and CSS, this platform stands as a testament to the foundational skills acquired, offering a glimpse into the dynamic realm of real estate.',
+      duration: '3 weeks',
       year: 2019,
       overview: [
         'Embark on a virtual tour of the real estate market through our prototype website, where foundational coding expertise meets the dynamic world of property exploration. Witness the convergence of knowledge and innovation in real estate web development.',

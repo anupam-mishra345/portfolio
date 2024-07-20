@@ -1,0 +1,71 @@
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.dot-dark {
+  background-color: #000;
+}
+.dot-light {
+  background-color: #fff;
+}
+.bullet-text {
+  font-size: 20px;
+}
+.main-heading-text {
+  font-size: 80px;
+  word-break: break-word;
+}
+.overflow-div {
+  overflow-x: auto;
+}
+.project-name {
+  font-size: 24px;
+}
+.view-project {
+  font-size: 16px;
+}
+.project:hover {
+  .view-project,
+  .project-name {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+}
+.img-div {
+  overflow: hidden;
+  img {
+    transition: 0.2s all ease-in;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+}
+.btn-about-me {
+  font-size: 26px;
+  border: 1px solid;
+  border-radius: 50px;
+}
+i {
+  font-size: 30px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 940px) {
+  .grid-div {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-heading-text {
+    font-size: 40px;
+  }
+  .left-div {
+    position: sticky;
+    top: 150px;
+  }
+  .project {
+    position: sticky;
+    top: 240px;
+  }
+}

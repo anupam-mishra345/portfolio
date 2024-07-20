@@ -1,0 +1,79 @@
+.main-div {
+  position: fixed;
+  top: 0px;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  font-size: 16px;
+  transition: top 0.3s;
+  letter-spacing: 1px;
+  overflow: hidden;
+  z-index: 999999999;
+}
+.name {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+//Theme changing CSS
+.big-circle {
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid rgb(83, 82, 82);
+  transition: all 0.2s ease-in-out;
+}
+.small-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: all 0.7s ease-in-out;
+}
+.darkMode {
+  transform: translateX(42px);
+  background-color: #000;
+}
+.lightMode {
+  transform: translateX(2px);
+  background-color: #fff;
+}
+
+.desktop-div {
+  display: flex;
+}
+.mobile-div {
+  display: none;
+}
+.menu-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop-menu-item {
+    column-gap: 12px;
+  }
+  .desktop-div {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .desktop-div {
+    display: none;
+  }
+  .mobile-div {
+    display: flex;
+  }
+  .icon {
+    font-size: 28px;
+  }
+  .menu-item {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

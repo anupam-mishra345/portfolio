@@ -1,0 +1,76 @@
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.dot-dark {
+  background-color: #000;
+}
+.dot-light {
+  background-color: #fff;
+}
+.bullet-text {
+  font-size: 20px;
+}
+.about-me-para {
+  font-size: 24px;
+}
+.count {
+  font-size: 100px;
+}
+.count-heading {
+  font-size: 18px;
+}
+hr {
+  border-width: 1px;
+  border-radius: 5px;
+}
+.btn-about-me {
+  font-size: 26px;
+  border: 1px solid;
+  border-radius: 50px;
+  transition: 1s all;
+}
+.main-heading-text {
+  font-size: 80px;
+  word-break: break-word;
+}
+i {
+  font-size: 30px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 1260px) {
+  .main-div {
+    flex-direction: column;
+  }
+  .left-div,
+  .right-div {
+    width: 100%;
+  }
+  .main-heading-text {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-div {
+    flex-direction: column;
+  }
+  .left-div,
+  .right-div {
+    width: 100%;
+  }
+  .main-heading-text {
+    font-size: 40px;
+  }
+  .about-me-para {
+    font-size: 16px;
+  }
+  .count-main-div {
+    flex-direction: column;
+  }
+  .count-div {
+    width: 100%;
+  }
+}

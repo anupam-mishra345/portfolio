@@ -1,0 +1,81 @@
+<div class="px-10">
+  <div>
+    <div class="left-div">
+      <div class="flex">
+        <div
+          class="dot transition-effect self-center"
+          [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+        ></div>
+        <div
+          class="bullet-text transition-effect self-center px-5"
+          [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        >
+          PROJECTS
+        </div>
+      </div>
+      <div
+        class="main-heading-text"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        WHAT I OWN FOR TIMEPASS
+      </div>
+    </div>
+    <div class="grid-div grid grid-cols-2 gap-8 w-full">
+      <div
+        class="project w-full flex flex-col cursor-pointer"
+        *ngFor="let project of projectData"
+        [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+      >
+        <div class="img-div rounded-md">
+          <img
+            [src]="project.projectMockup"
+            class="mx-auto self-center rounded-md"
+            alt=""
+            height="auto"
+            width="100%"
+          />
+        </div>
+        <div class="flex mt-2">
+          <div
+            *ngIf="project.projectName !== 'Real-Estate'"
+            class="logo h-[50px] w-[50px] flex self-center"
+          >
+            <img
+              [src]="project.logo"
+              class="self-center"
+              alt="logo"
+              height="50px"
+              width="50px"
+            />
+          </div>
+          <div
+            *ngIf="project.projectName === 'Real-Estate'"
+            class="logo h-[40px] w-[40px] flex self-center mt-[5px] mb-[5px]"
+          >
+            <img
+              [src]="project.logo"
+              class="self-center"
+              alt="logo"
+              height="40px"
+              width="40px"
+            />
+          </div>
+          <div class="project-name cursor-pointer self-center pl-3">
+            {{ project.projectName }}
+          </div>
+          <!-- <div class="view-project cursor-pointer ml-auto mt-2">Details</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-10 text-center">
+    <div
+      class="btn-about-me animation-div transition-effect w-fit mx-auto px-10 py-5 cursor-pointer"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      (click)="viewAllProjects()"
+    >
+      <div class="animation-text">View Clients</div>
+      <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>
+    </div>
+  </div>
+</div>

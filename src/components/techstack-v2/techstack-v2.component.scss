@@ -1,0 +1,35 @@
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.dot-dark {
+  background-color: #000;
+}
+.dot-light {
+  background-color: #fff;
+}
+.stack-text {
+  font-size: 20px;
+}
+.techstack-div {
+  border-bottom: 1px solid white;
+}
+.techstack-heading-text {
+  font-size: 80px;
+}
+.stack-name {
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .main-div {
+    flex-direction: column;
+  }
+  .left-div,
+  .right-div {
+    width: 100%;
+  }
+  .techstack-heading-text {
+    font-size: 40px;
+  }
+}

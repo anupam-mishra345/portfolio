@@ -1,0 +1,116 @@
+<div class="main-div py-20">
+  <div class="left-div w-full pt-[100px] px-10">
+    <div
+      class="project-name flex transition-effect"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      <div class="project-logo w-[300px] self-center">
+        <img [src]="projectData.logo" alt="" />
+      </div>
+      <div class="self-center ml-10">
+        {{ projectData.projectName | uppercase }}
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div
+    class="project-info-div my-20 px-10 flex transition-effect"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    <div class="project-info1 flex w-1/2">
+      <div class="project-year flex flex-col w-1/2">
+        <div>Year</div>
+        <div>
+          {{ projectData.year }}
+        </div>
+      </div>
+      <div class="project-year flex flex-col w-1/2">
+        <div>Duration</div>
+        <div>
+          {{ projectData.duration }}
+        </div>
+      </div>
+    </div>
+    <div class="project-info2 ml-auto text-right w-1/2">
+      {{ projectData.cardInfo }}
+    </div>
+  </div>
+
+  <div class="mockup-img my-20">
+    <!-- <div
+      class="mockup-img my-20 w-full h-[100vh]"
+      [ngStyle]="{
+        'background-image': 'url(' + projectData.projectMockup + ')',
+      }"
+      style="
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      "
+    > -->
+    <img [src]="projectData.projectMockup" alt="" width="100%" height="auto" />
+  </div>
+
+  <hr />
+
+  <div
+    class="my-20 px-10 transition-effect"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    <div class="flex">
+      <div
+        class="dot transition-effect self-center"
+        [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+      ></div>
+      <div
+        class="overview-text transition-effect self-center px-5"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        Overview
+      </div>
+    </div>
+    <div class="overview-div flex mt-5">
+      <div class="project-overview w-3/5">
+        {{ projectData.overview }}
+      </div>
+      <div
+        class="stack-list transition-effect px-20 w-2/5"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        <div class="stack-text w-fit mx-auto">
+          <div class="self-center mb-5">Tech stack used</div>
+          <div
+            class="mt-3 transition-effect flex"
+            *ngFor="let stack of projectData.technologies2"
+            [ngClass]="isDarkMode ? 'stack-list-light' : 'stack-list-dark'"
+          >
+            <div
+              class="w-[30px] h-auto mx-4"
+              [ngClass]="stack.name === 'Tailwind' ? 'mt-2' : ''"
+            >
+              <img [src]="stack.logo" alt="" />
+            </div>
+            <div>
+              {{ stack.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-20 text-center">
+      <div
+        class="view-project animation-div transition-effect cursor-pointer w-fit px-10 py-5 text-center"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        <div class="animation-text">View Project</div>
+        <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <!-- <div>
+    <div>CHECK OUT SOME MORE</div>
+  </div> -->
+</div>

@@ -1,0 +1,70 @@
+.heading {
+  font-size: 110px;
+  font-weight: 500;
+}
+
+.logo-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.logo-list {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.logo-item img {
+  height: 60px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+/* Add this CSS to pause the animation on hover */
+.logo-container:hover .logo-list {
+  animation-play-state: paused;
+}
+.logo-container:hover {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.logo-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.logo-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@media screen and (max-width: 940px) {
+  .heading {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 40px;
+  }
+  .logo-list {
+    animation: scroll 20s linear infinite;
+  }
+  .logo-item {
+    margin-left: 20px;
+  }
+}

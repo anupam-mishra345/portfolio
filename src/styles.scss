@@ -9,6 +9,84 @@
   // --font-paragraph: Source Sans Pro;
   --font-paragraph: Optima;
 }
+* {
+  font-family: Inter, sans-serif;
+}
+.transition-effect {
+  transition: all 1s ease-in-out;
+}
+.text-dark {
+  color: #000;
+}
+.text-light {
+  color: #fff;
+}
+.bg-dark {
+  background-color: #000;
+}
+.bg-light {
+  background-color: #fff;
+}
+
+// Animation Css
+
+.animation-div {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.animation-text,
+.animation-icon {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.animation-div:hover .animation-text {
+  animation: slideOut 0.3s forwards, slideIn 0.2s forwards 0.1s;
+}
+
+.animation-div:hover .animation-icon {
+  animation: slideOut45deg 0.3s forwards, slideIn45deg 0.2s forwards 0.1s;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-150%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut45deg {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  100% {
+    transform: translate(70px, -70px) rotate(-45deg);
+  }
+}
+
+@keyframes slideIn45deg {
+  0% {
+    transform: translate(-70px, 70px) rotate(-45deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-45deg);
+  }
+}
+// end of animation
 
 .para {
   font-family: var(--font-paragraph);

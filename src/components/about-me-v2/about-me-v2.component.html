@@ -1,0 +1,63 @@
+<div class="main-div flex px-10">
+  <div class="left-div w-1/2 mb-auto">
+    <div class="flex">
+      <div
+        class="dot transition-effect self-center"
+        [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+      ></div>
+      <div
+        class="bullet-text transition-effect self-center px-5"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        ABOUT ME
+      </div>
+    </div>
+    <div
+      class="main-heading-text"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      MY SHORT PROFESSIONAL BIO
+    </div>
+  </div>
+  <div class="right-div w-1/2">
+    <div
+      class="transition-effect about-me-para"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      I am a dedicated and innovative software engineer with experience in
+      designing and developing robust, scalable, and high-performance
+      applications. My passion for problem-solving drives my commitment to
+      crafting efficient code and finding elegant solutions to complex technical
+      challenges.
+    </div>
+    <div
+      class="count-main-div transition-effect flex"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      <div class="count-div w-1/3 mr-10">
+        <div class="count">6+</div>
+        <hr class="mb-2" />
+        <div class="count-heading">Client Projects</div>
+      </div>
+      <div class="count-div w-1/3 mr-10">
+        <div class="count">6+</div>
+        <hr class="mb-2" />
+        <div class="count-heading">My own Projects</div>
+      </div>
+      <div class="count-div w-1/3">
+        <div class="count">3+</div>
+        <hr class="mb-2" />
+        <div class="count-heading">Years of Experience</div>
+      </div>
+    </div>
+    <div class="my-10 cursor-pointer">
+      <div
+        class="btn-about-me animation-div transition-effect flex w-fit px-10 py-5"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        <div class="animation-text">More About Me</div>
+        <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>
+      </div>
+    </div>
+  </div>
+</div>

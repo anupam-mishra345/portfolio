@@ -1,0 +1,38 @@
+<div class="main-div flex px-10">
+  <div class="left-div sticky top-[150px] w-1/2 mb-auto">
+    <div class="flex">
+      <div
+        class="dot transition-effect self-center"
+        [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+      ></div>
+      <div
+        class="testimonial-text transition-effect self-center px-5"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        TESTIMONIALS
+      </div>
+    </div>
+    <div
+      class="managers-text"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      WHAT MY MANAGERS SAY
+    </div>
+  </div>
+  <div class="right-div w-1/2">
+    <div
+      *ngFor="let remark of remarks; let i = index"
+      class="position-div px-5 py-20 sticky top-[180px] w-full"
+      [ngClass]="[
+        isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light',
+        i < remarks.length - 1 ? 'remark-div' : ''
+      ]"
+    >
+      <div class="mb-5">
+        <span>{{ i < 10 ? "0" : "" }}</span
+        >{{ i + 1 }}
+      </div>
+      <div>"{{ remark }}"</div>
+    </div>
+  </div>
+</div>

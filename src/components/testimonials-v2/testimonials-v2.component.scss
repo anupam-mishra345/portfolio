@@ -1,0 +1,37 @@
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.dot-dark {
+  background-color: #000;
+}
+.dot-light {
+  background-color: #fff;
+}
+.testimonial-text {
+  font-size: 20px;
+}
+.remark-div {
+  border-bottom: 1px solid white;
+}
+.managers-text {
+  font-size: 80px;
+}
+@media screen and (max-width: 1260px) {
+  .main-div {
+    flex-direction: column;
+  }
+  .left-div,
+  .right-div {
+    width: 100%;
+  }
+  .managers-text {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .managers-text {
+    font-size: 40px;
+  }
+}

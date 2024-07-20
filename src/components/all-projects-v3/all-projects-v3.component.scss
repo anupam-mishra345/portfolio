@@ -1,0 +1,47 @@
+.heading {
+  font-size: 110px;
+  font-weight: 500;
+}
+hr {
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.project-name {
+  font-size: 24px;
+}
+.view-project {
+  font-size: 16px;
+}
+.project:hover {
+  .view-project,
+  .project-name {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+}
+.img-div {
+  overflow: hidden;
+  img {
+    transition: 0.2s all ease-in;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+}
+@media screen and (max-width: 940px) {
+  .grid-div {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 60px;
+  }
+
+  .project {
+    position: sticky;
+    top: 240px;
+  }
+}

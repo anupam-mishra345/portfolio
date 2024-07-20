@@ -1,0 +1,47 @@
+<div class="main-div px-10">
+  <div class="left-div w-full pt-[100px]">
+    <div
+      class="techstack-heading-text"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      MY TECH TOOL BOX
+    </div>
+    <hr class="my-10" />
+  </div>
+  <div class="right-div w-full transition-effect">
+    <div
+      *ngFor="let techstack of techstacks; let i = index"
+      class="techstack-div py-10 transition-effect"
+      [ngClass]="[
+        isDarkMode
+          ? 'text-light bg-dark border-dark'
+          : 'text-dark bg-light border-light',
+        i > techstacks.length - 2 ? 'no-border-bottom' : ''
+      ]"
+    >
+      <div class="flex">
+        <div class="logo-div">
+          <img
+            class="w-full"
+            [src]="techstack?.logo"
+            alt="logo"
+            height="50px"
+            width="50px"
+          />
+        </div>
+        <div class="flex flex-col w-full ml-10">
+          <div>
+            <div class="stack-name">{{ techstack?.name }}</div>
+            <div class="mb-4">{{ techstack.info }}</div>
+          </div>
+          <div class="techstack-info-desktop mt-4">
+            "{{ techstack?.description }}"
+          </div>
+        </div>
+      </div>
+      <div class="techstack-info-mobile mt-4">
+        "{{ techstack?.description }}"
+      </div>
+    </div>
+  </div>
+</div>

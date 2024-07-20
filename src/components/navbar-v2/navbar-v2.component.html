@@ -1,0 +1,120 @@
+<div
+  class="main-div flex flex-col"
+  [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+>
+  <div class="desktop-div flex h-[80px] px-20">
+    <div
+      class="desktop-menu-item flex gap-x-10 self-center transition-effect"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      <div
+        class="animation-div cursor-pointer"
+        (click)="navigateTo('/home-v2')"
+      >
+        <div class="animation-text">HOME</div>
+      </div>
+      <div class="animation-div cursor-pointer">
+        <div class="animation-text">ABOUT</div>
+      </div>
+      <div
+        class="animation-div cursor-pointer"
+        (click)="navigateTo('/techstack-v3')"
+      >
+        <div class="animation-text">STACK</div>
+      </div>
+    </div>
+    <div
+      class="name animation-div mx-auto self-center cursor-pointer transition-effect"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      (click)="navigateTo('/home-v2')"
+    >
+      <div class="animation-text">ANUPAM MISHRA</div>
+    </div>
+    <div
+      class="desktop-menu-item flex gap-x-10 self-center transition-effect"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+    >
+      <div
+        class="big-circle flex mx-4 cursor-pointer transition-effect"
+        [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'"
+        (click)="changeTheme()"
+      >
+        <div
+          class="small-circle self-center flex"
+          [ngClass]="isDarkMode ? 'darkMode' : 'lightMode'"
+        >
+          <i
+            *ngIf="isDarkMode"
+            class="moon fa-solid fa-moon mx-auto my-auto"
+          ></i>
+          <i
+            *ngIf="!isDarkMode"
+            class="sun fa-solid fa-sun mx-auto my-auto"
+            style="color: orange"
+          ></i>
+        </div>
+      </div>
+      <div
+        class="animation-div cursor-pointer"
+        (click)="navigateTo('/all-projects-v3')"
+      >
+        <div class="animation-text">PROJECTS</div>
+      </div>
+      <div class="animation-div cursor-pointer">
+        <div class="animation-text">CONTACT</div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-div h-[80px] justify-around">
+    <div
+      class="name cursor-pointer self-center transition-effect"
+      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      (click)="navigateTo('/home-v2')"
+    >
+      ANUPAM MISHRA
+    </div>
+    <div class="self-center">
+      <i
+        *ngIf="!isMenuOpen"
+        class="fa-solid fa-bars icon"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        (click)="showMenu(true)"
+      ></i>
+      <i
+        *ngIf="isMenuOpen"
+        class="fa-solid fa-xmark icon"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        (click)="showMenu(false)"
+      ></i>
+    </div>
+  </div>
+  <div
+    class="mobile-div menu-list flex-col mx-auto transition-effect"
+    #menu_list
+  >
+    <div
+      class="menu-item big-circle flex transition-effect"
+      [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'"
+      (click)="changeTheme()"
+    >
+      <div
+        class="small-circle self-center flex"
+        [ngClass]="isDarkMode ? 'darkMode' : 'lightMode'"
+      >
+        <i *ngIf="isDarkMode" class="moon fa-solid fa-moon mx-auto my-auto"></i>
+        <i
+          *ngIf="!isDarkMode"
+          class="sun fa-solid fa-sun mx-auto my-auto"
+          style="color: orange"
+        ></i>
+      </div>
+    </div>
+    <div class="menu-item mt-1" (click)="navigateTo('/home-v2')">HOME</div>
+    <div class="menu-item">ABOUT</div>
+    <div class="menu-item" (click)="navigateTo('/techstack-v3')">STACK</div>
+    <div class="menu-item" (click)="navigateTo('/all-projects-v3')">
+      PROJECTS
+    </div>
+    <div class="menu-item">CONTACT</div>
+  </div>
+</div>

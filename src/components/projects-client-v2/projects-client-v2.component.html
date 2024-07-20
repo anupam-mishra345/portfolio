@@ -1,0 +1,31 @@
+<div class="main-div transition-effect">
+  <div
+    class="heading transition-effect"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    Client's Project I have worked on
+  </div>
+
+  <div class="logo-container my-20">
+    <div class="logo-list">
+      <div class="logo-item ml-20" *ngFor="let client of clients">
+        <img
+          [src]="isDarkMode ? client.logoDark : client.logoLight"
+          [alt]="client.name"
+        />
+      </div>
+      <div class="logo-item ml-20" *ngFor="let client of clients">
+        <img
+          [src]="isDarkMode ? client.logoDark : client.logoLight"
+          [alt]="client.name"
+        />
+      </div>
+      <div class="logo-item ml-20" *ngFor="let client of clients">
+        <img
+          [src]="isDarkMode ? client.logoDark : client.logoLight"
+          [alt]="client.name"
+        />
+      </div>
+    </div>
+  </div>
+</div>
