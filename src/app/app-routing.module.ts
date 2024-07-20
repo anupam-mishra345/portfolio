@@ -11,7 +11,7 @@ import { TechstackV3Component } from 'src/components/techstack-v3/techstack-v3.c
 import { ProjectDetailsV2Component } from 'src/components/project-details-v2/project-details-v2.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home-v2', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'expertise', component: ExpertiseComponent },
   {
