@@ -1,4 +1,10 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { ThemeService } from 'src/services/theme.service';
 
@@ -10,12 +16,15 @@ import { ThemeService } from 'src/services/theme.service';
 export class NavbarV2Component {
   isDarkMode: boolean = false;
   isMenuOpen: boolean = false;
+  insideHammerBtn: boolean = false;
   @ViewChild('menu_list') menu_list!: ElementRef;
+  @ViewChild('main_div') main_div!: ElementRef;
 
   constructor(
     private router: Router,
     private renderer: Renderer2,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private eRef: ElementRef
   ) {}
 
   ngOnInit() {
@@ -34,21 +43,26 @@ export class NavbarV2Component {
     this.router.navigateByUrl(path);
     this.showMenu(false);
   }
+  contactMe() {
+    this.showMenu(false);
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
 
   showMenu(displayMenu: boolean) {
     this.isMenuOpen = displayMenu;
     this.animationFun();
+    this.insideHammerBtn = displayMenu;
   }
 
   animationFun() {
     if (this.isMenuOpen) {
       setTimeout(() => {
         // Set height to auto to calculate the scrollHeight
-        this.renderer.setStyle(
-          this.menu_list.nativeElement,
-          'max-height',
-          'none'
-        );
+        // this.renderer.setStyle(
+        //   this.menu_list.nativeElement,
+        //   'max-height',
+        //   'none'
+        // );
         const scrollHeight = this.menu_list.nativeElement.scrollHeight;
         this.renderer.setStyle(this.menu_list.nativeElement, 'max-height', '0');
 
@@ -76,5 +90,17 @@ export class NavbarV2Component {
         this.renderer.setStyle(this.menu_list.nativeElement, 'max-height', '0');
       }, 0);
     }
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    if (
+      this.isMenuOpen &&
+      !this.insideHammerBtn &&
+      !this.main_div.nativeElement.contains(event.target)
+    ) {
+      this.showMenu(false);
+    }
+    this.insideHammerBtn = false;
   }
 }

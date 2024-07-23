@@ -24,6 +24,7 @@ import { ProjectsClientV2Component } from 'src/components/projects-client-v2/pro
 import { NavbarV2Component } from 'src/components/navbar-v2/navbar-v2.component';
 import { TechstackV3Component } from 'src/components/techstack-v3/techstack-v3.component';
 import { ProjectDetailsV2Component } from 'src/components/project-details-v2/project-details-v2.component';
+import { FooterV2Component } from 'src/components/footer-v2/footer-v2.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ProjectDetailsV2Component } from 'src/components/project-details-v2/pro
     NavbarV2Component,
     TechstackV3Component,
     ProjectDetailsV2Component,
+    FooterV2Component,
   ],
   imports: [
     BrowserModule,

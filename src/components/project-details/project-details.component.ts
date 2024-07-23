@@ -43,9 +43,7 @@ export class ProjectDetailsComponent {
     });
     this.divHeight =
       this.mainRight.nativeElement.getBoundingClientRect().height;
-    console.log(this.divHeight);
     this.cdr.detectChanges();
-    // console.log(this.mainRight.nativeElement.);
   }
   ngAfterViewInit() {
     this.setRemainingHeight();

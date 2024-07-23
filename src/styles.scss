@@ -88,6 +88,15 @@
 }
 // end of animation
 
+.btn-click-animation-dark:active {
+  background-color: #000;
+  transition: 0.5s;
+}
+.btn-click-animation-light:active {
+  background-color: #fff;
+  transition: 0.5s;
+}
+
 .para {
   font-family: var(--font-paragraph);
 }

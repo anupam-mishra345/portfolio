@@ -29,8 +29,8 @@ hr {
   font-size: 26px;
   border: 1px solid;
   border-radius: 50px;
-  transition: 1s all;
 }
+
 .main-heading-text {
   font-size: 80px;
   word-break: break-word;
@@ -43,6 +43,7 @@ i {
 @media screen and (max-width: 1260px) {
   .main-div {
     flex-direction: column;
+    padding: 0;
   }
   .left-div,
   .right-div {
@@ -50,6 +51,9 @@ i {
   }
   .main-heading-text {
     font-size: 60px;
+  }
+  .btn-center {
+    text-align: center;
   }
 }
 
@@ -72,5 +76,10 @@ i {
   }
   .count-div {
     width: 100%;
+  }
+  .btn-about-me {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

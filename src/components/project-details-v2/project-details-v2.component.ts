@@ -20,7 +20,6 @@ export class ProjectDetailsV2Component {
     this.projectData = this.allProjectData.filter(
       (elem: any) => elem.id === id
     )[0];
-    console.log(this.projectData);
   }
 
   ngOnInit() {
@@ -28,5 +27,9 @@ export class ProjectDetailsV2Component {
       this.isDarkMode = theme;
     });
     scrollTo(0, 0);
+  }
+
+  visitProject() {
+    window.open(this.projectData.projectLink, '_blank');
   }
 }

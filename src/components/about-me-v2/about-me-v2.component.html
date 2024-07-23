@@ -13,7 +13,7 @@
       </div>
     </div>
     <div
-      class="main-heading-text"
+      class="main-heading-text transition-effect"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
     >
       MY SHORT PROFESSIONAL BIO
@@ -50,10 +50,14 @@
         <div class="count-heading">Years of Experience</div>
       </div>
     </div>
-    <div class="my-10 cursor-pointer">
+    <div class="btn-center my-10 cursor-pointer">
       <div
         class="btn-about-me animation-div transition-effect flex w-fit px-10 py-5"
-        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        [ngClass]="
+          isDarkMode
+            ? 'text-light btn-click-animation-light'
+            : 'text-dark btn-click-animation-dark'
+        "
       >
         <div class="animation-text">More About Me</div>
         <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>

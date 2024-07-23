@@ -31,6 +31,15 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .main-div {
+    padding: 0;
+  }
+  .left-div {
+    top: 100px;
+  }
+  .position-div {
+    top: 140px;
+  }
   .managers-text {
     font-size: 40px;
   }

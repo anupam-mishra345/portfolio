@@ -13,35 +13,63 @@
       </div>
     </div>
     <div
-      class="techstack-heading-text"
+      class="techstack-heading-text transition-effect"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
     >
       MY TECH TOOL BOX
     </div>
   </div>
-  <div class="right-div w-1/2">
+  <div
+    class="right-div w-1/2 transition-effect"
+    [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+  >
+    <div>
+      <div
+        *ngFor="let techstack of techstacks; let i = index"
+        class="position-div px-5 py-20 sticky top-[180px] transition-effect"
+        [ngClass]="[
+          isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light',
+          i < techstacks.length - 1 ? 'techstack-div' : ''
+        ]"
+      >
+        <div class="mb-5">
+          <span>{{ i < 10 ? "0" : "" }}</span
+          >{{ i + 1 }}
+        </div>
+        <div class="flex">
+          <div class="self-center">
+            <img
+              [src]="techstack?.logo"
+              alt="logo"
+              height="40px"
+              width="40px"
+            />
+          </div>
+          <div class="ml-3 mt-2 self-center">
+            <div class="stack-name">{{ techstack?.name }}</div>
+            <div class="mb-4">{{ techstack.info }}</div>
+          </div>
+        </div>
+        <div>"{{ techstack?.description }}"</div>
+      </div>
+    </div>
+
     <div
-      *ngFor="let techstack of techstacks; let i = index"
-      class="px-5 py-20 sticky top-[180px]"
-      [ngClass]="[
-        isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light',
-        i < techstacks.length - 1 ? 'techstack-div' : ''
-      ]"
+      class="py-10 text-center relative transition-effect"
+      [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
     >
-      <div class="mb-5">
-        <span>{{ i < 10 ? "0" : "" }}</span
-        >{{ i + 1 }}
+      <div
+        class="view-all-stack-btn animation-div transition-effect w-fit mx-auto px-10 py-5 cursor-pointer"
+        [ngClass]="
+          isDarkMode
+            ? 'text-light btn-click-animation-light'
+            : 'text-dark btn-click-animation-dark'
+        "
+        (click)="viewAllStacks()"
+      >
+        <div class="animation-text">View All Stacks</div>
+        <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>
       </div>
-      <div class="flex">
-        <div class="self-center">
-          <img [src]="techstack?.logo" alt="logo" height="40px" width="40px" />
-        </div>
-        <div class="ml-3 mt-2 self-center">
-          <div class="stack-name">{{ techstack?.name }}</div>
-          <div class="mb-4">{{ techstack.info }}</div>
-        </div>
-      </div>
-      <div>"{{ techstack?.description }}"</div>
     </div>
   </div>
 </div>

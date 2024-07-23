@@ -13,7 +13,7 @@
       </div>
     </div>
     <div
-      class="managers-text"
+      class="managers-text transition-effect"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
     >
       WHAT MY MANAGERS SAY
@@ -22,7 +22,7 @@
   <div class="right-div w-1/2">
     <div
       *ngFor="let remark of remarks; let i = index"
-      class="position-div px-5 py-20 sticky top-[180px] w-full"
+      class="position-div px-5 py-20 sticky top-[180px] w-full transition-effect"
       [ngClass]="[
         isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light',
         i < remarks.length - 1 ? 'remark-div' : ''

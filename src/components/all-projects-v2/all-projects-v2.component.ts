@@ -24,4 +24,9 @@ export class AllProjectsV2Component {
   viewAllProjects() {
     this.router.navigate(['/all-projects-v3']);
   }
+
+  navigateTo(id: string) {
+    const url = '/project-details-v2/' + id;
+    this.router.navigate([url]);
+  }
 }

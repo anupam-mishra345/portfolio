@@ -13,7 +13,7 @@
   font-size: 20px;
 }
 .techstack-div {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid;
 }
 .techstack-heading-text {
   font-size: 80px;
@@ -21,11 +21,28 @@
 .stack-name {
   font-size: 20px;
 }
+.view-all-stack-btn {
+  font-size: 26px;
+  border: 1px solid;
+  border-radius: 50px;
+}
+i {
+  font-size: 30px;
+  transform: rotate(-45deg);
+}
+
 @media screen and (max-width: 768px) {
   .main-div {
     flex-direction: column;
+    padding: 0;
   }
-  .left-div,
+  .left-div {
+    width: 100%;
+    top: 100px;
+  }
+  .position-div {
+    top: 140px;
+  }
   .right-div {
     width: 100%;
   }

@@ -1,6 +1,7 @@
 <div
   class="main-div flex flex-col"
   [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  #main_div
 >
   <div class="desktop-div flex h-[80px] px-20">
     <div
@@ -35,7 +36,7 @@
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
     >
       <div
-        class="big-circle flex mx-4 cursor-pointer transition-effect"
+        class="big-circle flex mx-4 cursor-pointer"
         [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'"
         (click)="changeTheme()"
       >
@@ -60,7 +61,7 @@
       >
         <div class="animation-text">PROJECTS</div>
       </div>
-      <div class="animation-div cursor-pointer">
+      <div class="animation-div cursor-pointer" (click)="contactMe()">
         <div class="animation-text">CONTACT</div>
       </div>
     </div>
@@ -82,7 +83,7 @@
       ></i>
       <i
         *ngIf="isMenuOpen"
-        class="fa-solid fa-xmark icon"
+        class="fa-solid fa-xmark icon transition-effect"
         [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
         (click)="showMenu(false)"
       ></i>
@@ -109,12 +110,25 @@
         ></i>
       </div>
     </div>
-    <div class="menu-item mt-1" (click)="navigateTo('/home-v2')">HOME</div>
-    <div class="menu-item">ABOUT</div>
-    <div class="menu-item" (click)="navigateTo('/techstack-v3')">STACK</div>
-    <div class="menu-item" (click)="navigateTo('/all-projects-v3')">
+    <div
+      class="menu-item mt-1 transition-effect"
+      (click)="navigateTo('/home-v2')"
+    >
+      HOME
+    </div>
+    <div class="menu-item transition-effect">ABOUT</div>
+    <div
+      class="menu-item transition-effect"
+      (click)="navigateTo('/techstack-v3')"
+    >
+      STACK
+    </div>
+    <div
+      class="menu-item transition-effect"
+      (click)="navigateTo('/all-projects-v3')"
+    >
       PROJECTS
     </div>
-    <div class="menu-item">CONTACT</div>
+    <div class="menu-item transition-effect" (click)="contactMe()">CONTACT</div>
   </div>
 </div>

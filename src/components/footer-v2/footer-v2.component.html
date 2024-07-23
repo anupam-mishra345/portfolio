@@ -1,0 +1,65 @@
+<div
+  class="footer-main-div pt-10 py-5 transition-effect"
+  [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+>
+  <div *ngIf="hoveringElement === ''" class="my-name text-center px-[50px]">
+    <span>LET'S COLLABORATE</span>
+  </div>
+
+  <div class="about-div para text-center mx-[200px] mt-5">
+    <div>
+      I am always eager to take on new challenges and collaborate on exciting
+      projects. If you are looking for a dedicated web developer who can bring
+      your ideas to life, let's connect!
+    </div>
+    <div>
+      Feel free to explore my portfolio and get in touch for potential
+      collaborations or inquiries.
+    </div>
+  </div>
+  <div class="flex mt-10 gap-4 justify-center">
+    <div
+      class="desktop-div cursor-pointer"
+      *ngFor="let social of socialPlatformData"
+    >
+      <div
+        class="social animation-div text-center"
+        [ngClass]="
+          social.name === 'Email' || social.name === 'Github'
+            ? 'border-black'
+            : 'border-black'
+        "
+      >
+        <a
+          class="animation-text h-full w-full"
+          [href]="social.link"
+          target="_blank"
+        >
+          <i class="my-auto" [ngClass]="[social.icons, 'text-[#000]']"></i>
+          <img [src]="social.logo" alt="" />
+        </a>
+      </div>
+    </div>
+    <div
+      class="mobile-div cursor-pointer"
+      *ngFor="let social of socialPlatformData"
+    >
+      <div
+        class="social text-center"
+        [ngClass]="
+          social.name === 'Email' || social.name === 'Github'
+            ? 'border-black'
+            : 'border-black'
+        "
+      >
+        <a class="h-full w-full" [href]="social.link" target="_blank">
+          <img [src]="social.logo" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="credit-div para flex justify-center pt-3 text-lg">
+    Designed and Coded by Me with
+    <span>&hearts;</span>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<div class="px-10">
+<div class="main-div px-10">
   <div>
     <div class="left-div">
       <div class="flex">
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div
-        class="main-heading-text"
+        class="main-heading-text transition-effect"
         [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
       >
         WHAT I OWN FOR TIMEPASS
@@ -22,14 +22,15 @@
     </div>
     <div class="grid-div grid grid-cols-2 gap-8 w-full">
       <div
-        class="project w-full flex flex-col cursor-pointer"
+        class="project w-full flex flex-col cursor-pointer transition-effect"
         *ngFor="let project of projectData"
         [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+        (click)="navigateTo(project.id)"
       >
-        <div class="img-div rounded-md">
+        <div class="img-div">
           <img
             [src]="project.projectMockup"
-            class="mx-auto self-center rounded-md"
+            class="mx-auto self-center"
             alt=""
             height="auto"
             width="100%"
@@ -71,7 +72,11 @@
   <div class="py-10 text-center">
     <div
       class="btn-about-me animation-div transition-effect w-fit mx-auto px-10 py-5 cursor-pointer"
-      [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      [ngClass]="
+        isDarkMode
+          ? 'text-light btn-click-animation-light'
+          : 'text-dark btn-click-animation-dark'
+      "
       (click)="viewAllProjects()"
     >
       <div class="animation-text">View Clients</div>

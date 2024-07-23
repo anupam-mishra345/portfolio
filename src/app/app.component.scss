@@ -9,6 +9,11 @@
 .darkTheme {
   background-color: #000;
 }
+hr {
+  margin: 40px 40px;
+  border-radius: 10px;
+  border-width: 2px;
+}
 @media screen and (max-width: 1260px) {
   .main-page {
     width: 100%;

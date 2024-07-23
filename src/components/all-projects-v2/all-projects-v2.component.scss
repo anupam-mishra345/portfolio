@@ -57,15 +57,18 @@ i {
   }
 }
 @media screen and (max-width: 768px) {
+  .main-div {
+    padding: 0;
+  }
   .main-heading-text {
     font-size: 40px;
   }
   .left-div {
     position: sticky;
-    top: 150px;
+    top: 100px;
   }
   .project {
     position: sticky;
-    top: 240px;
+    top: 140px;
   }
 }

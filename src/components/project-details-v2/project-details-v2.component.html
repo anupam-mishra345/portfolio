@@ -101,9 +101,14 @@
     <div class="mt-20 text-center">
       <div
         class="view-project animation-div transition-effect cursor-pointer w-fit px-10 py-5 text-center"
-        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        [ngClass]="
+          isDarkMode
+            ? 'text-light btn-click-animation-light'
+            : 'text-dark btn-click-animation-dark'
+        "
+        (click)="visitProject()"
       >
-        <div class="animation-text">View Project</div>
+        <div class="animation-text">Visit Project</div>
         <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>
       </div>
     </div>
