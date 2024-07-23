@@ -29,19 +29,27 @@ hr {
     transform: scale(1.05);
   }
 }
+.main-heading-div {
+  font-size: 110px;
+}
+
 @media screen and (max-width: 940px) {
   .grid-div {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .heading {
+    font-size: 60px;
+  }
+  .main-heading-div {
+    font-size: 60px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .heading {
-    font-size: 60px;
+    font-size: 40px;
   }
-
-  .project {
-    position: sticky;
-    top: 240px;
+  .main-heading-div {
+    font-size: 40px;
   }
 }

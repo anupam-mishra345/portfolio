@@ -3,7 +3,7 @@
     class="heading transition-effect py-20"
     [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
   >
-    Here's What I Do When I'm Not Sleeping
+    HERE'S WHAT I DO WHEN I'M NOT SLEEPING
   </div>
   <hr class="px-10 mb-20" />
   <div class="grid-div grid grid-cols-2 gap-8 w-full my-10">
@@ -50,12 +50,17 @@
         <div class="project-name cursor-pointer self-center pl-3">
           {{ project.projectName }}
         </div>
-        <!-- <div class="view-project cursor-pointer ml-auto mt-2">Details</div> -->
       </div>
     </div>
   </div>
 
   <hr class="px-10 mb-20" />
 
+  <div
+    class="main-heading-div transition-effect"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    CLIENT PROJECTS I'VE WORKED ON
+  </div>
   <app-projects-client-v2></app-projects-client-v2>
 </div>

@@ -1,0 +1,187 @@
+<div class="py-10" [ngClass]="isDarkMode ? 'text-light' : 'text-dark'">
+  <div
+    class="heading transition-effect pt-20 mx-10"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    FROM FRONTEND TO BACKEND: CREATING DYNAMIC DIGITAL SOLUTIONS
+  </div>
+  <hr class="mx-10 my-20" />
+  <div class="full-stack-text flex justify-between mx-10 transition-effect">
+    <div>Full-Stack Engineer</div>
+    <div>Building the Future of Web Applications</div>
+  </div>
+
+  <div class="main-div flex mx-10 mt-10">
+    <div class="left-div w-1/2 mb-auto sticky top-[80px]">
+      <div
+        class="flex py-10 transition-effect"
+        [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+      >
+        <div
+          class="dot transition-effect self-center"
+          [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+        ></div>
+        <div class="bullet-text self-center px-5">WHO AM I</div>
+      </div>
+    </div>
+    <div class="right-div w-1/2">
+      <div
+        class="transition-effect about-me-para"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        With 3.5 years as a full stack developer, I have a proven track record
+        in developing and enhancing applications. My experience includes
+        designing and delivering comprehensive training programs, building user
+        interfaces, fixing bugs, updating codebases, and integrating third-party
+        tools. I have successfully delivered new features and integrations,
+        developed high-performance server-side applications, and mentored junior
+        team members. Additionally, I have facilitated theoretical and hands-on
+        training sessions, ensuring participants gained practical experience and
+        a deep understanding of the material.
+      </div>
+      <div class="count-div w-full transition-effect">
+        <div class="count1">12+</div>
+        <hr class="mb-6" />
+        <div class="count-heading">Completed Projects</div>
+      </div>
+      <div
+        class="count-main-div transition-effect flex mt-10"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        <div class="count-div w-1/2">
+          <div class="count">6+</div>
+          <hr class="mb-6 mr-10" />
+          <div class="count-heading">Happy Clients</div>
+        </div>
+        <div class="count-div w-1/2">
+          <div class="count">3.5+</div>
+          <hr class="mb-6" />
+          <div class="count-heading">Years of Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mx-10 my-20" />
+
+  <div class="main-div flex mx-10 mt-10">
+    <div class="left-div w-1/2 mb-auto sticky top-[80px]">
+      <div class="flex">
+        <div
+          class="dot transition-effect self-center"
+          [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+        ></div>
+        <div
+          class="bullet-text transition-effect self-center px-5"
+          [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        >
+          EXPERIENCE
+        </div>
+      </div>
+      <div class="main-heading-div transition-effect">MY CAREER JOURNEY</div>
+    </div>
+    <div class="right-div w-1/2 pl-10">
+      <div>
+        <div
+          class="experience-div pt-10 pb-20 relative transition-effect"
+          *ngFor="let exp of experience"
+          [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+        >
+          <div class="flex">
+            <div
+              class="dot transition-effect self-center"
+              [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+            ></div>
+            <div class="exp-duration ml-3">{{ exp.duration }}</div>
+          </div>
+          <div class="exp-industry mt-10">{{ exp.industry }}</div>
+          <div class="exp-position">
+            {{ exp.position }}
+          </div>
+          <div class="exp-work mt-8">
+            {{ exp.work }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mx-10 my-20" />
+
+  <div class="main-div mx-10 mt-10">
+    <div class="awards-div w-full mb-auto">
+      <div class="flex">
+        <div
+          class="dot transition-effect self-center"
+          [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+        ></div>
+        <div
+          class="bullet-text transition-effect self-center px-5"
+          [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        >
+          ACHIEVEMENTS & AWARDS
+        </div>
+      </div>
+      <div class="main-heading-div transition-effect">WHAT I'VE ACHIEVED</div>
+    </div>
+    <div class="right-div w-full mt-20">
+      <div
+        class="experience-div py-10 w-full flex transition-effect"
+        *ngFor="let award of awards; let i = index"
+        [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+      >
+        <div class="desktop-awards-div flex w-full">
+          <div class="award w-[15%]">
+            <span>{{ i < 10 ? "0" : "" }}</span
+            >{{ i + 1 }}
+          </div>
+          <div class="award w-[15%]">
+            {{ award.category }}
+          </div>
+          <div class="award w-[40%] text-center">
+            {{ award.name }}
+          </div>
+          <div class="award w-[30%] text-end">
+            {{ award.month }}
+          </div>
+        </div>
+        <div class="mobile-awards-div w-full">
+          <div class="award">
+            <span>{{ i < 10 ? "0" : "" }}</span
+            >{{ i + 1 }}
+          </div>
+          <div class="award">
+            {{ award.category }}
+          </div>
+          <div class="award">
+            {{ award.name }}
+          </div>
+          <div class="award">
+            {{ award.month }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mx-10 my-20" />
+
+  <div class="mx-10">
+    <div>
+      <div class="flex">
+        <div
+          class="dot transition-effect self-center"
+          [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+        ></div>
+        <div
+          class="bullet-text transition-effect self-center px-5"
+          [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        >
+          CLIENTS
+        </div>
+      </div>
+      <div class="main-heading-div transition-effect">BRANDS I WORKED WITH</div>
+    </div>
+    <app-projects-client-v2></app-projects-client-v2>
+  </div>
+</div>

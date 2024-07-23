@@ -14,7 +14,10 @@
       >
         <div class="animation-text">HOME</div>
       </div>
-      <div class="animation-div cursor-pointer">
+      <div
+        class="animation-div cursor-pointer"
+        (click)="navigateTo('/about-me-v3')"
+      >
         <div class="animation-text">ABOUT</div>
       </div>
       <div
@@ -116,7 +119,12 @@
     >
       HOME
     </div>
-    <div class="menu-item transition-effect">ABOUT</div>
+    <div
+      class="menu-item transition-effect"
+      (click)="navigateTo('/about-me-v3')"
+    >
+      ABOUT
+    </div>
     <div
       class="menu-item transition-effect"
       (click)="navigateTo('/techstack-v3')"

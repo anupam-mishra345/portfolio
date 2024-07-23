@@ -33,23 +33,23 @@
 }
 
 /* Add this CSS to pause the animation on hover */
-.logo-container:hover .logo-list {
-  animation-play-state: paused;
-}
-.logo-container:hover {
-  width: 100%;
-  overflow-x: auto;
-}
+// .logo-container:hover .logo-list {
+//   animation-play-state: paused;
+// }
+// .logo-container:hover {
+//   width: 100%;
+//   overflow-x: auto;
+// }
 
-.logo-container::-webkit-scrollbar {
-  display: none;
-}
+// .logo-container::-webkit-scrollbar {
+//   display: none;
+// }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.logo-container {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+// .logo-container {
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none; /* Firefox */
+// }
 
 @media screen and (max-width: 940px) {
   .heading {

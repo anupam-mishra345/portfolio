@@ -25,6 +25,7 @@ import { NavbarV2Component } from 'src/components/navbar-v2/navbar-v2.component'
 import { TechstackV3Component } from 'src/components/techstack-v3/techstack-v3.component';
 import { ProjectDetailsV2Component } from 'src/components/project-details-v2/project-details-v2.component';
 import { FooterV2Component } from 'src/components/footer-v2/footer-v2.component';
+import { AboutMeV3Component } from 'src/components/about-me-v3/about-me-v3.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { FooterV2Component } from 'src/components/footer-v2/footer-v2.component'
     TechstackV3Component,
     ProjectDetailsV2Component,
     FooterV2Component,
+    AboutMeV3Component,
   ],
   imports: [
     BrowserModule,

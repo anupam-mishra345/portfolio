@@ -1,0 +1,116 @@
+.heading {
+  font-size: 110px;
+  font-weight: 500;
+  line-height: normal;
+}
+hr {
+  border-width: 2px;
+  border-radius: 10px;
+}
+.full-stack-text {
+  font-size: 30px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.dot-dark {
+  background-color: #000;
+}
+.dot-light {
+  background-color: #fff;
+}
+.bullet-text {
+  font-size: 20px;
+}
+.main-heading-div {
+  font-size: 90px;
+}
+.about-me-para {
+  font-size: 24px;
+}
+.count1 {
+  font-size: 150px;
+}
+.count {
+  font-size: 100px;
+}
+.count-heading {
+  font-size: 18px;
+}
+.exp-duration,
+.exp-work {
+  font-size: 18px;
+  font-weight: 200;
+}
+.exp-position {
+  font-size: 20px;
+  font-weight: 300;
+}
+.exp-industry {
+  font-size: 40px;
+}
+.experience-div {
+  border-top: 1px solid grey;
+}
+.award {
+  font-size: 20px;
+}
+.mobile-awards-div {
+  display: none;
+}
+@media screen and (max-width: 1260px) {
+  .main-div {
+    flex-direction: column;
+    padding: 0;
+  }
+  .left-div,
+  .right-div {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 940px) {
+  .heading {
+    font-size: 80px;
+  }
+  .main-heading-div {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 60px;
+  }
+  .full-stack-text {
+    font-size: 30px;
+  }
+  .count-main-div {
+    flex-direction: column;
+  }
+  .count-div {
+    width: 100%;
+  }
+  .main-heading-div {
+    font-size: 40px;
+  }
+  .awards-div {
+    position: sticky;
+    top: 80px;
+  }
+  .mobile-awards-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .desktop-awards-div {
+    display: none;
+  }
+  .award {
+    text-align: center;
+  }
+  .experience-div {
+    position: sticky;
+    top: 170px;
+  }
+}

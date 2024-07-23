@@ -8,7 +8,7 @@
   border-bottom: 1px solid gray;
 }
 .techstack-heading-text {
-  font-size: 80px;
+  font-size: 110px;
 }
 .stack-name {
   font-size: 20px;
@@ -33,13 +33,16 @@ hr {
 }
 
 @media screen and (max-width: 940px) {
+  .techstack-heading-text {
+    font-size: 80px;
+  }
   .techstack-info-desktop {
     width: 80%;
   }
 }
 @media screen and (max-width: 768px) {
   .techstack-heading-text {
-    font-size: 40px;
+    font-size: 60px;
   }
   .techstack-info-desktop {
     display: none;

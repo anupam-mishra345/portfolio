@@ -17,4 +17,7 @@ export class AboutMeV2Component {
       this.isDarkMode = theme;
     });
   }
+  navigateToAboutMe() {
+    this.router.navigate(['/about-me-v3']);
+  }
 }
