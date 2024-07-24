@@ -66,6 +66,16 @@ hr {
   border: 1px solid;
   border-radius: 50px;
 }
+
+.img-div {
+  height: 700px;
+  background-image: url("../../assets/anupam3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+}
+
 @media screen and (max-width: 1260px) {
   .main-div {
     flex-direction: column;
@@ -132,12 +142,15 @@ hr {
   }
   .experience-div {
     position: sticky;
-    top: 170px;
+    top: 120px;
     padding-top: 20px;
   }
   .download-btn {
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .img-div {
+    width: 100%;
   }
 }
