@@ -37,7 +37,8 @@
 }
 
 .animation-text,
-.animation-icon {
+.animation-icon,
+.animation-down-icon {
   display: inline-block;
   position: relative;
   transition: transform 0.5s ease-in-out;
@@ -49,6 +50,10 @@
 
 .animation-div:hover .animation-icon {
   animation: slideOut45deg 0.3s forwards, slideIn45deg 0.2s forwards 0.1s;
+}
+
+.animation-div:hover .animation-down-icon {
+  animation: slideUp 0.3s forwards, slideDown 0.2s forwards 0.1s;
 }
 
 @keyframes slideOut {
@@ -86,6 +91,24 @@
     transform: translate(0, 0) rotate(-45deg);
   }
 }
+@keyframes slideDown {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(150%);
+  }
+}
+
 // end of animation
 
 .btn-click-animation-dark:active {

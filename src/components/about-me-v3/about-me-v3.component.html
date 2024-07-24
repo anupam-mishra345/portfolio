@@ -8,13 +8,13 @@
   <hr class="mx-10 my-20" />
   <div class="full-stack-text flex justify-between mx-10 transition-effect">
     <div>Full-Stack Engineer</div>
-    <div>Building the Future of Web Applications</div>
+    <div class="text-end pl-3">Building the Future of Web Applications</div>
   </div>
 
   <div class="main-div flex mx-10 mt-10">
-    <div class="left-div w-1/2 mb-auto sticky top-[80px]">
+    <div class="who-am-I-div w-1/2 mb-auto sticky top-[80px]">
       <div
-        class="flex py-10 transition-effect"
+        class="flex transition-effect"
         [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
       >
         <div
@@ -26,7 +26,7 @@
     </div>
     <div class="right-div w-1/2">
       <div
-        class="transition-effect about-me-para"
+        class="about-me-para transition-effect"
         [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
       >
         With 3.5 years as a full stack developer, I have a proven track record
@@ -57,6 +57,20 @@
           <div class="count">3.5+</div>
           <hr class="mb-6" />
           <div class="count-heading">Years of Experience</div>
+        </div>
+      </div>
+      <div class="btn-center mt-20 mb-10 cursor-pointer">
+        <div
+          class="download-btn animation-div transition-effect flex w-fit px-10 py-5"
+          [ngClass]="
+            isDarkMode
+              ? 'text-light btn-click-animation-light'
+              : 'text-dark btn-click-animation-dark'
+          "
+          (click)="downloadResume()"
+        >
+          <div class="animation-text">Download Resume</div>
+          <i class="animation-down-icon fa-solid fa-download ml-5"></i>
         </div>
       </div>
     </div>
@@ -94,7 +108,7 @@
             ></div>
             <div class="exp-duration ml-3">{{ exp.duration }}</div>
           </div>
-          <div class="exp-industry mt-10">{{ exp.industry }}</div>
+          <div class="exp-industry mt-5">{{ exp.industry }}</div>
           <div class="exp-position">
             {{ exp.position }}
           </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from 'src/services/theme.service';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-about-me-v3',
   templateUrl: './about-me-v3.component.html',
@@ -27,7 +27,7 @@ export class AboutMeV3Component {
       industry: 'Mantra Labs',
       position: 'SOFTWARE ENGINEER',
       duration: 'November 2022 - Present',
-      work: 'With 1.5 years as a software engineer, I have developed and enhanced various applications. I integrated Firebase for real-time notifications, designed user role-based applications, managed RESTful API integration, and utilized Formik and Yup for form validation. I set up front-end codebases following best practices, keeping enhanced security with Interceptors and AuthGuard in mind, completed user onboarding flows, and mentored new team members. Leveraging my React experience, I enhanced functionality and added features to internal projects.',
+      work: 'With 1.5 years as a software engineer, I have developed and enhanced various applications. I integrated Firebase for real-time notifications, designed user role-based applications, managed RESTful API integration, and utilized Formik and Yup for form validation. I set up front-end codebases following best practices, keeping enhanced security with Interceptors and AuthGuard in mind, completed user onboarding flows, and mentored new team members. Leveraging my React experience, I enhanced functionality and added features to many projects. Additionally, I improved existing projects by adding features, resolving bugs, and reprogramming functionalities for better efficiency.',
       products: [
         'MILES EDUCATION',
         'MANIPAL HOSPITALS',
@@ -55,12 +55,32 @@ export class AboutMeV3Component {
     },
   ];
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService, private http: HttpClient) {}
 
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
     });
     scrollTo(0, 0);
+  }
+
+  downloadResume() {
+    const filePath = './assets/pdfs/Anupam-Mishra-Resume.pdf';
+
+    this.http
+      .get(filePath, { responseType: 'blob' })
+      .subscribe((response: Blob) => {
+        const blob = new Blob([response], { type: 'application/pdf' });
+        const url = window.URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Anupam Mishra Resume.pdf';
+        document.body.appendChild(a);
+        a.click();
+
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      });
   }
 }

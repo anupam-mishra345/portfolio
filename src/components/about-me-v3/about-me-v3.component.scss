@@ -60,6 +60,12 @@ hr {
 .mobile-awards-div {
   display: none;
 }
+
+.download-btn {
+  font-size: 26px;
+  border: 1px solid;
+  border-radius: 50px;
+}
 @media screen and (max-width: 1260px) {
   .main-div {
     flex-direction: column;
@@ -69,6 +75,16 @@ hr {
   .right-div {
     width: 100%;
     padding-left: 0;
+  }
+  .who-am-I-div {
+    position: relative;
+    top: unset;
+  }
+  .about-me-para {
+    padding-top: 20px;
+  }
+  .btn-center {
+    text-align: center;
   }
 }
 @media screen and (max-width: 940px) {
@@ -84,7 +100,12 @@ hr {
     font-size: 60px;
   }
   .full-stack-text {
-    font-size: 30px;
+    font-size: 16px;
+  }
+  .about-me-para {
+    font-size: 20px;
+    padding-top: 20px;
+    font-weight: 300;
   }
   .count-main-div {
     flex-direction: column;
@@ -112,5 +133,11 @@ hr {
   .experience-div {
     position: sticky;
     top: 170px;
+    padding-top: 20px;
+  }
+  .download-btn {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

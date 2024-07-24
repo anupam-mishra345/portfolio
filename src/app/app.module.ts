@@ -26,6 +26,7 @@ import { TechstackV3Component } from 'src/components/techstack-v3/techstack-v3.c
 import { ProjectDetailsV2Component } from 'src/components/project-details-v2/project-details-v2.component';
 import { FooterV2Component } from 'src/components/footer-v2/footer-v2.component';
 import { AboutMeV3Component } from 'src/components/about-me-v3/about-me-v3.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { AboutMeV3Component } from 'src/components/about-me-v3/about-me-v3.compo
     AppRoutingModule,
     CommonModule,
     CanvasJSAngularChartsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
