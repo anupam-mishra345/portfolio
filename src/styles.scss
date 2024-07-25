@@ -56,6 +56,13 @@
   animation: slideUp 0.3s forwards, slideDown 0.2s forwards 0.1s;
 }
 
+.animation-div:hover .animation-right-icon {
+  animation: slideLeft1 0.3s forwards, slideRight1 0.2s forwards 0.1s;
+}
+.animation-div:hover .animation-left-icon {
+  animation: slideLeft2 0.3s forwards, slideRight2 0.2s forwards 0.1s;
+}
+
 @keyframes slideOut {
   0% {
     transform: translateY(0);
@@ -106,6 +113,42 @@
   }
   100% {
     transform: translateY(150%);
+  }
+}
+
+@keyframes slideLeft1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@keyframes slideRight1 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes slideRight2 {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

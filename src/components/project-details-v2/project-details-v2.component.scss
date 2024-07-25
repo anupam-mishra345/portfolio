@@ -52,6 +52,10 @@ i {
   transform: rotate(-45deg);
 }
 
+.main-heading-div {
+  font-size: 90px;
+}
+
 @media screen and (max-width: 940px) {
   .project-year {
     width: 50%;
@@ -68,6 +72,15 @@ i {
     text-align: center;
     margin-top: 50px;
   }
+  .main-heading-div {
+    font-size: 60px;
+  }
+  .right-div {
+    flex-direction: column;
+  }
+  .other-project {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -77,9 +90,13 @@ i {
   .overview-div {
     flex-direction: column;
   }
+  .project-info2 {
+    font-size: 18px;
+  }
   .project-overview {
     width: 100%;
-    text-align: center;
+    font-size: 18px;
+    // text-align: justify;
   }
   .stack-list {
     width: 100%;
@@ -89,6 +106,9 @@ i {
   .stack-text {
     margin-left: 0;
     margin-right: 0;
+  }
+  .main-heading-div {
+    font-size: 40px;
   }
 }
 

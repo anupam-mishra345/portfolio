@@ -115,7 +115,51 @@
   </div>
 
   <hr />
-  <!-- <div>
-    <div>CHECK OUT SOME MORE</div>
-  </div> -->
+
+  <div
+    class="main-div mx-10 mt-10"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    <div class="others-div w-full mb-auto">
+      <div class="flex">
+        <div
+          class="dot transition-effect self-center"
+          [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+        ></div>
+        <div
+          class="bullet-text transition-effect self-center px-5"
+          [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+        >
+          OTHER PROJECTS
+        </div>
+      </div>
+      <div class="main-heading-div transition-effect">CHECK OUT SOME MORE</div>
+    </div>
+    <div class="right-div gap-8 w-full mt-20 flex">
+      <div
+        class="other-project w-1/2"
+        *ngIf="currentIndex > 0"
+        [ngClass]="currentIndex === allProjectData.length - 1 ? 'mx-auto' : ''"
+      >
+        <app-project-card-v2
+          [project]="allProjectData[currentIndex - 1]"
+          arrowBtnName="PREVIOUS"
+          [showText]="true"
+          (navigateNewProject)="navigateNewProject($event)"
+        ></app-project-card-v2>
+      </div>
+      <div
+        class="other-project w-1/2"
+        *ngIf="currentIndex < allProjectData.length - 1"
+        [ngClass]="currentIndex === 0 ? 'mx-auto' : ''"
+      >
+        <app-project-card-v2
+          [project]="allProjectData[currentIndex + 1]"
+          [showText]="true"
+          arrowBtnName="NEXT"
+          (navigateNewProject)="navigateNewProject($event)"
+        ></app-project-card-v2>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,12 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ThemeService } from 'src/services/theme.service';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-projects-client-v2',
@@ -20,7 +27,6 @@ export class ProjectsClientV2Component {
       logoLight: './assets/ClientProjectLogo/TataAIA.png',
       logoDark: './assets/ClientProjectLogo/TataAIA.png',
     },
-
     {
       name: 'Manipal Hospitals 2',
       logoLight: './assets/ClientProjectLogo/manipal-hospitals.svg',
@@ -49,11 +55,15 @@ export class ProjectsClientV2Component {
     },
   ];
 
+  clientsDuplicate = [...this.clients];
+
   constructor(
     private themeService: ThemeService,
     private el: ElementRef,
     private renderer: Renderer2
-  ) {}
+  ) {
+    this.changeClientsUI();
+  }
 
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
@@ -64,5 +74,12 @@ export class ProjectsClientV2Component {
     const logoList = this.el.nativeElement.querySelector('.logo-list');
     const clone = logoList.cloneNode(true);
     this.renderer.appendChild(logoList.parentNode, clone);
+  }
+
+  changeClientsUI() {
+    setInterval(() => {
+      const temp: any = this.clientsDuplicate.pop();
+      this.clientsDuplicate.unshift(temp);
+    }, 2500);
   }
 }

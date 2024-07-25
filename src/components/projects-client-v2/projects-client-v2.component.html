@@ -1,11 +1,4 @@
 <div class="main-div transition-effect">
-  <!-- <div
-    class="heading transition-effect"
-    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
-  >
-    Client's Project I have worked on
-  </div> -->
-
   <div class="logo-container my-20">
     <div class="logo-list">
       <div class="logo-item ml-20" *ngFor="let client of clients">
@@ -24,6 +17,78 @@
         <img
           [src]="isDarkMode ? client.logoDark : client.logoLight"
           [alt]="client.name"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="logo-container2 my-20"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    <div class="flex w-full">
+      <div class="border-div big-div w-2/3">
+        <img
+          [src]="
+            isDarkMode
+              ? clientsDuplicate[0].logoDark
+              : clientsDuplicate[0].logoLight
+          "
+          alt=""
+        />
+      </div>
+      <div class="flex flex-col w-1/3">
+        <div class="border-div">
+          <img
+            [src]="
+              isDarkMode
+                ? clientsDuplicate[1].logoDark
+                : clientsDuplicate[1].logoLight
+            "
+            alt=""
+          />
+        </div>
+        <div class="border-div">
+          <img
+            [src]="
+              isDarkMode
+                ? clientsDuplicate[2].logoDark
+                : clientsDuplicate[2].logoLight
+            "
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex w-full">
+      <div class="w-1/3 border-div">
+        <img
+          [src]="
+            isDarkMode
+              ? clientsDuplicate[5].logoDark
+              : clientsDuplicate[5].logoLight
+          "
+          alt=""
+        />
+      </div>
+      <div class="w-1/3 border-div">
+        <img
+          [src]="
+            isDarkMode
+              ? clientsDuplicate[4].logoDark
+              : clientsDuplicate[4].logoLight
+          "
+          alt=""
+        />
+      </div>
+      <div class="w-1/3 border-div">
+        <img
+          [src]="
+            isDarkMode
+              ? clientsDuplicate[3].logoDark
+              : clientsDuplicate[3].logoLight
+          "
+          alt=""
         />
       </div>
     </div>

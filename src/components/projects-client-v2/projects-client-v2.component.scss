@@ -23,6 +23,20 @@
   cursor: pointer;
 }
 
+.logo-container2 {
+  display: none;
+}
+
+.border-div {
+  display: flex;
+  padding: 20px;
+}
+.border-div img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -31,25 +45,6 @@
     transform: translateX(-400%);
   }
 }
-
-/* Add this CSS to pause the animation on hover */
-// .logo-container:hover .logo-list {
-//   animation-play-state: paused;
-// }
-// .logo-container:hover {
-//   width: 100%;
-//   overflow-x: auto;
-// }
-
-// .logo-container::-webkit-scrollbar {
-//   display: none;
-// }
-
-/* Hide scrollbar for IE, Edge and Firefox */
-// .logo-container {
-//   -ms-overflow-style: none; /* IE and Edge */
-//   scrollbar-width: none; /* Firefox */
-// }
 
 @media screen and (max-width: 940px) {
   .heading {
@@ -66,5 +61,11 @@
   }
   .logo-item {
     margin-left: 20px;
+  }
+  .logo-container {
+    display: none;
+  }
+  .logo-container2 {
+    display: unset;
   }
 }

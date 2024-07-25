@@ -19,7 +19,7 @@
   font-size: 80px;
 }
 .stack-name {
-  font-size: 20px;
+  font-size: 24px;
 }
 .view-all-stack-btn {
   font-size: 26px;
@@ -29,6 +29,13 @@
 i {
   font-size: 30px;
   transform: rotate(-45deg);
+}
+.stack-info {
+  font-size: 18px;
+  font-weight: 200;
+}
+.techstack-description {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {
@@ -42,6 +49,7 @@ i {
   }
   .position-div {
     top: 140px;
+    padding: 20px;
   }
   .right-div {
     width: 100%;

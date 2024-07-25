@@ -33,7 +33,7 @@ export class TechStackConstant {
       logo: './assets/StackLogo/Html.png',
       info: 'Foundation of Web Development',
       description:
-        'HTML and CSS are the foundational technologies for web development. I use HTML to structure content and CSS to style and layout web pages. Together, they enable me to create visually appealing and well-structured web applications that are both user-friendly and responsive.',
+        'HTML and CSS form the backbone of my web development projects. HTML provides the structural foundation, allowing me to create well-organized and semantic web pages. CSS is essential for designing and styling these pages, enabling me to craft visually appealing and responsive layouts. Together, they allow me to build user-friendly interfaces and ensure a consistent look and feel across different devices and browsers.',
     },
     {
       name: 'Node.js',
