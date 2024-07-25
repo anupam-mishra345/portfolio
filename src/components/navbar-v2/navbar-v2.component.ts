@@ -57,12 +57,6 @@ export class NavbarV2Component {
   animationFun() {
     if (this.isMenuOpen) {
       setTimeout(() => {
-        // Set height to auto to calculate the scrollHeight
-        // this.renderer.setStyle(
-        //   this.menu_list.nativeElement,
-        //   'max-height',
-        //   'none'
-        // );
         const scrollHeight = this.menu_list.nativeElement.scrollHeight;
         this.renderer.setStyle(this.menu_list.nativeElement, 'max-height', '0');
 

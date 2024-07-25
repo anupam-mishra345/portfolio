@@ -28,7 +28,7 @@ hr {
   font-size: 90px;
 }
 .about-me-para {
-  font-size: 24px;
+  font-size: 20px;
 }
 .count1 {
   font-size: 150px;
@@ -69,11 +69,10 @@ hr {
 
 .img-div {
   height: 700px;
-  background-image: url("../../assets/anupam3.jpg");
+  background-image: url("../../assets/Anupam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // background-attachment: fixed;
 }
 
 @media screen and (max-width: 1260px) {

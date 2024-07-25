@@ -19,10 +19,6 @@ export class AppComponent {
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
-      // const body = this.el.nativeElement.ownerDocument.body;
-      // const newBackgroundColor = this.isDarkMode ? '#000' : '#fff';
-
-      // this.renderer.setStyle(body, 'background-color', newBackgroundColor);
     });
   }
 }

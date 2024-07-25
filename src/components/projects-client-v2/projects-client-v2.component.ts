@@ -80,6 +80,6 @@ export class ProjectsClientV2Component {
     setInterval(() => {
       const temp: any = this.clientsDuplicate.pop();
       this.clientsDuplicate.unshift(temp);
-    }, 2500);
+    }, 1500);
   }
 }
