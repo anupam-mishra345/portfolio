@@ -21,6 +21,6 @@ export class TechstackV2Component {
     scrollTo(0, 0);
   }
   viewAllStacks() {
-    this.router.navigate(['/techstack-v3']);
+    this.router.navigate(['/techstack']);
   }
 }

@@ -21,7 +21,7 @@ export class AllProjectsV3Component {
     scrollTo(0, 0);
   }
   navigateTo(id: string) {
-    const url = '/project-details-v2/' + id;
+    const url = '/project-details/' + id;
     this.router.navigate([url]);
   }
 }

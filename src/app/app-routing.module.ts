@@ -12,32 +12,32 @@ import { ProjectDetailsV2Component } from 'src/components/project-details-v2/pro
 import { AboutMeV3Component } from 'src/components/about-me-v3/about-me-v3.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home-v2', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'expertise', component: ExpertiseComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: 'home', component: HomeComponent },
+  // { path: 'expertise', component: ExpertiseComponent },
+  // {
+  //   path: 'all-projects',
+  //   component: AllProjectsComponent,
+  // },
+  // {
+  //   path: 'project-details/:id',
+  //   component: ProjectDetailsComponent,
+  // },
+  { path: 'home', component: HomeV2Component },
   {
     path: 'all-projects',
-    component: AllProjectsComponent,
-  },
-  {
-    path: 'project-details/:id',
-    component: ProjectDetailsComponent,
-  },
-  { path: 'home-v2', component: HomeV2Component },
-  {
-    path: 'all-projects-v3',
     component: AllProjectsV3Component,
   },
   {
-    path: 'techstack-v3',
+    path: 'techstack',
     component: TechstackV3Component,
   },
   {
-    path: 'project-details-v2/:id',
+    path: 'project-details/:id',
     component: ProjectDetailsV2Component,
   },
   {
-    path: 'about-me-v3',
+    path: 'about-me',
     component: AboutMeV3Component,
   },
 ];

@@ -8,21 +8,18 @@
       class="desktop-menu-item flex gap-x-10 self-center transition-effect"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
     >
-      <div
-        class="animation-div cursor-pointer"
-        (click)="navigateTo('/home-v2')"
-      >
+      <div class="animation-div cursor-pointer" (click)="navigateTo('/home')">
         <div class="animation-text">HOME</div>
       </div>
       <div
         class="animation-div cursor-pointer"
-        (click)="navigateTo('/about-me-v3')"
+        (click)="navigateTo('/about-me')"
       >
         <div class="animation-text">ABOUT</div>
       </div>
       <div
         class="animation-div cursor-pointer"
-        (click)="navigateTo('/techstack-v3')"
+        (click)="navigateTo('/techstack')"
       >
         <div class="animation-text">STACK</div>
       </div>
@@ -30,7 +27,7 @@
     <div
       class="name animation-div mx-auto self-center cursor-pointer transition-effect"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
-      (click)="navigateTo('/home-v2')"
+      (click)="navigateTo('/home')"
     >
       <div class="animation-text">ANUPAM MISHRA</div>
     </div>
@@ -60,7 +57,7 @@
       </div>
       <div
         class="animation-div cursor-pointer"
-        (click)="navigateTo('/all-projects-v3')"
+        (click)="navigateTo('/all-projects')"
       >
         <div class="animation-text">PROJECTS</div>
       </div>
@@ -73,7 +70,7 @@
     <div
       class="name cursor-pointer self-center transition-effect"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
-      (click)="navigateTo('/home-v2')"
+      (click)="navigateTo('/home')"
     >
       ANUPAM MISHRA
     </div>
@@ -113,27 +110,18 @@
         ></i>
       </div>
     </div>
-    <div
-      class="menu-item mt-1 transition-effect"
-      (click)="navigateTo('/home-v2')"
-    >
+    <div class="menu-item mt-1 transition-effect" (click)="navigateTo('/home')">
       HOME
     </div>
-    <div
-      class="menu-item transition-effect"
-      (click)="navigateTo('/about-me-v3')"
-    >
+    <div class="menu-item transition-effect" (click)="navigateTo('/about-me')">
       ABOUT
     </div>
-    <div
-      class="menu-item transition-effect"
-      (click)="navigateTo('/techstack-v3')"
-    >
+    <div class="menu-item transition-effect" (click)="navigateTo('/techstack')">
       STACK
     </div>
     <div
       class="menu-item transition-effect"
-      (click)="navigateTo('/all-projects-v3')"
+      (click)="navigateTo('/all-projects')"
     >
       PROJECTS
     </div>

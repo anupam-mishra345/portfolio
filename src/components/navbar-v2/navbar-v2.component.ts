@@ -41,6 +41,7 @@ export class NavbarV2Component {
 
   navigateTo(path: string) {
     this.router.navigateByUrl(path);
+    scroll(0, 0);
     this.showMenu(false);
   }
   contactMe() {

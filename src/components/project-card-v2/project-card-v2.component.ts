@@ -46,7 +46,7 @@ export class ProjectCardV2Component {
   }
 
   navigateTo(id: string) {
-    const url = '/project-details-v2/' + id;
+    const url = '/project-details/' + id;
     this.router.navigate([url]);
     if (this.showText) {
       this.navigateNewProject.emit(id);

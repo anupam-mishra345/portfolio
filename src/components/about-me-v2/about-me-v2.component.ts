@@ -18,6 +18,6 @@ export class AboutMeV2Component {
     });
   }
   navigateToAboutMe() {
-    this.router.navigate(['/about-me-v3']);
+    this.router.navigate(['/about-me']);
   }
 }

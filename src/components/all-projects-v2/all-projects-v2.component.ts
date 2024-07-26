@@ -22,11 +22,11 @@ export class AllProjectsV2Component {
   }
 
   viewAllProjects() {
-    this.router.navigate(['/all-projects-v3']);
+    this.router.navigate(['/all-projects']);
   }
 
   navigateTo(id: string) {
-    const url = '/project-details-v2/' + id;
+    const url = '/project-details/' + id;
     this.router.navigate([url]);
   }
 }
