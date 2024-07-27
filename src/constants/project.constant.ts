@@ -4,7 +4,7 @@ export class Projects {
       id: '498ead31-ba3f-4149-80b3-331586739d3a',
       logo: './assets/MyProjectsLogo/task-planner.png',
       projectScreenShot: './assets/task-planner-ss.png',
-      projectMockup: './assets/screenshots/Task-planner.png',
+      projectMockup: './assets/screenshots/Task-planner-min.png',
       projectName: 'Task-Planner',
       projectLink: 'https://anupam-mishra345.github.io/task-planner/',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Tailwind'],
@@ -38,7 +38,7 @@ export class Projects {
       id: 'c3a45c09-09bd-47eb-832f-6073f197caea',
       logo: './assets/MyProjectsLogo/Footwear-PNG.png',
       projectScreenShot: './assets/Footwear-ss.png',
-      projectMockup: './assets/screenshots/Shopping.png',
+      projectMockup: './assets/screenshots/Shopping-min.png',
       projectName: 'Footwear Shop',
       projectLink:
         'https://anupam-mishra345.github.io/Shopping-site.github.io/',
@@ -68,7 +68,7 @@ export class Projects {
       id: '54c3aaac-ebed-4d53-b0b8-8e201a0a6b86',
       logo: './assets/MyProjectsLogo/Restaurent.png',
       projectScreenShot: './assets/restaurent-ss.png',
-      projectMockup: './assets/screenshots/Restaurent.png',
+      projectMockup: './assets/screenshots/Restaurent-min.png',
       projectName: 'Restaurant',
       projectLink:
         'https://anupam-mishra345.github.io/Restaurant/Restaurant.html',
@@ -99,7 +99,7 @@ export class Projects {
       id: '852ed509-e270-4043-9dfa-67e812ddedfa',
       logo: './assets/MyProjectsLogo/ChattingBox.png',
       projectScreenShot: './assets/chatting-box-ss.png',
-      projectMockup: './assets/screenshots/Chatting-box.png',
+      projectMockup: './assets/screenshots/Chatting-box-min.png',
       projectName: 'Chatting Box',
       projectLink:
         'https://anupam-mishra345.github.io/Chatting-Box/Chatting.html',
@@ -126,10 +126,10 @@ export class Projects {
       id: 'c40b0ed9-0e6e-4af7-9e1a-0f94b9704dae',
       logo: './assets/MyProjectsLogo/BankApplication.png',
       projectScreenShot: './assets/bank-application-ss.png',
-      projectMockup: './assets/screenshots/Bank-application.png',
+      projectMockup: './assets/screenshots/Bank-application-min.png',
       projectName: 'Bank Application',
       projectLink:
-        'https://anupam-mishra345.github.io/BankApplication/Oceanbank.html',
+        'https://anupam-mishra345.github.io/BankApplication/Capital.html',
       technologies: ['JavaScript', 'HTML', 'CSS'],
       technologies2: [
         { name: 'HTML', logo: './assets/StackLogo/Html.png' },
@@ -156,7 +156,7 @@ export class Projects {
       id: '5e16553b-9b4d-4695-812f-e94d42eabc7b',
       logo: './assets/MyProjectsLogo/real-estate.png',
       projectScreenShot: './assets/real-estate-ss.png',
-      projectMockup: './assets/screenshots/Real-estate.png',
+      projectMockup: './assets/screenshots/Real-estate-min.png',
       projectName: 'Real-Estate',
       projectLink:
         'https://anupam-mishra345.github.io/Real-estate/MaMaison.html',
