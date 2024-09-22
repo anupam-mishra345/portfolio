@@ -118,20 +118,40 @@
             {{ exp.position }}
           </div>
           <div class="exp-work mt-8">
-            {{ exp.work }}
+            <span *ngIf="exp.currentCompany"
+              >With {{ currentCompanyExperience }}</span
+            >{{ exp.work }}
           </div>
           <div class="exp-work mt-8" *ngIf="exp?.products?.length > 0">
-            <div class="font-bold my-3">Projects -</div>
+            <div class="exp-position my-5">Projects</div>
             <div
               *ngFor="let projects of exp.products; let i = index"
-              class="border-t-[1px] border-[grey] py-2"
+              class="border-t-[1px] border-[grey] py-4"
               [ngClass]="i === exp.products.length - 1 ? 'border-b-[1px]' : ''"
             >
-              <li class="list-decimal flex">
-                <div>{{ projects.name }}</div>
-                <div class="ml-auto">{{ projects.duration }}</div>
+              <li
+                class="flex cursor-pointer"
+                (click)="openProjectDetails(projects.id)"
+              >
+                <div class="font-semibold mr-3">{{ i + 1 }}.</div>
+                <div class="font-semibold">
+                  {{ projects.name }}
+                </div>
+                <div class="project-duration-text ml-auto">
+                  {{ projects.duration }}
+                </div>
+                <div *ngIf="openProjectId !== projects.id" class="ml-5">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div *ngIf="openProjectId === projects.id" class="ml-5">
+                  <i class="fa-solid fa-chevron-up"></i>
+                </div>
               </li>
-              <!-- <hr /> -->
+              <div *ngIf="openProjectId === projects.id">
+                <app-client-project-card
+                  [projectDetails]="projects"
+                ></app-client-project-card>
+              </div>
             </div>
           </div>
         </div>

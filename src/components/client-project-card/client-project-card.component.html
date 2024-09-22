@@ -1,0 +1,24 @@
+<div class="p-5">
+  <div class="duration-text">
+    Duration <span class="ml-16">{{ projectDetails?.duration }}</span>
+  </div>
+  <div class="flex">
+    <div class="my-3">Tech Used</div>
+    <div>
+      <li
+        class="ml-16 my-3 flex"
+        *ngFor="let stack of projectDetails?.techUsed"
+      >
+        <div
+          class="w-[30px] h-auto mx-4"
+          [ngClass]="stack.name === 'Tailwind' ? 'mt-2' : ''"
+        >
+          <img [src]="stack.logo" alt="" />
+        </div>
+        <div>
+          {{ stack.name }}
+        </div>
+      </li>
+    </div>
+  </div>
+</div>

@@ -70,5 +70,19 @@ export class TechStackConstant {
       description:
         "Git is my essential tool for version control. I use it to track changes, collaborate with team members, and manage codebases efficiently. Git's branching and merging capabilities allow for smooth collaboration and ensure the integrity and history of the project's code.",
     },
+    {
+      name: 'Tailwind',
+      logo: './assets/StackLogo/Tailwind.png',
+      info: 'Utility-First CSS Framework',
+      description:
+        "Tailwind is my preferred utility-first CSS framework. I use it to rapidly design and develop custom user interfaces by applying pre-defined utility classes directly in the HTML. Tailwind's approach allows for a highly responsive and consistent design without writing extensive custom CSS, speeding up the development process and ensuring a clean, maintainable codebase.",
+    },
+    {
+      name: 'Bootstrap',
+      logo: './assets/StackLogo/Bootstrap.png',
+      info: 'Responsive Front-End Framework',
+      description:
+        'Bootstrap is my go-to front-end framework for building responsive and mobile-first web applications. I use it to quickly create layouts and components with its pre-built grid system and extensive library of reusable UI elements. Bootstrap allows me to deliver consistent, visually appealing designs across different devices while maintaining flexibility for customization and scalability.',
+    },
   ];
 }

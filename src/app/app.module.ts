@@ -28,6 +28,7 @@ import { FooterV2Component } from 'src/components/footer-v2/footer-v2.component'
 import { AboutMeV3Component } from 'src/components/about-me-v3/about-me-v3.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectCardV2Component } from 'src/components/project-card-v2/project-card-v2.component';
+import { ClientProjectCardComponent } from 'src/components/client-project-card/client-project-card.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { ProjectCardV2Component } from 'src/components/project-card-v2/project-c
     FooterV2Component,
     AboutMeV3Component,
     ProjectCardV2Component,
+    ClientProjectCardComponent,
   ],
   imports: [
     BrowserModule,
