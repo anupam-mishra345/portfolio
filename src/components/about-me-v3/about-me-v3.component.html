@@ -33,15 +33,16 @@
         class="about-me-para transition-effect"
         [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
       >
-        With 3.5 years as a full stack developer, I have a proven track record
-        in developing and enhancing applications. My experience includes
-        designing and delivering comprehensive training programs, building user
-        interfaces, fixing bugs, updating codebases, and integrating third-party
-        tools. I have successfully delivered new features and integrations,
-        developed high-performance server-side applications, and mentored junior
-        team members. Additionally, I have facilitated theoretical and hands-on
-        training sessions, ensuring participants gained practical experience and
-        a deep understanding of the material.
+        With {{ totalExperience }} years as a full stack developer, I have a
+        proven track record in developing and enhancing applications. My
+        experience includes designing and delivering comprehensive training
+        programs, building user interfaces, fixing bugs, updating codebases, and
+        integrating third-party tools. I have successfully delivered new
+        features and integrations, developed high-performance server-side
+        applications, and mentored junior team members. Additionally, I have
+        facilitated theoretical and hands-on training sessions, ensuring
+        participants gained practical experience and a deep understanding of the
+        material.
       </div>
       <div class="count-div w-full transition-effect">
         <div class="count1">12+</div>
@@ -58,7 +59,7 @@
           <div class="count-heading">Happy Clients</div>
         </div>
         <div class="count-div w-1/2">
-          <div class="count">3.5+</div>
+          <div class="count">{{ totalExperience }}</div>
           <hr class="mb-6" />
           <div class="count-heading">Years of Experience</div>
         </div>
@@ -119,6 +120,20 @@
           <div class="exp-work mt-8">
             {{ exp.work }}
           </div>
+          <div class="exp-work mt-8" *ngIf="exp?.products?.length > 0">
+            <div class="font-bold my-3">Projects -</div>
+            <div
+              *ngFor="let projects of exp.products; let i = index"
+              class="border-t-[1px] border-[grey] py-2"
+              [ngClass]="i === exp.products.length - 1 ? 'border-b-[1px]' : ''"
+            >
+              <li class="list-decimal flex">
+                <div>{{ projects.name }}</div>
+                <div class="ml-auto">{{ projects.duration }}</div>
+              </li>
+              <!-- <hr /> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -144,7 +159,7 @@
     </div>
     <div class="right-div w-full mt-20">
       <div
-        class="experience-div py-10 w-full flex transition-effect"
+        class="award-div py-10 w-full flex transition-effect"
         *ngFor="let award of awards; let i = index"
         [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
       >

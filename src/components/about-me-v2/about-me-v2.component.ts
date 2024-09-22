@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/services/data.service';
 import { ThemeService } from 'src/services/theme.service';
 
 @Component({
@@ -9,12 +10,20 @@ import { ThemeService } from 'src/services/theme.service';
 })
 export class AboutMeV2Component {
   isDarkMode: boolean = false;
+  totalExperience: number = 0;
 
-  constructor(private router: Router, private themeService: ThemeService) {}
+  constructor(
+    private router: Router,
+    private themeService: ThemeService,
+    private dataService: DataService
+  ) {}
 
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
+    });
+    this.dataService.totalExperience.subscribe((value) => {
+      this.totalExperience = value;
     });
   }
   navigateToAboutMe() {
