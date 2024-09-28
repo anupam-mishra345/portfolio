@@ -1,5 +1,8 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 import { ThemeService } from 'src/services/theme.service';
+declare let gtag: Function;
 
 @Component({
   selector: 'app-root',
@@ -12,9 +15,20 @@ export class AppComponent {
 
   constructor(
     private themeService: ThemeService,
-    private el: ElementRef,
-    private renderer: Renderer2
-  ) {}
+    // private el: ElementRef,
+    // private renderer: Renderer2,
+    private router: Router
+  ) {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        if (window.location.hostname !== 'localhost') {
+          gtag('config', 'G-5RL4PLXJYJ', {
+            page_path: this.router.url,
+          });
+        }
+      });
+  }
 
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {

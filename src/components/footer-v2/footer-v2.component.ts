@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Footer } from 'src/constants/footer.constant';
 import { ThemeService } from 'src/services/theme.service';
+import { VisitCountService } from 'src/services/visitCount.service';
 
 @Component({
   selector: 'app-footer-v2',
@@ -10,17 +11,26 @@ import { ThemeService } from 'src/services/theme.service';
 })
 export class FooterV2Component {
   isDarkMode: boolean = false;
+  visitCount: number = 0;
   hoveringElement: string = '';
   hoveringId: string = '';
   socialPlatformData: any = Footer.socialPlatformData;
 
-  constructor(private router: Router, private themeService: ThemeService) {}
+  constructor(
+    private router: Router,
+    private themeService: ThemeService,
+    private visitCountService: VisitCountService
+  ) {}
 
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
     });
     scrollTo(0, 0);
+    this.visitCountService.incrementPageCount();
+    this.visitCountService.count$.subscribe((count) => {
+      this.visitCount = count;
+    });
   }
 
   enableHovering(platform: string, id: string) {
