@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { ThemeService } from 'src/services/theme.service';
@@ -13,12 +13,7 @@ export class AppComponent {
   title = 'portfolio';
   isDarkMode: boolean = false;
 
-  constructor(
-    private themeService: ThemeService,
-    // private el: ElementRef,
-    // private renderer: Renderer2,
-    private router: Router
-  ) {
+  constructor(private themeService: ThemeService, private router: Router) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
