@@ -99,7 +99,7 @@ export class Experience {
           duration: 'Aug 2024 - Present',
           techUsed: [
             { name: 'React', logo: './assets/StackLogo/React.png' },
-            { name: 'JavaScript', logo: './assets/StackLogo/Javascript.png' },
+            { name: 'TypeScript', logo: './assets/StackLogo/Typescript.png' },
             { name: 'Tailwind', logo: './assets/StackLogo/Tailwind.png' },
             { name: 'HTML & CSS', logo: './assets/StackLogo/Html.png' },
           ],
