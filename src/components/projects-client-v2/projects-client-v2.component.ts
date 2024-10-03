@@ -45,8 +45,8 @@ export class ProjectsClientV2Component {
 
     {
       name: 'TrustyX',
-      logoLight: './assets/ClientProjectLogo/TrustyX.svg',
-      logoDark: './assets/ClientProjectLogo/TrustyX.svg',
+      logoLight: './assets/ClientProjectLogo/trustyxLogo.png',
+      logoDark: './assets/ClientProjectLogo/trustyxLogo.png',
     },
     {
       name: 'Interview IA dark',
