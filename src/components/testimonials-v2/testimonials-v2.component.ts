@@ -11,10 +11,10 @@ export class TestimonialsV2Component {
   isDarkMode: boolean = false;
   remarks: string[] = [
     "Anupam's expertise in front-end technologies and commitment to enhancing our codebase have greatly improved the quality of our project. Great work, Anupam!",
-    "How Anupam contributed to our project has been impressive. His remarkable skill in seamlessly integrating new features along with his mentorship and guidance for our junior developers, has played a pivotal role in the team's growth. Keep up the amazing work, Anupam!",
+    "How Anupam contributed to our project has been impressive. His seamless feature integration and mentorship of junior developers have been key to the team's growth. Keep up the amazing work, Anupam!",
     "Anupam's proficiency in multiple programming languages is impressive. He can switch between languages effortlessly, making him a versatile and invaluable team member. Outstanding job, Anupam!",
     'Working with Anupam has been a game-changer for our project. He quickly adapted to new technologies. Keep pushing the envelop, Anupam!',
-    'Giving Anupam a chance to start a career with us in a startup will always be one of the good bets. I won with you, man!',
+    'Hiring Anupam to start his career with us at the startup was one of the best bets. His dedication, hard work, and talent have exceeded expectations. I truly feel like I won with you, man!',
   ];
 
   constructor(private router: Router, private themeService: ThemeService) {}
