@@ -1,6 +1,36 @@
 export class Projects {
   public static projectsData = [
     {
+      id: 'a5c67aae-9473-451f-a00a-70b29f10cdcc',
+      logo: './assets/MyProjectsLogo/Atomic-structure.png',
+      projectScreenShot: './assets/screenshots/Atomic-structure-min.png',
+      projectMockup: './assets/screenshots/Atomic-structure-min.png',
+      projectName: 'Atomic Structure',
+      projectLink:
+        'https://anupam-mishra345.github.io/Chemical-electron-structure/mainPage.html',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      technologies2: [
+        { name: 'HTML', logo: './assets/StackLogo/Html.png' },
+        { name: 'CSS', logo: './assets/StackLogo/Css.png' },
+        { name: 'JavaScript', logo: './assets/StackLogo/Javascript.png' },
+      ],
+      cardInfo:
+        'Welcome to our interactive chemistry elements selection platform, designed as a prototype to enhance understanding of the atomic structure of periodic elements. Developed using HTML, CSS, and Vanilla JavaScript, this project showcases foundational coding skills while providing an engaging learning experience.',
+      duration: '1 week',
+      year: 2024,
+      overview: [
+        "Dive into the world of chemistry with our user-friendly interface that allows users to select and learn about the atomic structure of first 20 elements of the periodic table. This platform seamlessly combines educational content with interactive features, making the study of chemistry both accessible and enjoyable for learners of all ages. Users can not only explore each element's properties but also engage in a hands-on experience by adding the available number of electrons to the shells of selected elements. With built-in coded validations, users will receive immediate feedback on their inputs, ensuring a deeper understanding of electron configurations and atomic structure.",
+      ],
+      keyFeatures: [
+        "Interactive Element Selection: Users can easily choose from the first 20 elements, enhancing their understanding of each element's properties and significance in chemistry.",
+        'Educational Focus: This platform serves as an educational tool, providing insights into the basics of chemistry and the importance of each element in various scientific contexts.',
+        'HTML, CSS, and JavaScript Integration: Developed with a focus on core web technologies, this project highlights essential coding skills while offering a functional and visually appealing interface.',
+        'Responsive Design: The platform is designed to be fully responsive, ensuring an optimal experience across devices—from desktops to smartphones—making learning accessible anytime, anywhere.',
+        'Local Storage Utilization: Users can select an element and save their choice using local storage, allowing for a seamless transition between pages while retaining selected data.',
+        'Future Enhancements: As part of an ongoing learning journey, this prototype sets the stage for future developments that may include more advanced features such as quizzes or detailed element information.',
+      ],
+    },
+    {
       id: '498ead31-ba3f-4149-80b3-331586739d3a',
       logo: './assets/MyProjectsLogo/task-planner.png',
       projectScreenShot: './assets/task-planner-ss.png',
@@ -80,7 +110,7 @@ export class Projects {
       ],
       cardInfo:
         'This website stands as a sophisticated prototype, meticulously developed with a foundation of HTML, CSS, and Bootstrap technologies. The fusion of these cutting-edge web technologies ensures a visually appealing, responsive, and user-friendly interface that not only showcases our culinary prowess but also offers a seamless online experience for our valued patrons.',
-      duration: '3 weeks',
+      duration: '2 weeks',
       year: 2020,
       overview: [
         'Experience the epitome of a culinary destination with our meticulously crafted restaurant website, designed to captivate and entice food enthusiasts to explore the exquisite offerings of our establishment. The menu, seamlessly integrated into the site, provides a tantalizing preview of the culinary delights that await. Indulge your senses and embark on a virtual gastronomic adventure through our restaurant website – where culinary excellence meets cutting-edge web design. Explore, discover, and anticipate an unparalleled dining experience.',
@@ -111,7 +141,7 @@ export class Projects {
       ],
       cardInfo:
         'The Chatting Box project is a self-learning prototype that adds every message as a new node in the HTML tree.',
-      duration: '3 weeks',
+      duration: '1 weeks',
       year: 2020,
       overview: [
         'The Chatting Box prototype is a project designed to facilitate communication between two individuals. The user interface of this prototype closely mirrors the inbox layout of the WhatsApp application.',
@@ -167,7 +197,7 @@ export class Projects {
       ],
       cardInfo:
         'Welcome to our pioneering real estate website, representing the initial prototype project conceived during the learning phase. Crafted exclusively with pure HTML and CSS, this platform stands as a testament to the foundational skills acquired, offering a glimpse into the dynamic realm of real estate.',
-      duration: '3 weeks',
+      duration: '2 weeks',
       year: 2019,
       overview: [
         'Embark on a virtual tour of the real estate market through our prototype website, where foundational coding expertise meets the dynamic world of property exploration. Witness the convergence of knowledge and innovation in real estate web development.',
