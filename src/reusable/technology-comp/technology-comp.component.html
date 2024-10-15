@@ -1,0 +1,11 @@
+<div class="flex">
+  <div
+    class="w-[30px] h-auto mx-4"
+    [ngClass]="currentStack?.name === 'Tailwind' ? 'mt-2' : ''"
+  >
+    <img [src]="currentStack?.logo" alt="" />
+  </div>
+  <div>
+    {{ currentStack?.name }}
+  </div>
+</div>

@@ -85,15 +85,7 @@
             *ngFor="let stack of projectData.technologies2"
             [ngClass]="isDarkMode ? 'stack-list-light' : 'stack-list-dark'"
           >
-            <div
-              class="w-[30px] h-auto mx-4"
-              [ngClass]="stack.name === 'Tailwind' ? 'mt-2' : ''"
-            >
-              <img [src]="stack.logo" alt="" />
-            </div>
-            <div>
-              {{ stack.name }}
-            </div>
+            <app-technology-comp [techName]="stack.name"></app-technology-comp>
           </div>
         </div>
       </div>

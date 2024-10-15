@@ -29,6 +29,7 @@ import { AboutMeV3Component } from 'src/components/about-me-v3/about-me-v3.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectCardV2Component } from 'src/components/project-card-v2/project-card-v2.component';
 import { ClientProjectCardComponent } from 'src/components/client-project-card/client-project-card.component';
+import { TechnologyCompComponent } from 'src/reusable/technology-comp/technology-comp.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ClientProjectCardComponent } from 'src/components/client-project-card/c
     AboutMeV3Component,
     ProjectCardV2Component,
     ClientProjectCardComponent,
+    TechnologyCompComponent,
   ],
   imports: [
     BrowserModule,
