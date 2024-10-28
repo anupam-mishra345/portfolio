@@ -1,0 +1,29 @@
+.bg-dark-input {
+  background-color: #2a2a2a;
+  color: white;
+}
+.bg-light-input {
+  background-color: #e4e2e2;
+  color: black;
+}
+.btn {
+  font-size: 16px;
+  border-radius: 50px;
+  border: 1px solid;
+}
+.btn-disabled {
+  opacity: 0.5;
+}
+i:not(:first-child) {
+  transform: rotate(-45deg);
+}
+textarea {
+  resize: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(97, 126, 100);
+}
+small {
+  color: rgb(155, 43, 43);
+}

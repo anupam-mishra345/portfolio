@@ -30,6 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectCardV2Component } from 'src/components/project-card-v2/project-card-v2.component';
 import { ClientProjectCardComponent } from 'src/components/client-project-card/client-project-card.component';
 import { TechnologyCompComponent } from 'src/reusable/technology-comp/technology-comp.component';
+import { ContactUsFormComponent } from 'src/components/contact-us-form/contact-us-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ import { TechnologyCompComponent } from 'src/reusable/technology-comp/technology
     ProjectCardV2Component,
     ClientProjectCardComponent,
     TechnologyCompComponent,
+    ContactUsFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,7 @@ import { TechnologyCompComponent } from 'src/reusable/technology-comp/technology
     CommonModule,
     CanvasJSAngularChartsModule,
     HttpClientModule,
-    BrowserModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

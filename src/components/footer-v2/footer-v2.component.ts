@@ -12,6 +12,7 @@ export class FooterV2Component {
   hoveringElement: string = '';
   hoveringId: string = '';
   socialPlatformData: any = Footer.socialPlatformData;
+  isFormDisplay: boolean = false;
 
   constructor(private themeService: ThemeService) {}
 
@@ -40,5 +41,8 @@ export class FooterV2Component {
         (elem: any) => elem.name === social
       )[0].color;
     }
+  }
+  showFormHandler(showForm: boolean) {
+    this.isFormDisplay = showForm;
   }
 }

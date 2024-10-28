@@ -6,7 +6,10 @@
     <span>LET'S COLLABORATE</span>
   </div>
 
-  <div class="about-div para text-center mx-[200px] mt-5">
+  <div
+    *ngIf="!isFormDisplay"
+    class="about-div para text-center mx-[200px] mt-5"
+  >
     <div>
       I am always eager to take on new challenges and collaborate on exciting
       projects. If you are looking for a dedicated web developer who can bring
@@ -16,6 +19,18 @@
       Feel free to explore my portfolio and get in touch for potential
       collaborations or inquiries.
     </div>
+    <div
+      class="text-[#348e3e] cursor-pointer custom-underline"
+      (click)="showFormHandler(true)"
+    >
+      Still having a query? Click here to ask!
+    </div>
+  </div>
+
+  <div *ngIf="isFormDisplay" class="">
+    <app-contact-us-form
+      (cancelForm)="showFormHandler(false)"
+    ></app-contact-us-form>
   </div>
 
   <div class="flex mt-10 gap-4 justify-center">

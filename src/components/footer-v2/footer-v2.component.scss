@@ -54,6 +54,12 @@ span {
 .mobile-div {
   display: none;
 }
+
+.custom-underline {
+  border-bottom: 2px solid green;
+  margin-top: 5px;
+  display: inline-block;
+}
 @media screen and (max-width: 1234px) {
   .my-name {
     font-size: 80px;
