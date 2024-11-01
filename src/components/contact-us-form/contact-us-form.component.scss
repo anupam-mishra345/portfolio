@@ -27,3 +27,19 @@ textarea::placeholder {
 small {
   color: rgb(155, 43, 43);
 }
+@media screen and (max-width: 940px) {
+  form {
+    width: 90%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inline-div {
+    display: block;
+    margin: 0;
+  }
+  .inline-div > div {
+    width: 100%;
+    margin: 20px 0;
+  }
+}

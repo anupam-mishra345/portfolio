@@ -3,7 +3,7 @@
   [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
 >
   <div *ngIf="hoveringElement === ''" class="my-name text-center px-[50px]">
-    <span>LET'S COLLABORATE</span>
+    <span>LET'S CONNECT</span>
   </div>
 
   <div
@@ -20,7 +20,7 @@
       collaborations or inquiries.
     </div>
     <div
-      class="text-[#348e3e] cursor-pointer custom-underline"
+      class="text-[#348e3e] cursor-pointer underline mt-1 underline-offset-[6px]"
       (click)="showFormHandler(true)"
     >
       Still having a query? Click here to ask!
