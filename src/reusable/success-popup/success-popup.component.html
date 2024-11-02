@@ -1,0 +1,8 @@
+<div
+  class="popup"
+  [ngClass]="isSuccess ? 'popup-success' : 'popup-failed'"
+  *ngIf="show"
+  @popupAnimation
+>
+  <p>{{ message }} ({{ time }})</p>
+</div>

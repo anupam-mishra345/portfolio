@@ -6,7 +6,6 @@
   >
     <div>
       <div class="inline-div flex my-3">
-        <!-- <div class="my-2">Name</div> -->
         <div class="w-1/2 mr-2">
           <input
             class="py-1.5 px-2 rounded-md transition-effect w-full"
@@ -61,7 +60,6 @@
         </div>
       </div>
       <div class="inline-div flex my-3">
-        <!-- <div class="my-2">Email</div> -->
         <div class="w-1/2 mr-2">
           <input
             class="py-1.5 px-2 rounded-md transition-effect w-full"
@@ -110,8 +108,30 @@
           </div>
         </div>
       </div>
+
+      <div class="">
+        <input
+          class="py-1.5 px-2 rounded-md transition-effect w-full"
+          [ngClass]="
+            isDarkMode
+              ? 'bg-dark-input placeholder:text-[#9e9d9d]'
+              : 'bg-light-input placeholder:text-[#727070]'
+          "
+          formControlName="website"
+          type="url"
+          name="website"
+          placeholder="Website (optional)"
+        />
+        <div
+          *ngIf="form.get('website')?.invalid && form.get('website')?.touched"
+        >
+          <small *ngIf="form.get('website')?.errors?.['pattern']"
+            >Please enter a valid URL.</small
+          >
+        </div>
+      </div>
+
       <div class="my-3">
-        <!-- <div class="my-2">Message</div> -->
         <div>
           <textarea
             class="py-1.5 px-2 rounded-md transition-effect w-full"
@@ -146,10 +166,6 @@
           <i class="animation-left-icon fa-solid fa-arrow-left mr-4"></i>
           <span class="animation-text">Cancel</span>
         </div>
-        <!-- <div class="btn animation-div px-5 py-2">
-          <span class="animation-text">Send</span>
-          <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>
-        </div> -->
         <div
           class="btn px-5 py-2"
           [ngClass]="
@@ -168,5 +184,14 @@
       </div>
     </div>
   </form>
-  <!-- </div> -->
+
+  <app-success-popup
+    #popup
+    [isSuccess]="isEmailSent"
+    [message]="
+      isEmailSent
+        ? 'Your message has been sent successfully!'
+        : 'Something went wrong! Please try again later.'
+    "
+  ></app-success-popup>
 </div>

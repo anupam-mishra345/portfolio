@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { ClientProjectCardComponent } from 'src/components/client-project-card/c
 import { TechnologyCompComponent } from 'src/reusable/technology-comp/technology-comp.component';
 import { ContactUsFormComponent } from 'src/components/contact-us-form/contact-us-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SuccessPopupComponent } from 'src/reusable/success-popup/success-popup.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClientProjectCardComponent,
     TechnologyCompComponent,
     ContactUsFormComponent,
+    SuccessPopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +72,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CanvasJSAngularChartsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

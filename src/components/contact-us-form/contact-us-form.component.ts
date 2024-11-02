@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ThemeService } from 'src/services/theme.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from 'src/services/email.service';
+import { SuccessPopupComponent } from 'src/reusable/success-popup/success-popup.component';
 
 @Component({
   selector: 'app-contact-us-form',
@@ -9,10 +10,12 @@ import { EmailService } from 'src/services/email.service';
   styleUrls: ['./contact-us-form.component.scss'],
 })
 export class ContactUsFormComponent {
-  form!: FormGroup;
-
-  isDarkMode: boolean = false;
+  @ViewChild('popup') popup!: SuccessPopupComponent;
   @Output() cancelForm = new EventEmitter();
+
+  form!: FormGroup;
+  isEmailSent: boolean = true;
+  isDarkMode: boolean = false;
 
   constructor(
     private themeService: ThemeService,
@@ -26,6 +29,10 @@ export class ContactUsFormComponent {
       mobile: [
         '',
         [Validators.required, Validators.pattern('^[6-9]{1}[0-9]{9}$')],
+      ],
+      website: [
+        '',
+        [Validators.pattern(/https?:\/\/(www\.)?[a-zA-Z0-9-]+\.[a-z]{2,}/)],
       ],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
@@ -41,10 +48,7 @@ export class ContactUsFormComponent {
   }
   onSubmit() {
     if (this.form.valid) {
-      console.log('Form Submitted', this.form.value);
       this.sendContactEmail();
-    } else {
-      console.log('Form is invalid');
     }
   }
 
@@ -56,9 +60,17 @@ export class ContactUsFormComponent {
         this.emailTemplateUI()
       )
       .then((response) => {
+        this.isEmailSent = true;
+        this.popup.showPopup();
+        this.form.reset();
         console.log('Email sent successfully:', response);
+        setTimeout(() => {
+          this.cancelHandler();
+        }, 3500);
       })
       .catch((error) => {
+        this.isEmailSent = false;
+        this.popup.showPopup();
         console.error('Failed to send email:', error);
       });
   }
@@ -85,7 +97,9 @@ export class ContactUsFormComponent {
         <div style="padding: 20px; color: #333333;font-size: 14px">
           <p style="margin: 8px 0;">
             <span style="font-weight: bold; color: #555555;">Name:</span>
-            <span style="color: #333333;">${this.form.value.firstName} ${this.form.value.lastName}</span>
+            <span style="color: #333333;">${this.form.value.firstName} ${
+      this.form.value.lastName
+    }</span>
           </p>
           <p style="margin: 8px 0;">
             <span style="font-weight: bold; color: #555555;">Email:</span>
@@ -96,9 +110,15 @@ export class ContactUsFormComponent {
             <span style="color: #333333;">${this.form.value.mobile}</span>
           </p>
           <p style="margin: 8px 0;">
-            <span style="font-weight: bold; color: #555555;">Message:</span>
+            <span style="font-weight: bold; color: #555555;">Website:</span>
+            <span style="color: #333333;">${
+              this.form.value.website ? this.form.value.website : '-'
+            }</span>
           </p>
-          <p style="color: #333333;">${this.form.value.message}</p>
+          <p style="margin: 8px 0;">
+            <span style="font-weight: bold; color: #555555;">Message:</span>
+            <span style="color: #333333;">${this.form.value.message}</span>
+          </p>
         </div>
         
         <!-- Footer -->
