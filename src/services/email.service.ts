@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class EmailService {
   private brevoApiUrl = 'https://api.brevo.com/v3/smtp/email';
 
-  apiKey = environment.apiKey;
+  apiKey = environment.brevoApiKey;
 
   async sendEmail(
     toEmail: string,
