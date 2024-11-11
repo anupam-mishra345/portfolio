@@ -46,24 +46,28 @@ export class ContactUsFormComponent {
   cancelHandler() {
     this.cancelForm.emit();
   }
-  onSubmit() {
+  onSubmit(event: Event) {
     if (this.form.valid) {
-      this.sendContactEmail();
+      this.sendContactEmail(event);
     }
   }
 
-  sendContactEmail() {
+  sendContactEmail(event: Event) {
+    const emailData = {
+      firstName: this.form.value.firstName,
+      lastName: this.form.value.lastName,
+      email: this.form.value.email,
+      mobile: this.form.value.mobile,
+      message: this.form.value.message,
+      website: this.form.value.website,
+    };
+
     this.emailService
-      .sendEmail(
-        'anupam.mishra3451@gmail.com',
-        'Portfolio Query',
-        this.emailTemplateUI()
-      )
+      .sendEmail(event)
       .then((response) => {
         this.isEmailSent = true;
         this.popup.showPopup();
         this.form.reset();
-        console.log('Email sent successfully:', response);
         setTimeout(() => {
           this.cancelHandler();
         }, 3500);
@@ -71,7 +75,6 @@ export class ContactUsFormComponent {
       .catch((error) => {
         this.isEmailSent = false;
         this.popup.showPopup();
-        console.error('Failed to send email:', error);
       });
   }
 

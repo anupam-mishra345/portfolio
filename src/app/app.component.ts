@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { ThemeService } from 'src/services/theme.service';
 declare let gtag: Function;
 
@@ -30,6 +29,5 @@ export class AppComponent {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
     });
-    console.log(environment.brevoApiKey);
   }
 }

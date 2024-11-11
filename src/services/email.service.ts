@@ -1,35 +1,30 @@
 import { Injectable } from '@angular/core';
-import axios from 'axios';
-import { environment } from 'src/environments/environment';
-// import { BehaviorSubject } from 'rxjs';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { enviroment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmailService {
-  private brevoApiUrl = 'https://api.brevo.com/v3/smtp/email';
-
-  apiKey = environment.brevoApiKey;
-
-  async sendEmail(
-    toEmail: string,
-    subject: string,
-    content: string
-  ): Promise<any> {
-    const emailData = {
-      sender: { email: 'anupam.mishra345@gmail.com' },
-      to: [{ email: toEmail }],
-      subject: subject,
-      htmlContent: content,
-    };
-
+  async sendEmail(e: Event): Promise<any> {
+    e.preventDefault();
     try {
-      const response = await axios.post(this.brevoApiUrl, emailData, {
-        headers: { 'api-key': this.apiKey, 'Content-Type': 'application/json' },
-      });
-      return response.data;
+      emailjs
+        .sendForm(
+          enviroment.emailServiceId,
+          enviroment.emailTemplateId,
+          e.target as HTMLFormElement,
+          enviroment.emailUserId
+        )
+        .then(
+          (resp) => {
+            return resp;
+          },
+          (error) => {
+            throw error;
+          }
+        );
     } catch (error) {
-      console.error('Error sending email:', error);
       throw error;
     }
   }

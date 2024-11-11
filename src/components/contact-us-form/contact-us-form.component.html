@@ -2,7 +2,7 @@
   <form
     class="border mx-auto px-20 w-2/3 rounded-lg"
     [formGroup]="form"
-    (ngSubmit)="onSubmit()"
+    (ngSubmit)="onSubmit($event)"
   >
     <div>
       <div class="inline-div flex my-3">
@@ -16,7 +16,7 @@
             "
             formControlName="firstName"
             type="text"
-            name="first_name"
+            name="firstName"
             placeholder="First name"
           />
           <div
@@ -42,7 +42,7 @@
             "
             formControlName="lastName"
             type="text"
-            name="last_name"
+            name="lastName"
             placeholder="Last name"
           />
           <div
@@ -70,7 +70,7 @@
             "
             formControlName="email"
             type="text"
-            name="email_address"
+            name="email"
             placeholder="Email address"
           />
           <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
@@ -93,7 +93,7 @@
             formControlName="mobile"
             type="text"
             maxlength="10"
-            name="phone_number"
+            name="mobile"
             placeholder="Mobile Number"
           />
           <div
