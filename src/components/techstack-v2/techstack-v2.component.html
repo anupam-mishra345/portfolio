@@ -26,17 +26,17 @@
     <div>
       <div
         *ngFor="let techstack of techstacks; let i = index"
-        class="position-div px-5 py-20 sticky top-[100px] transition-effect"
+        class="position-div px-5 pt-10 pb-5 sticky top-[100px] transition-effect"
         [ngClass]="[
           isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light',
           i < techstacks.length - 1 ? 'techstack-div' : ''
         ]"
       >
-        <div class="mb-5">
+        <!-- <div class="mb-5">
           <span>{{ i < 10 ? "0" : "" }}</span
           >{{ i + 1 }}
-        </div>
-        <div class="flex">
+        </div> -->
+        <div class="flex" (click)="showDescription(techstack.name)">
           <div class="self-center">
             <img
               [src]="techstack?.logo"
@@ -49,8 +49,21 @@
             <div class="stack-name">{{ techstack?.name }}</div>
             <div class="stack-info mb-4">{{ techstack.info }}</div>
           </div>
+          <div class="arrow-div ml-auto my-auto mr-3 cursor-pointer">
+            <i
+              *ngIf="openDescriptionName !== techstack?.name"
+              class="fa-solid fa-chevron-down"
+            ></i>
+            <i
+              *ngIf="openDescriptionName === techstack?.name"
+              class="fa-solid fa-chevron-up"
+            ></i>
+          </div>
         </div>
-        <div class="techstack-description pt-3">
+        <div
+          *ngIf="openDescriptionName === techstack?.name"
+          class="techstack-description pt-3"
+        >
           "{{ techstack?.description }}"
         </div>
       </div>

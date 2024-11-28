@@ -11,7 +11,7 @@ import { ThemeService } from 'src/services/theme.service';
 export class TechstackV2Component {
   isDarkMode: boolean = false;
   techstacks = TechStackConstant.techstacks.filter((val, ind) => ind < 5);
-
+  openDescriptionName = '';
   constructor(private router: Router, private themeService: ThemeService) {}
 
   ngOnInit() {
@@ -22,5 +22,10 @@ export class TechstackV2Component {
   }
   viewAllStacks() {
     this.router.navigate(['/techstack']);
+  }
+  showDescription(name: string) {
+    if (this.openDescriptionName === name) {
+      this.openDescriptionName = '';
+    } else this.openDescriptionName = name;
   }
 }

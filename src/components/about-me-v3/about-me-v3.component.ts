@@ -13,7 +13,7 @@ export class AboutMeV3Component {
   totalExperience: number = 0;
   currentCompanyExperience: number = 0;
   openProjectId: string = '';
-  experience: any = Experience.experience;
+  experience: any = Experience.experience.reverse();
 
   awards = [
     {
