@@ -36,7 +36,10 @@
           <span>{{ i < 10 ? "0" : "" }}</span
           >{{ i + 1 }}
         </div> -->
-        <div class="flex" (click)="showDescription(techstack.name)">
+        <div
+          class="flex cursor-pointer"
+          (click)="showDescription(techstack.name)"
+        >
           <div class="self-center">
             <img
               [src]="techstack?.logo"

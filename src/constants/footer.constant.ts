@@ -24,21 +24,21 @@ export class Footer {
       logo: './assets/SocialLogo/Github3.png',
       color: '#ffffff',
     },
-    {
-      name: 'Whatsapp',
-      id: '@(+91)-7747852594',
-      link: 'https://wa.me/917747852594',
-      icons: 'fa-brands fa-whatsapp',
-      logo: './assets/SocialLogo/Whatsapp.png',
-      color: '#317d70',
-    },
-    {
-      name: 'Instagram',
-      id: '@anupam.mishra315',
-      link: 'https://www.instagram.com/anupam.mishra315/',
-      icons: 'fa-brands fa-instagram ',
-      logo: './assets/SocialLogo/Instagram.png',
-      color: '#ae3d79',
-    },
+    // {
+    //   name: 'Whatsapp',
+    //   id: '@(+91)-7747852594',
+    //   link: 'https://wa.me/917747852594',
+    //   icons: 'fa-brands fa-whatsapp',
+    //   logo: './assets/SocialLogo/Whatsapp.png',
+    //   color: '#317d70',
+    // },
+    // {
+    //   name: 'Instagram',
+    //   id: '@anupam.mishra315',
+    //   link: 'https://www.instagram.com/anupam.mishra315/',
+    //   icons: 'fa-brands fa-instagram ',
+    //   logo: './assets/SocialLogo/Instagram.png',
+    //   color: '#ae3d79',
+    // },
   ];
 }
