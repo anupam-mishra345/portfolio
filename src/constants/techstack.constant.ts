@@ -84,5 +84,19 @@ export class TechStackConstant {
       description:
         'Bootstrap is my go-to front-end framework for building responsive and mobile-first web applications. I use it to quickly create layouts and components with its pre-built grid system and extensive library of reusable UI elements. Bootstrap allows me to deliver consistent, visually appealing designs across different devices while maintaining flexibility for customization and scalability.',
     },
+    {
+      name: 'Jira',
+      logo: './assets/StackLogo/Jira.png',
+      info: 'Project Management',
+      description:
+        'Jira is my essential tool for project and issue tracking. I use it to plan sprints, manage tasks, and collaborate with my team efficiently. Its customizable workflows, automation features, and integration capabilities help streamline development processes, ensuring transparency and productivity throughout the project lifecycle.',
+    },
+    {
+      name: 'Slack',
+      logo: './assets/StackLogo/Slack.png',
+      info: 'Team Communication',
+      description:
+        'Slack is my go-to tool for team communication and collaboration. I use it to share updates, discuss projects, and integrate with other development tools for seamless workflow management. Its real-time messaging, channels, and notifications help keep the team aligned and ensure efficient communication.',
+    },
   ];
 }

@@ -96,11 +96,23 @@ export class Experience {
         {
           id: '76ba507e-d850-4507-9239-2438768d626d',
           name: 'MANTRA TRAQ',
-          duration: 'Aug 2024 - Present',
+          duration: 'Aug 2024 - Oct 2024',
           techUsed: [
             { name: 'React', logo: './assets/StackLogo/React.png' },
             { name: 'TypeScript', logo: './assets/StackLogo/Typescript.png' },
             { name: 'Tailwind', logo: './assets/StackLogo/Tailwind.png' },
+            { name: 'HTML & CSS', logo: './assets/StackLogo/Html.png' },
+          ],
+        },
+        {
+          id: 'fffa4cb8-3a9a-4388-852b-55b534496a34',
+          name: 'C2C - Connect2Clinic',
+          duration: 'Oct 2024 - Present',
+          techUsed: [
+            { name: 'React', logo: './assets/StackLogo/React.png' },
+            { name: 'TypeScript', logo: './assets/StackLogo/Typescript.png' },
+            { name: 'JavaScript', logo: './assets/StackLogo/Javascript.png' },
+            { name: 'Bootstrap', logo: './assets/StackLogo/Bootstrap.png' },
             { name: 'HTML & CSS', logo: './assets/StackLogo/Html.png' },
           ],
         },
