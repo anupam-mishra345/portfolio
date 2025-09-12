@@ -23,6 +23,11 @@ export class ProjectsClientV2Component {
 
   clients = [
     {
+      name: 'connect2clinic',
+      logoLight: './assets/ClientProjectLogo/connect2clinic.png',
+      logoDark: './assets/ClientProjectLogo/connect2clinic.png',
+    },
+    {
       name: 'TATA AIA',
       logoLight: './assets/ClientProjectLogo/TataAIA.png',
       logoDark: './assets/ClientProjectLogo/TataAIA.png',

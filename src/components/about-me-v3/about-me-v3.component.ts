@@ -13,7 +13,7 @@ export class AboutMeV3Component {
   totalExperience: number = 0;
   currentCompanyExperience: number = 0;
   openProjectId: string = '';
-  experience: any = Experience.experience.reverse();
+  experience: any = Experience.experience;
 
   awards = [
     {
@@ -58,23 +58,31 @@ export class AboutMeV3Component {
   }
 
   downloadResume() {
-    const filePath = './assets/pdfs/Anupam-Mishra-Resume.pdf';
+    // const filePath = './assets/pdfs/Anupam-Mishra-Resume.pdf';
+    const filePath =
+      'https://drive.google.com/uc?export=download&id=10FTodnoFm4io-Y7bWr9hE_tvhK13NUqG';
 
-    this.http
-      .get(filePath, { responseType: 'blob' })
-      .subscribe((response: Blob) => {
-        const blob = new Blob([response], { type: 'application/pdf' });
-        const url = window.URL.createObjectURL(blob);
+    // this.http
+    //   .get(filePath, { responseType: 'blob' })
+    //   .subscribe((response: Blob) => {
+    // const blob = new Blob([response], { type: 'application/pdf' });
+    // const url = window.URL.createObjectURL(blob);
 
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Anupam Mishra Resume.pdf';
-        document.body.appendChild(a);
-        a.click();
+    // const a = document.createElement('a');
+    // a.href = url;
+    // a.download = 'Anupam Mishra Resume.pdf';
+    // document.body.appendChild(a);
+    // a.click();
 
-        document.body.removeChild(a);
-        window.URL.revokeObjectURL(url);
-      });
+    // document.body.removeChild(a);
+    // window.URL.revokeObjectURL(url);
+    // });
+    const a = document.createElement('a');
+    a.href = filePath;
+
+    a.download = 'Anupam Mishra Resume.pdf';
+    document.body.appendChild(a);
+    a.click();
   }
 
   openProjectDetails(id: string) {
