@@ -20,7 +20,7 @@ MIT
 MIT
 CanvasJS Angular Chart
 
-Copyright (c) 2023, Fenopix
+Copyright (c) 2024, Fenopix
 
 The software in CanvasJS Angular Chart is free and open-source. But, CanvasJS Angular Chart relies on CanvasJS Chart which requires a valid CanvasJS Chart license for commercial use. Please refer to the following link for further details https://canvasjs.com/license/
 
