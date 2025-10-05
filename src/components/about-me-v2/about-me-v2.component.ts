@@ -11,6 +11,8 @@ import { ThemeService } from 'src/services/theme.service';
 export class AboutMeV2Component {
   isDarkMode: boolean = false;
   totalExperience: number = 0;
+  clientProjectCount: number = 0;
+  myOwnProjectCount: number = 0;
 
   constructor(
     private router: Router,
@@ -25,8 +27,17 @@ export class AboutMeV2Component {
     this.dataService.totalExperience.subscribe((value) => {
       this.totalExperience = value;
     });
+    this.fetchProjectsCount();
   }
   navigateToAboutMe() {
     this.router.navigate(['/about-me']);
+  }
+  fetchProjectsCount() {
+    this.dataService.clientProjectCount.subscribe((value) => {
+      this.clientProjectCount = value;
+    });
+    this.dataService.myOwnProjectCount.subscribe((value) => {
+      this.myOwnProjectCount = value;
+    });
   }
 }

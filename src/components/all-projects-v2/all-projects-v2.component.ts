@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Projects } from 'src/constants/project.constant';
+import { DataService } from 'src/services/data.service';
 import { ThemeService } from 'src/services/theme.service';
 
 @Component({
@@ -10,13 +10,20 @@ import { ThemeService } from 'src/services/theme.service';
 })
 export class AllProjectsV2Component {
   isDarkMode: boolean = false;
-  projectData = Projects.projectsData;
+  projectData: any = [];
 
-  constructor(private router: Router, private themeService: ThemeService) {}
+  constructor(
+    private router: Router,
+    private themeService: ThemeService,
+    private dataService: DataService
+  ) {}
 
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
+    });
+    this.dataService.portfolioProjectsGistData.subscribe((value) => {
+      this.projectData = value.projectsData;
     });
     scrollTo(0, 0);
   }

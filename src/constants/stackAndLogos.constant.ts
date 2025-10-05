@@ -50,5 +50,8 @@ export class StackLogoConstant {
     },
     { name: 'HTML', logo: './assets/StackLogo/Html.png' },
     { name: 'CSS', logo: './assets/StackLogo/Css.png' },
+    { name: 'Slack', logo: './assets/StackLogo/Slack.png' },
+    { name: 'Jira', logo: './assets/StackLogo/Jira.png' },
+    { name: 'Bitbucket', logo: './assets/StackLogo/Bitbucket.png' },
   ];
 }

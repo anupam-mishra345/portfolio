@@ -4,17 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from 'src/components/navbar/navbar.component';
-import { HomeComponent } from 'src/components/home/home.component';
-import { FooterComponent } from 'src/components/footer/footer.component';
 import { ContactMeComponent } from 'src/components/contact-me/contact-me.component';
-import { AllProjectsComponent } from 'src/components/all-projects/all-projects.component';
 import { CommonModule } from '@angular/common';
-import { ProjectCardComponent } from 'src/components/project-card/project-card.component';
-import { ProjectDetailsComponent } from 'src/components/project-details/project-details.component';
-import { ExpertiseComponent } from 'src/components/expertise/expertise.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-import { SkillSetComponent } from 'src/components/skill-set/skill-set.component';
 import { HomeV2Component } from 'src/components/home-v2/home-v2.component';
 import { AboutMeV2Component } from 'src/components/about-me-v2/about-me-v2.component';
 import { TestimonialsV2Component } from 'src/components/testimonials-v2/testimonials-v2.component';
@@ -38,15 +30,7 @@ import { SuccessPopupComponent } from 'src/reusable/success-popup/success-popup.
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ExpertiseComponent,
-    FooterComponent,
-    NavbarComponent,
     ContactMeComponent,
-    AllProjectsComponent,
-    ProjectCardComponent,
-    ProjectDetailsComponent,
-    SkillSetComponent,
     HomeV2Component,
     AboutMeV2Component,
     TestimonialsV2Component,

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ThemeService } from 'src/services/theme.service';
-import { HttpClient } from '@angular/common/http';
 import { DataService } from 'src/services/data.service';
-import { Experience } from 'src/constants/experience.constant';
+import { GistData } from 'src/constants/gist-data.constant';
+
 @Component({
   selector: 'app-about-me-v3',
   templateUrl: './about-me-v3.component.html',
@@ -13,29 +13,14 @@ export class AboutMeV3Component {
   totalExperience: number = 0;
   currentCompanyExperience: number = 0;
   openProjectId: string = '';
-  experience: any = Experience.experience;
-
-  awards = [
-    {
-      name: 'Employee of the Month',
-      category: 'Award',
-      month: 'October 2023',
-    },
-    {
-      name: 'Performer of the Month',
-      category: 'Award',
-      month: 'December 2021',
-    },
-    {
-      name: 'Full stack Development',
-      category: 'Certificate',
-      month: 'July 2020',
-    },
-  ];
+  experience: any;
+  awards: any;
+  projectData: any;
+  clientProjectCount: number = 0;
+  myOwnProjectCount: number = 0;
 
   constructor(
     private themeService: ThemeService,
-    private http: HttpClient,
     private dataService: DataService
   ) {}
 
@@ -50,33 +35,20 @@ export class AboutMeV3Component {
     this.dataService.currentCompanyExperience.subscribe((value) => {
       this.currentCompanyExperience = value;
     });
-    this.getExperience();
-  }
-
-  getExperience() {
-    // this.experience =
+    this.dataService.portfolioExperienceGistData.subscribe((value) => {
+      this.experience = value.experience;
+    });
+    this.dataService.portfolioProjectsGistData.subscribe((value) => {
+      this.projectData = value.projectsData;
+    });
+    this.dataService.portfolioGeneralGistData.subscribe((value) => {
+      this.awards = value.awards;
+    });
+    this.fetchProjectsCount();
   }
 
   downloadResume() {
-    // const filePath = './assets/pdfs/Anupam-Mishra-Resume.pdf';
-    const filePath =
-      'https://drive.google.com/uc?export=download&id=10FTodnoFm4io-Y7bWr9hE_tvhK13NUqG';
-
-    // this.http
-    //   .get(filePath, { responseType: 'blob' })
-    //   .subscribe((response: Blob) => {
-    // const blob = new Blob([response], { type: 'application/pdf' });
-    // const url = window.URL.createObjectURL(blob);
-
-    // const a = document.createElement('a');
-    // a.href = url;
-    // a.download = 'Anupam Mishra Resume.pdf';
-    // document.body.appendChild(a);
-    // a.click();
-
-    // document.body.removeChild(a);
-    // window.URL.revokeObjectURL(url);
-    // });
+    const filePath = GistData.resumeUrl;
     const a = document.createElement('a');
     a.href = filePath;
 
@@ -91,5 +63,14 @@ export class AboutMeV3Component {
     } else {
       this.openProjectId = id;
     }
+  }
+
+  fetchProjectsCount() {
+    this.dataService.clientProjectCount.subscribe((value) => {
+      this.clientProjectCount = value;
+    });
+    this.dataService.myOwnProjectCount.subscribe((value) => {
+      this.myOwnProjectCount = value;
+    });
   }
 }

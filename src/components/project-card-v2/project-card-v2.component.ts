@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Projects } from 'src/constants/project.constant';
+import { DataService } from 'src/services/data.service';
 import { ThemeService } from 'src/services/theme.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ThemeService } from 'src/services/theme.service';
 })
 export class ProjectCardV2Component {
   isDarkMode: boolean = false;
-  projectData = Projects.projectsData;
+  projectData: any = [];
 
   @Input() showText: boolean = false;
   @Input() arrowBtnName: string = '';
@@ -34,6 +34,7 @@ export class ProjectCardV2Component {
 
   constructor(
     private themeService: ThemeService,
+    private dataService: DataService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -41,6 +42,9 @@ export class ProjectCardV2Component {
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
+    });
+    this.dataService.portfolioProjectsGistData.subscribe((value) => {
+      this.projectData = value.projectsData;
     });
     scrollTo(0, 0);
   }
