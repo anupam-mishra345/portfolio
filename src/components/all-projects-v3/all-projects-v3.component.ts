@@ -11,6 +11,9 @@ import { ThemeService } from 'src/services/theme.service';
 export class AllProjectsV3Component {
   isDarkMode: boolean = false;
   projectData: any = [];
+  experience: any;
+  currentCompanyExperience: number = 0;
+  openProjectId: string = '';
 
   constructor(
     private themeService: ThemeService,
@@ -25,10 +28,25 @@ export class AllProjectsV3Component {
     this.dataService.portfolioProjectsGistData.subscribe((value) => {
       this.projectData = value.projectsData;
     });
+    this.dataService.currentCompanyExperience.subscribe((value) => {
+      this.currentCompanyExperience = value;
+    });
+    this.dataService.portfolioExperienceGistData.subscribe((value) => {
+      let temp: any = value.experience;
+      if (temp && temp.length > 0)
+        this.experience = temp.filter((exp: any) => exp?.products?.length > 0);
+    });
     scrollTo(0, 0);
   }
   navigateTo(id: string) {
     const url = '/project-details/' + id;
     this.router.navigate([url]);
+  }
+  openProjectDetails(id: string) {
+    if (this.openProjectId === id) {
+      this.openProjectId = '';
+    } else {
+      this.openProjectId = id;
+    }
   }
 }

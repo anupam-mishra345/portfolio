@@ -32,7 +32,51 @@ hr {
 .main-heading-div {
   font-size: 110px;
 }
+.main-heading-industry-div {
+  font-size: 40px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.dot-dark {
+  background-color: #000;
+}
+.dot-light {
+  background-color: #fff;
+}
+.bullet-text {
+  font-size: 20px;
+}
+.exp-duration,
+.exp-work {
+  font-size: 18px;
+  font-weight: 200;
+}
+.exp-position {
+  font-size: 20px;
+  font-weight: 300;
+}
+.exp-industry {
+  font-size: 40px;
+}
+.experience-div {
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
 
+@media screen and (max-width: 1260px) {
+  .main-div {
+    flex-direction: column;
+    padding: 0;
+  }
+  .left-div,
+  .right-div {
+    width: 100%;
+    padding-left: 0;
+  }
+}
 @media screen and (max-width: 940px) {
   .grid-div {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -43,6 +87,9 @@ hr {
   .main-heading-div {
     font-size: 60px;
   }
+  .main-heading-industry-div {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -51,5 +98,11 @@ hr {
   }
   .main-heading-div {
     font-size: 40px;
+  }
+  .main-heading-industry-div {
+    font-size: 20px;
+  }
+  .project-duration-text {
+    display: none;
   }
 }

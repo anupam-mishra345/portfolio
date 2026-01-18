@@ -1,5 +1,98 @@
 <div class="px-10 pt-[100px]">
   <div
+    class="main-heading-div transition-effect"
+    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+  >
+    CLIENT PROJECTS I'VE WORKED ON
+  </div>
+  <app-projects-client-v2></app-projects-client-v2>
+  <hr class="px-10 mb-20" />
+
+  <!-- Client Projects -->
+  <div class="main-div mx-10 mt-10">
+    <div class="flex sticky top-[80px]">
+      <div
+        class="dot transition-effect self-center"
+        [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+      ></div>
+      <div
+        class="bullet-text transition-effect self-center px-5"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        ORGANIZATION
+      </div>
+    </div>
+    <div
+      class="flex pb-20"
+      *ngFor="let exp of experience; let expIndex = index"
+      [ngClass]="expIndex === experience.length - 1 ? '' : 'experience-div'"
+    >
+      <div
+        class="left-div w-1/2 mb-auto sticky top-[120px]"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        <div class="main-heading-industry-div transition-effect">
+          {{ exp.industry }}
+        </div>
+        <div class="exp-position">
+          {{ exp.position }}
+        </div>
+      </div>
+      <div class="right-div w-1/2 pl-10">
+        <div>
+          <div
+            class="relative transition-effect"
+            [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+          >
+            <div class="flex">
+              <div
+                class="dot transition-effect self-center"
+                [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+              ></div>
+              <div class="exp-duration ml-3">{{ exp.duration }}</div>
+            </div>
+            <div class="exp-work mt-8" *ngIf="exp?.products?.length > 0">
+              <div class="exp-position my-5">Projects</div>
+              <div
+                *ngFor="let projects of exp.products; let i = index"
+                class="border-t-[1px] border-[grey] py-4"
+                [ngClass]="
+                  i === exp.products.length - 1 ? 'border-b-[1px]' : ''
+                "
+              >
+                <li
+                  class="flex cursor-pointer"
+                  (click)="openProjectDetails(projects.id)"
+                >
+                  <div class="font-semibold mr-3">{{ i + 1 }}.</div>
+                  <div class="font-semibold">
+                    {{ projects.name }}
+                  </div>
+                  <div class="project-duration-text ml-auto">
+                    {{ projects.duration }}
+                  </div>
+                  <div *ngIf="openProjectId !== projects.id" class="ml-5">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <div *ngIf="openProjectId === projects.id" class="ml-5">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                </li>
+                <div *ngIf="openProjectId === projects.id">
+                  <app-client-project-card
+                    [projectDetails]="projects"
+                  ></app-client-project-card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="px-10 mb-20" />
+  <div
     class="heading transition-effect py-20"
     [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
   >
@@ -11,14 +104,4 @@
       <app-project-card-v2 [project]="project"></app-project-card-v2>
     </div>
   </div>
-
-  <hr class="px-10 mb-20" />
-
-  <div
-    class="main-heading-div transition-effect"
-    [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
-  >
-    CLIENT PROJECTS I'VE WORKED ON
-  </div>
-  <app-projects-client-v2></app-projects-client-v2>
 </div>
