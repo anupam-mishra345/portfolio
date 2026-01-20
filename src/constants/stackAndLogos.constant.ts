@@ -21,6 +21,10 @@ export class StackLogoConstant {
       logo: './assets/StackLogo/Html.png',
     },
     {
+      name: 'Nest.js',
+      logo: './assets/StackLogo/Nest.png',
+    },
+    {
       name: 'Node.js',
       logo: './assets/StackLogo/Node.png',
     },
@@ -35,6 +39,10 @@ export class StackLogoConstant {
     {
       name: 'PostgreSQL',
       logo: './assets/StackLogo/Postgres.png',
+    },
+    {
+      name: 'MongoDB',
+      logo: './assets/StackLogo/MongoDB.png',
     },
     {
       name: 'Git',
