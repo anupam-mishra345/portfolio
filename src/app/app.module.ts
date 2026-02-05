@@ -26,6 +26,7 @@ import { TechnologyCompComponent } from 'src/reusable/technology-comp/technology
 import { ContactUsFormComponent } from 'src/components/contact-us-form/contact-us-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SuccessPopupComponent } from 'src/reusable/success-popup/success-popup.component';
+import { TechstackV4Component } from 'src/components/techstack-v4/techstack-v4.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SuccessPopupComponent } from 'src/reusable/success-popup/success-popup.
     ProjectsClientV2Component,
     NavbarV2Component,
     TechstackV3Component,
+    TechstackV4Component,
     ProjectDetailsV2Component,
     FooterV2Component,
     AboutMeV3Component,

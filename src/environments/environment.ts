@@ -1,5 +1,3 @@
-          
-
 export const enviroment = {
   production: false,
   emailServiceId: 'service_c3my6or',

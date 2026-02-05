@@ -1,0 +1,67 @@
+<div class="main-div flex px-10">
+  <div class="left-div w-1/2 mb-auto sticky top-[150px]">
+    <div class="flex">
+      <div
+        class="dot transition-effect self-center"
+        [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
+      ></div>
+      <div
+        class="stack-text transition-effect self-center px-5 w-full"
+        [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+      >
+        STACK
+      </div>
+    </div>
+    <div
+      class="techstack-heading-text transition-effect"
+      [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+    >
+      MY TECH TOOL BOX
+    </div>
+  </div>
+  <div
+    class="right-div w-1/2 transition-effect"
+    [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+  >
+    <div class="flex flex-wrap">
+      <div
+        *ngFor="let techstack of techstacks; let i = index"
+        class="position-div px-5 pt-10 pb-5 transition-effect self-center mx-auto cursor-pointer"
+        [ngClass]="[isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light']"
+      >
+        <div class="self-center">
+          <img
+            [src]="techstack?.logo"
+            class="mx-auto"
+            alt="logo"
+            height="60px"
+            width="60px"
+          />
+        </div>
+        <div class="mt-2 self-center flex">
+          <div class="stack-name mx-auto">
+            {{ techstack?.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="py-10 text-center relative transition-effect"
+      [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
+    >
+      <div
+        class="view-all-stack-btn animation-div transition-effect w-fit mx-auto px-10 py-5 cursor-pointer"
+        [ngClass]="
+          isDarkMode
+            ? 'text-light btn-click-animation-light'
+            : 'text-dark btn-click-animation-dark'
+        "
+        (click)="viewAllStacks()"
+      >
+        <div class="animation-text">View All Stacks</div>
+        <i class="animation-icon fa-solid fa-arrow-right ml-5"></i>
+      </div>
+    </div>
+  </div>
+</div>
