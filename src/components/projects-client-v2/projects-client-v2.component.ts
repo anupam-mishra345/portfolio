@@ -23,6 +23,11 @@ export class ProjectsClientV2Component {
 
   clients = [
     {
+      name: 'datafloww',
+      logoLight: './assets/ClientProjectLogo/tekx.png',
+      logoDark: './assets/ClientProjectLogo/tekx.png',
+    },
+    {
       name: 'connect2clinic',
       logoLight: './assets/ClientProjectLogo/connect2clinic.png',
       logoDark: './assets/ClientProjectLogo/connect2clinic.png',
@@ -65,7 +70,7 @@ export class ProjectsClientV2Component {
   constructor(
     private themeService: ThemeService,
     private el: ElementRef,
-    private renderer: Renderer2
+    private renderer: Renderer2,
   ) {
     this.changeClientsUI();
   }
