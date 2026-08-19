@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { BackendService } from 'src/services/backend.service';
 import { ThemeService } from 'src/services/theme.service';
 declare let gtag: Function;
 
@@ -12,8 +13,13 @@ declare let gtag: Function;
 export class AppComponent {
   title = 'portfolio';
   isDarkMode: boolean = false;
+  scrollProgress = 0;
 
-  constructor(private themeService: ThemeService, private router: Router) {
+  constructor(
+    private themeService: ThemeService,
+    private router: Router,
+    private backendService: BackendService,
+  ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -25,9 +31,27 @@ export class AppComponent {
       });
   }
 
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    const scrollTop = window.scrollY;
+    const documentHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+
+    this.scrollProgress =
+      documentHeight > 0 ? (scrollTop / documentHeight) * 100 : 0;
+  }
+
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
+    });
+    this.backendService.testBackend().subscribe({
+      next: (response) => {
+        console.log('Backend response:', response);
+      },
+      error: (error) => {
+        console.error('Backend error:', error);
+      },
     });
   }
 }

@@ -1,8 +1,12 @@
 <div class="main-page" [ngClass]="isDarkMode ? 'darkTheme' : 'lightTheme'">
+  <router-outlet></router-outlet>
   <div>
     <app-navbar-v2></app-navbar-v2>
   </div>
   <div class="pb-5">
+    <div class="scroll-progress">
+      <div class="scroll-progress__bar" [style.width.%]="scrollProgress"></div>
+    </div>
     <router-outlet></router-outlet>
   </div>
   <hr />
