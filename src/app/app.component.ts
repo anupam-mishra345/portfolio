@@ -45,13 +45,13 @@ export class AppComponent {
     this.themeService.getTheme().subscribe((theme) => {
       this.isDarkMode = theme;
     });
-    this.backendService.testBackend().subscribe({
-      next: (response) => {
-        console.log('Backend response:', response);
-      },
-      error: (error) => {
-        console.error('Backend error:', error);
-      },
-    });
+    // this.backendService.testBackend().subscribe({
+    //   next: (response) => {
+    //     console.log('Backend response:', response);
+    //   },
+    //   error: (error) => {
+    //     console.error('Backend error:', error);
+    //   },
+    // });
   }
 }
