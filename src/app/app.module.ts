@@ -27,6 +27,8 @@ import { ContactUsFormComponent } from 'src/components/contact-us-form/contact-u
 import { ReactiveFormsModule } from '@angular/forms';
 import { SuccessPopupComponent } from 'src/reusable/success-popup/success-popup.component';
 import { TechstackV4Component } from 'src/components/techstack-v4/techstack-v4.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ResumeViewerComponent } from 'src/components/resume-viewer/resume-viewer.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { TechstackV4Component } from 'src/components/techstack-v4/techstack-v4.c
     TechnologyCompComponent,
     ContactUsFormComponent,
     SuccessPopupComponent,
+    ResumeViewerComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ import { TechstackV4Component } from 'src/components/techstack-v4/techstack-v4.c
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    PdfViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

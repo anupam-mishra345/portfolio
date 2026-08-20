@@ -1,0 +1,47 @@
+<!-- Resume Backdrop -->
+<div class="resume-backdrop" (click)="close()">
+  <!-- Resume Modal -->
+  <div class="resume-modal" (click)="stopPropagation($event)">
+    <!-- Close Button -->
+    <button
+      type="button"
+      class="resume-close"
+      aria-label="Close resume"
+      (click)="close()"
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Loading -->
+    <div *ngIf="loading" class="resume-loading">
+      <div class="resume-spinner"></div>
+
+      <p>Loading resume...</p>
+    </div>
+
+    <!-- Error -->
+    <div *ngIf="!loading && error" class="resume-error">
+      <i class="fa-solid fa-file-circle-xmark"></i>
+
+      <p>Unable to load resume.</p>
+
+      <button type="button" (click)="close()">Close</button>
+    </div>
+
+    <!-- PDF Viewer -->
+    <div *ngIf="!loading && !error && pdfUrl" class="resume-pdf-container">
+      <pdf-viewer
+        [src]="pdfUrl"
+        [original-size]="false"
+        [fit-to-page]="true"
+        [show-all]="true"
+        [autoresize]="true"
+        [render-text]="true"
+        [show-borders]="false"
+        class="resume-pdf"
+        [class.resume-dark]="isDarkMode"
+      >
+      </pdf-viewer>
+    </div>
+  </div>
+</div>

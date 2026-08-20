@@ -26,7 +26,7 @@ hr {
   border-radius: 5px;
 }
 .btn-about-me {
-  font-size: 26px;
+  font-size: 20px;
   border: 1px solid;
   border-radius: 50px;
 }
@@ -38,6 +38,9 @@ i {
   font-size: 30px;
   transform: rotate(-45deg);
 }
+.right-div {
+  padding-left: 30px;
+}
 
 @media screen and (max-width: 1260px) {
   .main-div {
@@ -47,6 +50,7 @@ i {
   .left-div,
   .right-div {
     width: 100%;
+    padding-left: unset;
   }
   .main-heading-text {
     font-size: 60px;

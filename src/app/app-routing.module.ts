@@ -6,6 +6,7 @@ import { AllProjectsV3Component } from 'src/components/all-projects-v3/all-proje
 import { TechstackV3Component } from 'src/components/techstack-v3/techstack-v3.component';
 import { ProjectDetailsV2Component } from 'src/components/project-details-v2/project-details-v2.component';
 import { AboutMeV3Component } from 'src/components/about-me-v3/about-me-v3.component';
+import { ResumeViewerComponent } from 'src/components/resume-viewer/resume-viewer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'about-me',
     component: AboutMeV3Component,
+  },
+  {
+    path: 'resume',
+    component: ResumeViewerComponent,
   },
 ];
 

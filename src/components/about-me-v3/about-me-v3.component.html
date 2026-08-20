@@ -64,18 +64,59 @@
           <div class="count-heading">Years of Experience</div>
         </div>
       </div>
-      <div class="btn-center mt-20 mb-10 cursor-pointer">
-        <div
-          class="download-btn animation-div transition-effect flex w-fit px-10 py-5"
-          [ngClass]="
-            isDarkMode
-              ? 'text-light btn-click-animation-light'
-              : 'text-dark btn-click-animation-dark'
-          "
-          (click)="downloadResume()"
-        >
-          <div class="animation-text">Download Resume</div>
-          <i class="animation-down-icon fa-solid fa-download ml-5"></i>
+      <div
+        class="btn-center mt-20 mb-10 border-custom-grey"
+        [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+      >
+        <!-- Resume Info -->
+        <div class="flex items-center">
+          <!-- PDF Icon -->
+          <div
+            class="flex items-center justify-center w-14 h-14 mr-4 rounded-lg text-3xl transition-effect ml-auto"
+            [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+          >
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+
+          <!-- Resume Details -->
+          <div class="flex flex-col mr-auto transition-effect">
+            <div class="font-semibold">Anupam - Resume</div>
+
+            <div class="text-sm opacity-70">Full-Stack Developer</div>
+          </div>
+        </div>
+
+        <!-- Resume Actions -->
+        <div class="resume-action flex items-center gap-4 mt-5">
+          <!-- Download PDF -->
+          <div
+            class="download-btn animation-div transition-effect flex w-fit px-6 py-3 ml-auto cursor-pointer"
+            [ngClass]="
+              isDarkMode
+                ? 'text-light btn-click-animation-light'
+                : 'text-dark btn-click-animation-dark'
+            "
+            (click)="downloadResume()"
+          >
+            <div class="animation-text">Download PDF</div>
+
+            <i class="fa-solid fa-download ml-4 animation-down-icon"></i>
+          </div>
+
+          <!-- Quick View -->
+          <div
+            class="download-btn animation-div transition-effect flex w-fit px-6 py-3 mr-auto cursor-pointer"
+            [ngClass]="
+              isDarkMode
+                ? 'text-light btn-click-animation-light'
+                : 'text-dark btn-click-animation-dark'
+            "
+            (click)="viewResume()"
+          >
+            <div class="animation-text">Quick View</div>
+
+            <i class="fa-solid fa-eye ml-4 animation-down-icon"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -238,3 +279,5 @@
     <app-projects-client-v2></app-projects-client-v2>
   </div>
 </div>
+<app-resume-viewer *ngIf="showResume" (closed)="closeResume()">
+</app-resume-viewer>

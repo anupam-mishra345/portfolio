@@ -60,9 +60,14 @@ hr {
 .mobile-awards-div {
   display: none;
 }
+.border-custom-grey {
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 20px 10px;
+}
 
 .download-btn {
-  font-size: 26px;
+  font-size: 20px;
   border: 1px solid;
   border-radius: 50px;
 }
@@ -74,7 +79,9 @@ hr {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+iframe {
+  filter: invert(1);
+}
 @media screen and (max-width: 1260px) {
   .main-div {
     flex-direction: column;
@@ -88,6 +95,7 @@ hr {
   .who-am-I-div {
     position: relative;
     top: unset;
+    width: 100%;
   }
   .about-me-para {
     padding-top: 20px;
@@ -156,4 +164,24 @@ hr {
   .project-duration-text {
     display: none;
   }
+}
+@media screen and (max-width: 550px) {
+  .resume-action {
+    flex-direction: column;
+  }
+}
+@keyframes resumeModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-resume-modal {
+  animation: resumeModalIn 0.2s ease-out;
 }

@@ -7,7 +7,7 @@ export const GistData = {
     'https://api.github.com/gists/5ad2da21ddf6473b6da69922587eaffb',
   resumeUrl:
     'https://drive.google.com/uc?export=download&id=10FTodnoFm4io-Y7bWr9hE_tvhK13NUqG',
-
+  resumeFileId: '10FTodnoFm4io-Y7bWr9hE_tvhK13NUqG',
   generalData:
     'https://gist.githubusercontent.com/anupam-mishra345/5ad2da21ddf6473b6da69922587eaffb/raw/portfolio-general-data.json',
   projectData:

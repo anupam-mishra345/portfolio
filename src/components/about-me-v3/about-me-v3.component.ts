@@ -18,10 +18,11 @@ export class AboutMeV3Component {
   projectData: any;
   clientProjectCount: number = 0;
   myOwnProjectCount: number = 0;
+  showResume = false;
 
   constructor(
     private themeService: ThemeService,
-    private dataService: DataService
+    private dataService: DataService,
   ) {}
 
   ngOnInit() {
@@ -55,6 +56,15 @@ export class AboutMeV3Component {
     a.download = 'Anupam Mishra Resume.pdf';
     document.body.appendChild(a);
     a.click();
+    document.body.removeChild(a);
+  }
+
+  viewResume(): void {
+    this.showResume = true;
+  }
+
+  closeResume(): void {
+    this.showResume = false;
   }
 
   openProjectDetails(id: string) {
