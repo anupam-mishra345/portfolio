@@ -9,8 +9,6 @@ import { ThemeService } from 'src/services/theme.service';
 })
 export class FooterV2Component {
   isDarkMode: boolean = false;
-  hoveringElement: string = '';
-  hoveringId: string = '';
   socialPlatformData: any = Footer.socialPlatformData;
   isFormDisplay: boolean = false;
 
@@ -23,25 +21,6 @@ export class FooterV2Component {
     scrollTo(0, 0);
   }
 
-  enableHovering(platform: string, id: string) {
-    this.hoveringElement = platform;
-    this.hoveringId = id;
-  }
-  disableHovering() {
-    this.hoveringElement = '';
-    this.hoveringId = '';
-  }
-  getStackColor(social: string) {
-    if (social === '') {
-      return this.socialPlatformData.filter(
-        (elem: any) => elem.name === this.hoveringElement
-      )[0].color;
-    } else {
-      return this.socialPlatformData.filter(
-        (elem: any) => elem.name === social
-      )[0].color;
-    }
-  }
   showFormHandler(showForm: boolean) {
     this.isFormDisplay = showForm;
   }

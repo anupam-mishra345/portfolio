@@ -16,7 +16,7 @@
         isDarkMode
           ? 'text-light bg-dark border-dark'
           : 'text-dark bg-light border-light',
-        i > techstacks.length - 2 ? 'no-border-bottom' : ''
+        i > techstacks.length - 2 ? 'no-border-bottom' : '',
       ]"
     >
       <div class="flex">
@@ -32,7 +32,9 @@
         <div class="flex flex-col w-full ml-10">
           <div>
             <div class="stack-name">{{ techstack?.name }}</div>
-            <div class="mb-4">{{ techstack.info }}</div>
+            <div class="text-secondary mb-4">
+              {{ techstack.info }}
+            </div>
           </div>
           <div class="techstack-info-desktop mt-4">
             "{{ techstack?.description }}"

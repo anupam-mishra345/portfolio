@@ -13,7 +13,7 @@ export class TestimonialsV2Component {
 
   constructor(
     private themeService: ThemeService,
-    private dataService: DataService
+    private dataService: DataService,
   ) {}
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class TestimonialsV2Component {
       this.isDarkMode = theme;
     });
     this.dataService.portfolioGeneralGistData.subscribe((value) => {
-      this.remarks = value.manager_reviews;
+      this.remarks = value.manager_reviews.reverse();
     });
     scrollTo(0, 0);
   }

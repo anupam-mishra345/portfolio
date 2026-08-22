@@ -3,16 +3,15 @@
     class="heading transition-effect pt-20 mx-10"
     [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
   >
-    FROM FRONTEND TO BACKEND: CREATING DYNAMIC DIGITAL SOLUTIONS
+    FROM FRONTEND TO BACKEND<span class="active-text">:</span> CREATING DYNAMIC
+    DIGITAL SOLUTIONS
   </div>
   <hr class="mx-10 my-20" />
   <div class="full-stack-text flex justify-between mx-10 transition-effect">
     <div>Full-Stack Engineer</div>
     <div class="text-end pl-3">Building the Future of Web Applications</div>
   </div>
-  <div class="img-div w-4/5 mx-auto my-10">
-    <!-- <img src="./assets/anupam3.jpg" alt="" /> -->
-  </div>
+  <div class="img-div w-4/5 mx-auto my-10"></div>
 
   <!-- WHO AM I  -->
   <div class="main-div flex mx-10 mt-10">
@@ -45,7 +44,9 @@
         material.
       </div>
       <div class="count-div w-full transition-effect">
-        <div class="count1">{{ clientProjectCount + myOwnProjectCount }}+</div>
+        <div class="count1 active-text">
+          {{ clientProjectCount + myOwnProjectCount }}+
+        </div>
         <hr class="mb-6" />
         <div class="count-heading">Completed Projects</div>
       </div>
@@ -59,7 +60,7 @@
           <div class="count-heading">Happy Clients</div>
         </div>
         <div class="count-div w-1/2">
-          <div class="count">{{ totalExperience }}</div>
+          <div class="count active-text">{{ totalExperience }}</div>
           <hr class="mb-6" />
           <div class="count-heading">Years of Experience</div>
         </div>
@@ -72,9 +73,9 @@
         <div class="flex items-center">
           <!-- PDF Icon -->
           <div
-            class="flex items-center justify-center w-14 h-14 mr-4 rounded-lg text-3xl transition-effect ml-auto"
-            [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
+            class="flex active-text items-center justify-center w-14 h-14 mr-4 rounded-lg text-3xl transition-effect ml-auto"
           >
+            <!-- [ngClass]="isDarkMode ? 'text-light' : 'text-dark'" -->
             <i class="fa-solid fa-file-pdf"></i>
           </div>
 
@@ -82,7 +83,7 @@
           <div class="flex flex-col mr-auto transition-effect">
             <div class="font-semibold">Anupam - Resume</div>
 
-            <div class="text-sm opacity-70">Full-Stack Developer</div>
+            <div class="text-sm text-secondary">Full-Stack Developer</div>
           </div>
         </div>
 
@@ -152,10 +153,10 @@
               class="dot transition-effect self-center"
               [ngClass]="isDarkMode ? 'dot-light' : 'dot-dark'"
             ></div>
-            <div class="exp-duration ml-3">{{ exp.duration }}</div>
+            <div class="exp-duration active-text ml-3">{{ exp.duration }}</div>
           </div>
           <div class="exp-industry mt-5">{{ exp.industry }}</div>
-          <div class="exp-position">
+          <div class="exp-position text-secondary">
             {{ exp.position }}
           </div>
           <div class="exp-work mt-8">
@@ -229,11 +230,14 @@
             <span>{{ i < 10 ? "0" : "" }}</span
             >{{ i + 1 }}
           </div>
-          <div class="award w-[15%]">
+          <div class="award active-text w-[15%]">
             {{ award.category }}
           </div>
           <div class="award w-[40%] text-center">
-            {{ award.name }}
+            <p>{{ award.name }}</p>
+            <p class="text-secondary text-[16px]">
+              {{ award.location | uppercase }}
+            </p>
           </div>
           <div class="award w-[30%] text-end">
             {{ award.month }}
@@ -244,11 +248,14 @@
             <span>{{ i < 10 ? "0" : "" }}</span
             >{{ i + 1 }}
           </div>
-          <div class="award">
+          <div class="award active-text">
             {{ award.category }}
           </div>
           <div class="award">
-            {{ award.name }}
+            <p>{{ award.name }}</p>
+            <p class="text-secondary text-[16px]">
+              {{ award.location | uppercase }}
+            </p>
           </div>
           <div class="award">
             {{ award.month }}
@@ -274,7 +281,9 @@
           CLIENTS
         </div>
       </div>
-      <div class="main-heading-div transition-effect">BRANDS I WORKED WITH</div>
+      <div class="main-heading-div transition-effect">
+        BRANDS <span class="active-text">I</span> WORKED WITH
+      </div>
     </div>
     <app-projects-client-v2></app-projects-client-v2>
   </div>

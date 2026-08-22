@@ -22,7 +22,7 @@ textarea {
 }
 input::placeholder,
 textarea::placeholder {
-  color: rgb(76, 175, 80);
+  color: rgb(var(--active-color));
 }
 small {
   color: rgb(155, 43, 43);

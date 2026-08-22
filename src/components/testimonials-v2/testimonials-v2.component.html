@@ -25,10 +25,10 @@
       class="position-div px-5 py-20 sticky top-[100px] w-full transition-effect"
       [ngClass]="[
         isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light',
-        i < remarks.length - 1 ? 'remark-div' : ''
+        i < remarks.length - 1 ? 'remark-div' : '',
       ]"
     >
-      <div class="mb-5">
+      <div class="active-text mb-5">
         <span>{{ i < 10 ? "0" : "" }}</span
         >{{ i + 1 }}
       </div>

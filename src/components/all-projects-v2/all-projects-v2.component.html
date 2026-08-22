@@ -17,7 +17,7 @@
         class="main-heading-text transition-effect"
         [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
       >
-        WHAT I OWN FOR TIMEPASS
+        WHAT <span class="active-text">I</span> OWN FOR TIMEPASS
       </div>
     </div>
     <div class="grid-div grid grid-cols-2 gap-8 w-full">
@@ -64,7 +64,9 @@
           <div class="project-name cursor-pointer self-center pl-3">
             {{ project.projectName }}
           </div>
-          <div class="ml-auto self-center mr-5">{{ project.year }}</div>
+          <div class="active-text ml-auto self-center mr-5">
+            {{ project.year }}
+          </div>
           <!-- <div class="view-project cursor-pointer ml-auto mt-2">Details</div> -->
         </div>
       </div>

@@ -8,17 +8,29 @@
       class="desktop-menu-item flex gap-x-10 self-center transition-effect"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
     >
-      <div class="animation-div cursor-pointer" (click)="navigateTo('/home')">
+      <div
+        class="animation-div cursor-pointer active-nav-class"
+        routerLink="/home"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="navigateTo('/home')"
+      >
         <div class="animation-text">HOME</div>
       </div>
       <div
-        class="animation-div cursor-pointer"
+        class="animation-div cursor-pointer active-nav-class"
+        routerLink="/about-me"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
         (click)="navigateTo('/about-me')"
       >
         <div class="animation-text">ABOUT</div>
       </div>
       <div
-        class="animation-div cursor-pointer"
+        class="animation-div cursor-pointe active-nav-class"
+        routerLink="/techstack"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
         (click)="navigateTo('/techstack')"
       >
         <div class="animation-text">STACK</div>
@@ -56,7 +68,10 @@
         </div>
       </div>
       <div
-        class="animation-div cursor-pointer"
+        class="animation-div cursor-pointer active-nav-class"
+        routerLink="/all-projects"
+        routerLinkActive="active-nav"
+        [routerLinkActiveOptions]="{ exact: true }"
         (click)="navigateTo('/all-projects')"
       >
         <div class="animation-text">PROJECTS</div>
@@ -110,17 +125,38 @@
         ></i>
       </div>
     </div>
-    <div class="menu-item mt-1 transition-effect" (click)="navigateTo('/home')">
+    <div
+      class="menu-item mt-1 transition-effect active-nav-class"
+      routerLink="/home"
+      routerLinkActive="active-nav"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="navigateTo('/home')"
+    >
       HOME
     </div>
-    <div class="menu-item transition-effect" (click)="navigateTo('/about-me')">
+    <div
+      class="menu-item transition-effect active-nav-class"
+      routerLink="/about-me"
+      routerLinkActive="active-nav"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="navigateTo('/about-me')"
+    >
       ABOUT
     </div>
-    <div class="menu-item transition-effect" (click)="navigateTo('/techstack')">
+    <div
+      class="menu-item transition-effect active-nav-class"
+      routerLink="/techstack"
+      routerLinkActive="active-nav"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="navigateTo('/techstack')"
+    >
       STACK
     </div>
     <div
-      class="menu-item transition-effect"
+      class="menu-item transition-effect active-nav-class"
+      routerLink="/all-projects"
+      routerLinkActive="active-nav"
+      [routerLinkActiveOptions]="{ exact: true }"
       (click)="navigateTo('/all-projects')"
     >
       PROJECTS

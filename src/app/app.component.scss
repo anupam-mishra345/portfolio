@@ -29,11 +29,11 @@ hr {
   &__bar {
     height: 100%;
     width: 0;
-    background: rgba(76, 175, 80, 0.9);
+    background: rgba(var(--active-color), 0.9);
     box-shadow:
-      0 0 6px rgb(76, 175, 80),
-      0 0 15px rgba(76, 175, 80, 0.9),
-      0 0 30px rgba(76, 175, 80, 0.6);
+      0 0 6px rgb(var(--active-color)),
+      0 0 15px rgba(var(--active-color), 0.9),
+      0 0 30px rgba(var(--active-color), 0.6);
   }
 }
 @media screen and (max-width: 1260px) {

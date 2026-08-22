@@ -39,7 +39,9 @@ hr {
 .count-heading {
   font-size: 18px;
 }
-.exp-duration,
+.exp-duration {
+  font-size: 18px;
+}
 .exp-work {
   font-size: 18px;
   font-weight: 200;
@@ -81,6 +83,13 @@ hr {
 }
 iframe {
   filter: invert(1);
+}
+/* Large screens */
+@media (min-width: 1331px) {
+  .img-div {
+    background-size: auto 1330px;
+    background-position: center;
+  }
 }
 @media screen and (max-width: 1260px) {
   .main-div {
@@ -168,6 +177,11 @@ iframe {
 @media screen and (max-width: 550px) {
   .resume-action {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 392px) {
+  .award-div {
+    top: 140px;
   }
 }
 @keyframes resumeModalIn {

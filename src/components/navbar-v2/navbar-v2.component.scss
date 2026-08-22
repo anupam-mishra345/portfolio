@@ -13,6 +13,12 @@
   font-size: 30px;
   font-weight: 500;
 }
+.active-nav-class {
+  &.active-nav {
+    color: rgb(var(--active-color));
+    font-weight: bolder;
+  }
+}
 
 //Theme changing CSS
 .big-circle {
