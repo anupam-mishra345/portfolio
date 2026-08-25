@@ -35,6 +35,19 @@
   font-weight: bolder;
   color: rgb(var(--active-color));
 }
+.striked-design-text {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(var(--active-color)) 0,
+    rgb(var(--active-color)) 1px,
+    transparent 2px,
+    transparent 2px
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 // Animation Css
 
