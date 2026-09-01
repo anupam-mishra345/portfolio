@@ -1,31 +1,15 @@
 <div
-  class="project w-full flex flex-col cursor-pointer transition-effect p-5 my-5"
+  class="project w-full flex flex-col cursor-pointer transition-effect h-[600px]"
   [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
   (click)="navigateTo(project.id)"
+  [style.--project-image]="'url(' + project.projectMockup + ')'"
 >
-  <div class="img-div rounded-md">
-    <img
-      [src]="project.projectMockup"
-      class="mx-auto self-center rounded-md"
-      alt=""
-      height="auto"
-      width="100%"
-    />
-    <div *ngIf="showText" class="overlay w-full h-full">
-      <div class="text-container animation-div">
-        <i
-          *ngIf="arrowBtnName === 'PREVIOUS'"
-          class="animation-left-icon fa-solid fa-arrow-left mr-4"
-        ></i>
-        <div class="animation-text">{{ arrowBtnName }}</div>
-        <i
-          *ngIf="arrowBtnName === 'NEXT'"
-          class="animation-right-icon fa-solid fa-arrow-right ml-4"
-        ></i>
-      </div>
-    </div>
+  <div
+    class="index m-auto text-light stroke-dark text-[200px] font-bold transition-effect"
+  >
+    {{ index + 1 }}
   </div>
-  <div class="flex mt-2">
+  <div class="flex mt-auto p-2">
     <div
       *ngIf="project.projectName !== 'Real-Estate'"
       class="logo h-[50px] w-[50px] flex self-center"
@@ -50,7 +34,9 @@
         width="40px"
       />
     </div>
-    <div class="project-name cursor-pointer self-center pl-3">
+    <div
+      class="project-name text-light cursor-pointer self-center pl-3 transition-effect"
+    >
       {{ project.projectName }}
     </div>
     <div class="active-text ml-auto self-center mr-5">{{ project.year }}</div>

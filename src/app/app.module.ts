@@ -29,6 +29,7 @@ import { SuccessPopupComponent } from 'src/reusable/success-popup/success-popup.
 import { TechstackV4Component } from 'src/components/techstack-v4/techstack-v4.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ResumeViewerComponent } from 'src/components/resume-viewer/resume-viewer.component';
+import { ProjectCardV1Component } from 'src/components/project-card-v1/project-card-v1.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ResumeViewerComponent } from 'src/components/resume-viewer/resume-viewe
     ProjectDetailsV2Component,
     FooterV2Component,
     AboutMeV3Component,
+    ProjectCardV1Component,
     ProjectCardV2Component,
     ClientProjectCardComponent,
     TechnologyCompComponent,

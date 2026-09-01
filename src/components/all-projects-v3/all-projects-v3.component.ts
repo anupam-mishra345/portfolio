@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/services/data.service';
 import { ThemeService } from 'src/services/theme.service';
@@ -14,12 +14,31 @@ export class AllProjectsV3Component {
   experience: any;
   currentCompanyExperience: number = 0;
   openProjectId: string = '';
+  @ViewChild('projectWeb') projectWeb!: ElementRef;
+  @ViewChild('projectWrapper') projectWrapper!: ElementRef;
 
   constructor(
     private themeService: ThemeService,
     private dataService: DataService,
-    private router: Router
+    private router: Router,
   ) {}
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.projectWeb.nativeElement.classList.add('animate');
+        } else {
+          this.projectWeb.nativeElement.classList.remove('animate');
+        }
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    observer.observe(this.projectWrapper.nativeElement);
+  }
 
   ngOnInit() {
     this.themeService.getTheme().subscribe((theme) => {

@@ -108,7 +108,20 @@
     IN MY OWN PROJECT REPOSITORY
   </div>
   <hr class="px-10 mb-20" />
-  <div class="grid-div grid grid-cols-2 gap-8 w-full my-10">
+  <div #projectWrapper class="project-wrapper">
+    <div #projectWeb class="project-web flex my-10 px-[300px]">
+      <div
+        *ngFor="let project of projectData; let ind = index"
+        class="project-item w-[350px]"
+      >
+        <app-project-card-v1
+          [project]="project"
+          [index]="ind"
+        ></app-project-card-v1>
+      </div>
+    </div>
+  </div>
+  <div class="project-mobile grid-div grid grid-cols-2 gap-8 w-full my-10">
     <div *ngFor="let project of projectData">
       <app-project-card-v2 [project]="project"></app-project-card-v2>
     </div>

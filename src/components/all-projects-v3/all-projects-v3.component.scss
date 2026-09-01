@@ -73,6 +73,35 @@ hr {
 .org-list-div {
   display: flex;
 }
+.project-wrapper {
+  width: 100%;
+  overflow: auto;
+}
+.project-web {
+  // animation: scroll 40s linear infinite;
+  animation-play-state: paused;
+  will-change: transform;
+}
+
+.project-web.animate {
+  animation-play-state: running;
+}
+.project-item {
+  flex: 0 0 auto;
+  margin-right: 50px;
+}
+.project-mobile {
+  display: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
 
 @media screen and (max-width: 1260px) {
   .main-div {
@@ -116,5 +145,11 @@ hr {
   .org-list-div {
     display: flex;
     flex-direction: column;
+  }
+  .project-web {
+    display: none;
+  }
+  .project-mobile {
+    display: unset;
   }
 }

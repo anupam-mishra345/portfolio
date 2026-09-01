@@ -55,6 +55,15 @@ i {
   font-size: 90px;
 }
 
+.mockup-img {
+  margin-left: 40px;
+  margin-right: 40px;
+  img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (max-width: 940px) {
   .project-year {
     width: 50%;
@@ -107,6 +116,14 @@ i {
   }
   .main-heading-div {
     font-size: 40px;
+  }
+  .mockup-img {
+    margin-left: 20px;
+    margin-right: 20px;
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }
 
