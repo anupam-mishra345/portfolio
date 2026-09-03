@@ -7,7 +7,7 @@
     <img
       [src]="project.projectMockup"
       class="mx-auto self-center rounded-md"
-      alt=""
+      [alt]="project.projectName + ' logo'"
       height="auto"
       width="100%"
     />
@@ -50,9 +50,9 @@
         width="40px"
       />
     </div>
-    <div class="project-name cursor-pointer self-center pl-3">
+    <h3 class="project-name cursor-pointer self-center pl-3">
       {{ project.projectName }}
-    </div>
+    </h3>
     <div class="active-text ml-auto self-center mr-5">{{ project.year }}</div>
   </div>
 </div>

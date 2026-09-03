@@ -3,14 +3,16 @@
     Duration <span class="ml-16">{{ projectDetails?.duration }}</span>
   </div>
   <div class="flex">
-    <div class="my-3">Tech Used</div>
+    <h3 class="my-3">Tech Used</h3>
     <div>
-      <li
-        class="ml-16 my-3 flex"
-        *ngFor="let stack of projectDetails?.techUsed"
-      >
-        <app-technology-comp [techName]="stack.name"></app-technology-comp>
-      </li>
+      <ul>
+        <li
+          class="ml-16 my-3 flex"
+          *ngFor="let stack of projectDetails?.techUsed"
+        >
+          <app-technology-comp [techName]="stack.name"></app-technology-comp>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

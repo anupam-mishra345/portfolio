@@ -3,7 +3,7 @@
     class="w-[30px] h-auto mx-4"
     [ngClass]="currentStack?.name === 'Tailwind' ? 'mt-2' : ''"
   >
-    <img [src]="currentStack?.logo" alt="" />
+    <img [src]="currentStack?.logo" [alt]="currentStack?.name + 'logo'" />
   </div>
   <div>
     {{ currentStack?.name }}

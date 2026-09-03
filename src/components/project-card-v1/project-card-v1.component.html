@@ -17,7 +17,7 @@
       <img
         [src]="project.logo"
         class="self-center"
-        alt="logo"
+        [alt]="project.projectName + ' logo'"
         height="50px"
         width="50px"
       />
@@ -34,11 +34,11 @@
         width="40px"
       />
     </div>
-    <div
+    <h3
       class="project-name text-light cursor-pointer self-center pl-3 transition-effect"
     >
       {{ project.projectName }}
-    </div>
+    </h3>
     <div class="active-text ml-auto self-center mr-5">{{ project.year }}</div>
   </div>
 </div>

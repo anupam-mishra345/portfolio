@@ -13,13 +13,13 @@
           PROJECTS
         </div>
       </div>
-      <div
+      <h2
         class="main-heading-text transition-effect"
         [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
       >
         WHAT <span class="active-text striked-design-text">I</span> OWN FOR
         TIMEPASS
-      </div>
+      </h2>
     </div>
     <div class="grid-div grid grid-cols-2 gap-8 w-full">
       <div
@@ -32,7 +32,7 @@
           <img
             [src]="project.projectMockup"
             class="mx-auto self-center"
-            alt=""
+            alt="{{ project.projectName }} project"
             height="auto"
             width="100%"
           />
@@ -45,7 +45,7 @@
             <img
               [src]="project.logo"
               class="self-center"
-              alt="logo"
+              alt="{{ project.projectName }} logo"
               height="50px"
               width="50px"
             />
@@ -62,9 +62,9 @@
               width="40px"
             />
           </div>
-          <div class="project-name cursor-pointer self-center pl-3">
+          <h3 class="project-name cursor-pointer self-center pl-3">
             {{ project.projectName }}
-          </div>
+          </h3>
           <div class="active-text ml-auto self-center mr-5">
             {{ project.year }}
           </div>

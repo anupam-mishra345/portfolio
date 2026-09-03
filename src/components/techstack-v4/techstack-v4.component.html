@@ -12,12 +12,12 @@
         STACK
       </div>
     </div>
-    <div
+    <h2
       class="techstack-heading-text transition-effect"
       [ngClass]="isDarkMode ? 'text-light bg-dark' : 'text-dark bg-light'"
     >
       MY TECH TOOL BOX
-    </div>
+    </h2>
   </div>
   <div
     class="right-div w-1/2 transition-effect"
@@ -33,7 +33,7 @@
           <img
             [src]="techstack?.logo"
             class="mx-auto"
-            alt="logo"
+            alt="{{ techstack?.name }} logo"
             height="60px"
             width="60px"
           />

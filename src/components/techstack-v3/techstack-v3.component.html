@@ -1,11 +1,11 @@
 <div class="main-div px-10">
   <div class="left-div w-full pt-[100px]">
-    <div
+    <h1
       class="techstack-heading-text transition-effect py-20"
       [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
     >
       MY TECH TOOL BOX
-    </div>
+    </h1>
     <hr class="my-10" />
   </div>
   <div class="right-div w-full transition-effect">
@@ -24,7 +24,7 @@
           <img
             class="w-full"
             [src]="techstack?.logo"
-            alt="logo"
+            alt="{{ techstack?.name }} logo"
             height="50px"
             width="50px"
           />

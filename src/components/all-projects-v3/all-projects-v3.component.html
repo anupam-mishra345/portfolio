@@ -1,10 +1,10 @@
 <div class="px-10 pt-[100px]">
-  <div
+  <h1
     class="main-heading-div transition-effect"
     [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
   >
     CLIENT PROJECTS I<span class="active-text">'</span>VE WORKED ON
-  </div>
+  </h1>
   <app-projects-client-v2></app-projects-client-v2>
   <hr class="px-10 mb-20" />
 
@@ -34,12 +34,12 @@
         class="left-div w-1/2 mb-auto sticky top-[120px]"
         [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
       >
-        <div
+        <h2
           class="main-heading-industry-div transition-effect"
           [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'"
         >
           {{ exp.industry }}
-        </div>
+        </h2>
         <div class="exp-position transition-effect">
           {{ exp.position }}
         </div>
@@ -60,7 +60,7 @@
               </div>
             </div>
             <div class="exp-work mt-8" *ngIf="exp?.products?.length > 0">
-              <div class="exp-position my-5">Projects</div>
+              <h3 class="exp-position my-5">Projects</h3>
               <div
                 *ngFor="let projects of exp.products; let i = index"
                 class="border-t-[1px] border-[grey] py-4"
@@ -73,9 +73,9 @@
                   (click)="openProjectDetails(projects.id)"
                 >
                   <div class="font-semibold mr-3">{{ i + 1 }}.</div>
-                  <div class="font-semibold">
+                  <h3 class="font-semibold">
                     {{ projects.name }}
-                  </div>
+                  </h3>
                   <div class="project-duration-text ml-auto">
                     {{ projects.duration }}
                   </div>
@@ -100,13 +100,13 @@
   </div>
 
   <hr class="px-10 mb-20" />
-  <div
+  <h2
     class="heading transition-effect py-20"
     [ngClass]="isDarkMode ? 'text-light' : 'text-dark'"
   >
     HERE'S WHAT <span class="active-text striked-design-text">I</span> INCLUDE
     IN MY OWN PROJECT REPOSITORY
-  </div>
+  </h2>
   <hr class="px-10 mb-20" />
   <div #projectWrapper class="project-wrapper">
     <div #projectWeb class="project-web flex my-10 px-[300px]">
